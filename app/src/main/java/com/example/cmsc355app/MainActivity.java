@@ -2,12 +2,7 @@ package com.example.cmsc355app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,17 +10,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button nextBtn = (Button) findViewById(R.id.nextBtn);
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent startIntent = new Intent (getApplicationContext(), MainActivity2.class);
-                startActivity(startIntent);
-            }
-        });
     }
-/*
+    /*
     public void test(){
 
         final SharedPreferences myPrefs = getSharedPreferences("tag", 0);
@@ -49,12 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 temp = Integer.toString(count[0]);
                 textView2.setText(temp);
             }
-
-
         });
-
-
-
     }
 
  */

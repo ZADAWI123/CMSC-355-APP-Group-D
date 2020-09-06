@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "cmsc355App"
+rootProject.name = "cmsc355APP"
