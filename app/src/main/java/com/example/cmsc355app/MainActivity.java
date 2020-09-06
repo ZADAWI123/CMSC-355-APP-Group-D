@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         temp  = Integer.toString(count[0]);
         setContentView(R.layout.activity_main);
         Button btn = (Button) findViewById(R.id.btn1);
-        //myEditor.putInt("num", count[0]++).commit();
+        //myEditor.putInt("num", count[0]+=5).commit();
 
         btn.setOnClickListener(new View.OnClickListener(){
 
