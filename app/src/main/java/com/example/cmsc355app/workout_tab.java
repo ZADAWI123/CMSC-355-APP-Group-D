@@ -2,17 +2,15 @@ package com.example.cmsc355app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class workout_tab extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_workout_tab);
-    }
 
-    /*
+
     String temp = "";
     String temp2 = "";
 
@@ -38,8 +36,8 @@ public class workout_tab extends AppCompatActivity {
             public void onClick(View v){
                 SharedPreferences.Editor myEditor = myPrefs.edit();
 
-                TextView textView2 = (TextView) findViewById(R.id.textView2);
-                TextView textView = (TextView) findViewById(R.id.textView);
+                //TextView textView2 = (TextView) findViewById(R.id.textView2);
+                //TextView textView = (TextView) findViewById(R.id.textView);
                 myEditor.putInt("num", count[0]++).commit();
                 if(count[0] == points[0] * 2){
                     myEditor.putInt("num2", currentLevel[0]++).commit();
@@ -49,8 +47,8 @@ public class workout_tab extends AppCompatActivity {
 
                 temp = Integer.toString(count[0]);
                 temp2 = Integer.toString(currentLevel[0]);
-                textView2.setText(temp);
-                textView.setText(temp2);
+                //textView2.setText(temp);
+                //textView.setText(temp2);
             }
 
 
@@ -58,5 +56,12 @@ public class workout_tab extends AppCompatActivity {
 
     }
 
-     */
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_workout_tab);
+        test();
+    }
+
+
 }
