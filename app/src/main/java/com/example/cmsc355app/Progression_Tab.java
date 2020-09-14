@@ -2,7 +2,9 @@ package com.example.cmsc355app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 
 public class Progression_Tab extends AppCompatActivity {
 
@@ -10,6 +12,11 @@ public class Progression_Tab extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progression__tab);
+        SharedPreferences myPrefs = getSharedPreferences("tag", 0);
+        SharedPreferences.Editor myEditor = myPrefs.edit();
+        int level = myPrefs.getInt("check", 0);
+        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("check", "num2");
+
     }
     int xp = 0;
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 
@@ -40,8 +41,10 @@ public class workout_tab extends AppCompatActivity {
                 //TextView textView = (TextView) findViewById(R.id.textView);
                 myEditor.putInt("num", count[0]++).commit();
                 if(count[0] == points[0] * 2){
-                    myEditor.putInt("num2", currentLevel[0]++).commit();
-                    myEditor.putInt("num3", points[0] = count[0]).commit();
+                    myEditor.putInt("num2", currentLevel[0]++).apply();
+                    myEditor.putInt("num3", points[0] = count[0]).apply();
+                    PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num2", currentLevel[0]).apply();
+
                 }
 
 
