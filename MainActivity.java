@@ -64,4 +64,3 @@ public class MainActivity extends AppCompatActivity {
         return newList;
     }
 }
-public class Derp
