@@ -19,7 +19,7 @@ public class workout_tab extends AppCompatActivity {
     public void test(){
 
 
-        final SharedPreferences myPrefs = getSharedPreferences("tag", 0);
+        final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         final int []count = {myPrefs.getInt("num",0)};
         final int []currentLevel = {myPrefs.getInt("num2",0)};
         final int [] points = {myPrefs.getInt("num3",1)};;

@@ -12,10 +12,9 @@ public class Progression_Tab extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progression__tab);
-        SharedPreferences myPrefs = getSharedPreferences("tag", 0);
-        SharedPreferences.Editor myEditor = myPrefs.edit();
-        int level = myPrefs.getInt("check", 0);
-        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("check", "num2");
+        SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        //SharedPreferences.Editor myEditor = myPrefs.edit();
+        int level = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num2",1);
 
     }
     int xp = 0;
