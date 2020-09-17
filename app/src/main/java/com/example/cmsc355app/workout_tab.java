@@ -18,7 +18,7 @@ public class workout_tab extends AppCompatActivity {
 
     public void test(){
 
-
+/*
         final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         final int []count = {myPrefs.getInt("num",0)};
         final int []currentLevel = {myPrefs.getInt("num2",0)};
@@ -56,14 +56,14 @@ public class workout_tab extends AppCompatActivity {
 
 
         });
-
+*/
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_tab);
-        test();
+        //test();
     }
 
 
