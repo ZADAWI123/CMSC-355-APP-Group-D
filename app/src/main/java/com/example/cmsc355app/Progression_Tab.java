@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.TextView;
 
 public class Progression_Tab extends AppCompatActivity {
 
@@ -15,7 +16,9 @@ public class Progression_Tab extends AppCompatActivity {
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         //SharedPreferences.Editor myEditor = myPrefs.edit();
         int level = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num2",1);
-
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        String temp = Integer.toString(level);
+        textView2.setText(temp);
     }
     int xp = 0;
 

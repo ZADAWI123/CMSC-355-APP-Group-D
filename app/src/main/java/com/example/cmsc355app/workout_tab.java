@@ -17,8 +17,7 @@ public class workout_tab extends AppCompatActivity {
 
 
     public void test(){
-
-/*
+        //final SharedPreferences myPrefs = getSharedPreferences("tag", 0);
         final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         final int []count = {myPrefs.getInt("num",0)};
         final int []currentLevel = {myPrefs.getInt("num2",0)};
@@ -27,7 +26,7 @@ public class workout_tab extends AppCompatActivity {
         //final String[] temp = {""};
 
         temp  = Integer.toString(count[0]);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_workout_tab);
         Button btn = (Button) findViewById(R.id.btn1);
         //myEditor.putInt("num", count[0]++).commit();
 
@@ -39,7 +38,7 @@ public class workout_tab extends AppCompatActivity {
 
                 //TextView textView2 = (TextView) findViewById(R.id.textView2);
                 //TextView textView = (TextView) findViewById(R.id.textView);
-                myEditor.putInt("num", count[0]++).commit();
+                myEditor.putInt("num", count[0]++).apply();
                 if(count[0] == points[0] * 2){
                     myEditor.putInt("num2", currentLevel[0]++).apply();
                     myEditor.putInt("num3", points[0] = count[0]).apply();
@@ -56,14 +55,14 @@ public class workout_tab extends AppCompatActivity {
 
 
         });
-*/
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_tab);
-        //test();
+        test();
     }
 
 
