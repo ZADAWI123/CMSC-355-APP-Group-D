@@ -1,6 +1,7 @@
 package com.example.cmsc355app;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,5 +16,11 @@ public class Selection_Tab extends AppCompatActivity {
         Button cBtn = findViewById(R.id.cBtn);
         Button wlBtn = findViewById(R.id.wlBtn);
         Button bwBtn = findViewById(R.id.bwBtn);
+
+        cBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("Button Clicked");
+            }
+        });
     }
 }
