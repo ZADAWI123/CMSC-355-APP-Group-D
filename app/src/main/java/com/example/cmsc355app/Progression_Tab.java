@@ -16,9 +16,14 @@ public class Progression_Tab extends AppCompatActivity {
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         //SharedPreferences.Editor myEditor = myPrefs.edit();
         int level = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num2",1);
+        int numWorkouts = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num",0);
+
         TextView textView2 = (TextView) findViewById(R.id.textView2);
+        TextView textView5 = (TextView) findViewById(R.id.textView5);
         String temp = Integer.toString(level);
-        textView2.setText(temp);
+        String temp2 = Integer.toString(numWorkouts);
+        textView2.setText(ranks[level]);
+        textView5.setText(temp2);
     }
     int xp = 0;
 
