@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/Select question"
+        android:id="@+id/SelectQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/weight training"
+        android:id="@+id/weightTraining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Weight Training"
@@ -28,18 +28,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Select question"
+        app:layout_constraintTop_toBottomOf="@+id/SelectQuestion"
         app:layout_constraintVertical_bias="0.172" />
 
     <Button
-        android:id="@+id/Body Weight"
+        android:id="@+id/BodyWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Body Weight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight training"
+        app:layout_constraintTop_toBottomOf="@+id/weightTraining"
         app:layout_constraintVertical_bias="0.209" />
 
     <Button
@@ -51,6 +51,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Body Weight"
+        app:layout_constraintTop_toBottomOf="@+id/BodyWeight"
         app:layout_constraintVertical_bias="0.374" />
 </androidx.constraintlayout.widget.ConstraintLayout>
