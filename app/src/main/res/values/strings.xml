@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">cmsc355APP</string>
+<<<<<<< Updated upstream
+=======
+    <string name="hub_page">Hub Page</string>
+    <string name="work_out_page">Work Out Page</string>
+    <string name="progression">Progression</string>
+    <string name="weight_training">Weight Training</string>
+    <string name="body_weight">Body Weight</string>
+    <string name="cardio">Cardio</string>
+    <string name="what_type_of_workout_would_you_like_to_select">What type of workout would you like to select?</string>
+    <string name="what_type_of_workout_would_you_like_to_select">What type of workout would you like to select?</string>
+    <string name="weight_training">Weight Training</string>
+    <string name="body_weight">Body Weight</string>
+    <string name="cardio">Cardio</string>
+    >>>>>>> Stashed changes
 </resources>
