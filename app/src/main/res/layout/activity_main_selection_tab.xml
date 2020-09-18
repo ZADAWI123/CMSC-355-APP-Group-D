@@ -7,11 +7,11 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/Select question"
+        android:id="@+id/Question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
-        android:text="What type of workout would you like to select?"
+        android:text="@string/what_type_of_workout_would_you_like_to_select"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,37 +20,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/weight training"
+        android:id="@+id/wlBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weight Training"
+        android:text="@string/weight_training"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Select question"
+        app:layout_constraintTop_toBottomOf="@+id/Question"
         app:layout_constraintVertical_bias="0.172" />
 
     <Button
-        android:id="@+id/Body Weight"
+        android:id="@+id/bwBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Body Weight"
+        android:text="@string/body_weight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight training"
+        app:layout_constraintTop_toBottomOf="@+id/wlBtn"
         app:layout_constraintVertical_bias="0.209" />
 
     <Button
-        android:id="@+id/Cardio"
+        android:id="@+id/cBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cardio"
+        android:text="@string/cardio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Body Weight"
+        app:layout_constraintTop_toBottomOf="@+id/bwBtn"
         app:layout_constraintVertical_bias="0.374" />
 </androidx.constraintlayout.widget.ConstraintLayout>
