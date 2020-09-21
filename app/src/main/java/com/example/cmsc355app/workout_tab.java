@@ -1,4 +1,3 @@
-//Zakariya Adawi
 package com.example.cmsc355app;
 
 import androidx.appcompat.app.AppCompatActivity;
