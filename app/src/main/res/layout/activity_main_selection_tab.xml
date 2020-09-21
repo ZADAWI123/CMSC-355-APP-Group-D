@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.229" />
 
     <Button
-        android:id="@+id/wlBtn"
+        android:id="@+id/wtBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/weight_training"
@@ -41,7 +41,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wlBtn"
+        app:layout_constraintTop_toBottomOf="@+id/wtBtn"
         app:layout_constraintVertical_bias="0.209" />
 
     <Button
@@ -55,4 +55,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bwBtn"
         app:layout_constraintVertical_bias="0.374" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+<<<<<<< android:HEAD
+</RelativeLayout>
+=======
+</RelativeLayout>
+>>>>>>> JackBranch
