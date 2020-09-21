@@ -7,18 +7,11 @@
     android:layout_height="match_parent">
 
     <TextView
-<<<<<<< HEAD
         android:id="@+id/SelectQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="What type of workout would you like to select?"
-=======
-        android:id="@+id/Question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
-        android:text="@string/what_type_of_workout_would_you_like_to_select"
->>>>>>> JackBranch
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,11 +22,7 @@
         app:layout_constraintVertical_bias="0.229" />
 
     <Button
-<<<<<<< HEAD
-        android:id="@+id/weightTraining"
-=======
         android:id="@+id/wlBtn"
->>>>>>> JackBranch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/weight_training"
@@ -41,30 +30,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/SelectQuestion"
         app:layout_constraintVertical_bias="0.172" />
 
     <Button
-        android:id="@+id/BodyWeight"
-=======
-        app:layout_constraintTop_toBottomOf="@+id/Question"
-        app:layout_constraintVertical_bias="0.172" />
-
-    <Button
         android:id="@+id/bwBtn"
->>>>>>> JackBranch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/body_weight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintTop_toBottomOf="@+id/weightTraining"
-=======
         app:layout_constraintTop_toBottomOf="@+id/wlBtn"
->>>>>>> JackBranch
         app:layout_constraintVertical_bias="0.209" />
 
     <Button
@@ -76,10 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/BodyWeight"
-=======
         app:layout_constraintTop_toBottomOf="@+id/bwBtn"
->>>>>>> JackBranch
         app:layout_constraintVertical_bias="0.374" />
 </androidx.constraintlayout.widget.ConstraintLayout>
