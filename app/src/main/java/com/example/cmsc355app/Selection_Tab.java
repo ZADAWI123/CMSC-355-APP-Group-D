@@ -1,5 +1,6 @@
 package com.example.cmsc355app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,13 +15,19 @@ public class Selection_Tab extends AppCompatActivity {
         setContentView(R.layout.activity_main_selection_tab);
 
         Button cBtn = findViewById(R.id.cBtn);
-        Button wlBtn = findViewById(R.id.wlBtn);
+        Button wtBtn = findViewById(R.id.wtBtn);
         Button bwBtn = findViewById(R.id.bwBtn);
 
-        cBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                System.out.println("Button Clicked");
+        wtBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openWeightTrainingTab();
             }
         });
+    }
+
+    public void openWeightTrainingTab() {
+        Intent intent = new Intent(this, WeightTrainingTab.class);
+        startActivity(intent);
     }
 }
