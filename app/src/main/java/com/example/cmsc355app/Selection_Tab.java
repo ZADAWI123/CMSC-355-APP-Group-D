@@ -24,9 +24,33 @@ public class Selection_Tab extends AppCompatActivity {
                 openWeightTrainingTab();
             }
         });
+
+        bwBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBodyWeightTab();
+            }
+        });
+
+        cBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openCardioTab();
+            }
+        });
     }
 
-    public void openWeightTrainingTab() {
+    public void openWeightTrainingTab () {
+        Intent intent = new Intent(this, WeightTrainingTab.class);
+        startActivity(intent);
+    }
+
+    public void openBodyWeightTab () {
+        Intent intent = new Intent(this, WeightTrainingTab.class);
+        startActivity(intent);
+    }
+
+    public void openCardioTab () {
         Intent intent = new Intent(this, WeightTrainingTab.class);
         startActivity(intent);
     }
