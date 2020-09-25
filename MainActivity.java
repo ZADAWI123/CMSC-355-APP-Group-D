@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     backButton.setOnClickListener(this);
 
 }
+
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
         List<String> newList = new ArrayList<>();
@@ -51,6 +52,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     return numList;
     }
 
+    public List<Integer> getRandomNumSets(int num){
+        Random randNum = new Random();
+        int n = num;
+        int RandomInt = randNum.nextInt(3);
+        List<Integer> numSet = new ArrayList<>(n);
+        for (int i = 1; i <= num; i++){
+            numSet.add(RandomInt + 3);
+        }
+        return numSet;
+    }
 
     @Override
     public void onClick(View view) {
