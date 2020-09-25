@@ -7,8 +7,8 @@
     <string name="weight_training">Weight Training</string>
     <string name="body_weight">Body Weight</string>
     <string name="cardio">Cardio</string>
-    <string name="what_type_of_workout_would_you_like_to_select">What type of workout would you like to select?</string>
     <string name="click_to_hub">Click to Hub</string>
     <string name="challenge_me">Challenge Me!:</string>
     <string name="workouts_for_beginners">Workouts for Beginners</string>
+    <string name="challenge_me2nd">Challenge Me</string>
 </resources>

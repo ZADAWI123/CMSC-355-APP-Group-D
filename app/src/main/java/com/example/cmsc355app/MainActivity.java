@@ -33,6 +33,17 @@ public class MainActivity extends AppCompatActivity {
         list.add("It all starts with you.");
         list.add("Your limitation—it's only your imagination.");
         list.add("Sometimes later becomes never.");
+        list.add("No pain, no gain. Shut up and train.");
+        list.add("Train insane or remain the same.");
+        list.add("Push yourself because no one else is going to do it for you.");
+        list.add("Suck it up. And one day you won’t have to suck it in.");
+        list.add("Success starts with self-discipline.");
+        list.add("Good things come to those who sweat.");
+        list.add("The body achieves what the mind believes.");
+        list.add("Someone busier than you is working out right now.");
+        list.add("The hardest lift of all is lifting your butt off the couch.");
+
+
 
         MainActivity obj = new MainActivity();
 
