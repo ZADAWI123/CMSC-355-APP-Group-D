@@ -23,10 +23,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button chestButton = findViewById(R.id.chestButton);
     Button legButton = findViewById(R.id.legButton);
     Button backButton = findViewById(R.id.backButton);
+    Button heavy= findViewById(R.id.buttonHeavy);
+    Button light= findViewById(R.id.buttonLight);
+    Button bb= findViewById(R.id.buttonBodybuilding);
 
     chestButton.setOnClickListener(this);
     legButton.setOnClickListener(this);
     backButton.setOnClickListener(this);
+
 
 }
 
