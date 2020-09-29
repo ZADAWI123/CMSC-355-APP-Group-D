@@ -55,6 +55,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     return numList;
     }
+    /*
+    random set number generator that will be used later
+    based on heaby, light, or size input the number of reps will change
+     */
+    public List<Integer> randomSetNum(int num){
+        Random randNum = new Random();
+        int n = 1;
+        List<Integer> numList = new ArrayList<>(n);
+        return numList;
+    }
 
     public List<Integer> getRandomNumSets(int num){
         Random randNum = new Random();
