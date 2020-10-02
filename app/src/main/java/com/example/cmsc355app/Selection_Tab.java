@@ -28,14 +28,14 @@ public class Selection_Tab extends AppCompatActivity {
         bwBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openworkout_tab();
+                //openworkout_tab();
             }
         });
 
         cBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openworkout_tab();
+                //openworkout_tab();
             }
         });
     }
