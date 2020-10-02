@@ -66,8 +66,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return numList;
     }
     /*
+    this method returns a random combo set for the user
+     */
+
+    public List<String> randomCombination (int num){
+        Random ranCombo = new Random();
+        int n = num;
+        List<String> comboList = new ArrayList<>();
+        comboList.add("Back and Biceps");
+        comboList.add("Chest and Triceps and Shoulders");
+        comboList.add("Legs and abs");
+        return comboList;
+    }
+        /*
     this method returns a random number based on the sets
      */
+
     public List<Integer> getRandomNumSets(int num){
         Random randNum = new Random();
         int n = num;
