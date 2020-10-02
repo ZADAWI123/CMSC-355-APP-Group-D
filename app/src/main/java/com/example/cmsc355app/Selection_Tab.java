@@ -21,7 +21,7 @@ public class Selection_Tab extends AppCompatActivity {
         wtBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                //Create value to hold selection
             }
         });
 
@@ -29,6 +29,7 @@ public class Selection_Tab extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //openworkout_tab();
+                //Create value to hold selection
             }
         });
 
@@ -36,6 +37,7 @@ public class Selection_Tab extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //openworkout_tab();
+                //Create value to hold selection
             }
         });
     }
