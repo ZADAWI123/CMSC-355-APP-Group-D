@@ -12,13 +12,31 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Scanner;
 
-public class Progression_Tab extends AppCompatActivity {
+public class Progression_Tab<array> extends AppCompatActivity {
+
+    TextView stringTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progression__tab);
+
+        stringTextView = (TextView)findViewById(R.id.totalNumber);
+
+         /*
+        int[] array = {10, 20, 30, 40, 50, 10};
+        int sum = 0;
+
+        //Advanced for loop
+        for (int num : array) {
+            sum = sum+num;
+        }
+          */
+
+        stringTextView.setText(stringTextView.getText());
+
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         //SharedPreferences.Editor myEditor = myPrefs.edit();
         int level = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num2",1);
@@ -30,6 +48,7 @@ public class Progression_Tab extends AppCompatActivity {
         String temp2 = Integer.toString(numWorkouts);
         textView2.setText(ranks[level]);
         textView5.setText(temp2);
+
          /*
         Button shareBtn = (Button) findViewById(R.id.shareBtn);
         shareBtn.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +92,8 @@ public class Progression_Tab extends AppCompatActivity {
          */
 
     }
+
+
     int xp = 0;
 
 
@@ -87,4 +108,5 @@ public class Progression_Tab extends AppCompatActivity {
                        "LXXIX", "LXXX", "LXXXI", "LXXXII", "LXXXIII", "LLXXXIV", "LXXXV", "LXXXVI",
                        "LXXXVII", "LXXXVIII", "LXXXIX", "XC", "XCI", "XCII", "XCIII", "XCIV", "XCV",
                        "Pablo Liftabar", "Admiral Squatbar", "Hero", "Legend", "Inheritor"};
+
 }
