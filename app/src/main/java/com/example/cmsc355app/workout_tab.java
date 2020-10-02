@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
-
 public class workout_tab extends AppCompatActivity {
 
 
@@ -43,6 +42,8 @@ public class workout_tab extends AppCompatActivity {
                     myEditor.putInt("num2", currentLevel[0]++).apply();
                     myEditor.putInt("num3", points[0] = count[0]).apply();
                     PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num2", currentLevel[0]).apply();
+                    PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num", currentLevel[0]).apply();
+
 
                 }
 
