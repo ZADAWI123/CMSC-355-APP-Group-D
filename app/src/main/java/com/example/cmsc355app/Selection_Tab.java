@@ -21,27 +21,25 @@ public class Selection_Tab extends AppCompatActivity {
         wtBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openworkout_tab();
+                //Create value to hold selection
             }
         });
 
         bwBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openworkout_tab();
+                //openworkout_tab();
+                //Create value to hold selection
             }
         });
 
         cBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openworkout_tab();
+                //openworkout_tab();
+                //Create value to hold selection
             }
         });
     }
 
-    public void openworkout_tab () {
-        Intent intent = new Intent(this, workout_tab.class);
-        startActivity(intent);
-    }
 }
