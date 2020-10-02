@@ -65,7 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         List<Integer> numList = new ArrayList<>(n);
         return numList;
     }
-
+    /*
+    this method returns a random number based on the sets
+     */
     public List<Integer> getRandomNumSets(int num){
         Random randNum = new Random();
         int n = num;
@@ -76,7 +78,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return numSet;
     }
-
+/*
+this method returns the exercises with the number of sets to do
+later i plan to change the sets based on power, size, or athetic endurance
+ */
     @Override
     public void onClick(View view) {
         switch (view.getId())
@@ -92,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 List<String> exStringList = new ArrayList<>();
                 ArrayList<String> printList = new ArrayList<String>();
                 ArrayList<Integer> printSet = new ArrayList<>();
-
+                //chest exercises
                 exStringList.add("Push up");
                 exStringList.add("Bench press");
                 exStringList.add("incline bench press");
@@ -119,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 List<String> exStringList1 = new ArrayList<>();
                 ArrayList<String> printList1 = new ArrayList<String>();
                 ArrayList<Integer> printSet1 = new ArrayList<>();
-
+                //leg exercises
                 exStringList1.add("Jump");
                 exStringList1.add("Squats");
                 exStringList1.add("Leg Curls");
@@ -145,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 List<String> exStringList2 = new ArrayList<>();
                 ArrayList<String> printList2 = new ArrayList<String>();
                 ArrayList<Integer> printSet2 = new ArrayList<>();
-
+                //back exercises
                 exStringList2.add("Pull up");
                 exStringList2.add("barbell Row");
                 exStringList2.add("deadlift");
