@@ -49,7 +49,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
         textView2.setText(ranks[level]);
         textView5.setText(temp2);
 
-         /*
+
         Button shareBtn = (Button) findViewById(R.id.shareBtn);
         shareBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -65,13 +65,14 @@ public class Progression_Tab<array> extends AppCompatActivity {
             public void onClick(View v) {
                 Uri contentUri = Uri.parse("android.resource://" + getPackageName() + "/drawable/" + "ic_launcher");
 
-                String invite = "Think you can beat my rank? Download 'Challenge Me! - Workouts for Beginners' and see who's more dedicated!";
-                String link = "https://play.google.com/store/apps/details?id=com.example.cmsc355app";
+                String invite = "Think you can beat my rank? Download 'Challenge Me! - Workouts for Beginners' and see who's more dedicated!" +"\n"
+                        + "https://play.google.com/store/apps/details?id=com.example.cmsc355app";
 
                 if (contentUri != null) {
                     Intent shareIntent = new Intent();
                     shareIntent.setAction(Intent.ACTION_SEND);
                     shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    shareIntent.setType("image/*");
                     shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, invite);
                     shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
                     try {
@@ -89,7 +90,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
 
         });
 
-         */
+
 
     }
 
