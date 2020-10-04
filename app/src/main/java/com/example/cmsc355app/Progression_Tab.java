@@ -50,13 +50,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
         textView5.setText(temp2);
 
 
-        Button shareBtn = (Button) findViewById(R.id.shareBtn);
-        shareBtn.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                String invite = "Think you can beat my rank? Download 'Challenge Me! - Workouts for Beginners' and see who's more dedicated!";
-                String link = "https://play.google.com/store/apps/details?id=com.example.cmsc355app";
 
         Button shareBtn = (Button) findViewById(R.id.shareBtn);
         shareBtn.setOnClickListener(new View.OnClickListener() {
@@ -88,11 +82,11 @@ public class Progression_Tab<array> extends AppCompatActivity {
 
             }
 
-        });
 
 
 
-    }
+
+
 
 
     int xp = 0;

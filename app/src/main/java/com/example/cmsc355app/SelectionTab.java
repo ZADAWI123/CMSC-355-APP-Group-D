@@ -1,22 +1,22 @@
 package com.example.cmsc355app;
 
-import android.content.Intent;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class Selection_Tab extends AppCompatActivity {
-
+public class SelectionTab extends AppCompatActivity {
+    Button cBtn;
+    Button wtBtn;
+    Button bwBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_selection_tab);
-
-        Button cBtn = findViewById(R.id.cBtn);
-        Button wtBtn = findViewById(R.id.wtBtn);
-        Button bwBtn = findViewById(R.id.bwBtn);
+        setContentView(R.layout.activity_selection_tab);
+        cBtn = findViewById(R.id.cBtn);
+        wtBtn = findViewById(R.id.wtBtn);
+        bwBtn = findViewById(R.id.bwBtn);
 
         wtBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,5 +41,4 @@ public class Selection_Tab extends AppCompatActivity {
             }
         });
     }
-
 }
