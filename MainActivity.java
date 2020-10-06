@@ -187,6 +187,31 @@ later i plan to change the sets based on power, size, or athetic endurance
                 exList2.setText(Arrays.toString(printList.toArray()));
                 setList2.setText(Arrays.toString(printSet.toArray()));
                 break;
+                /*
+                case R.id.bicepButton:
+                MainActivity obj2 = new MainActivity();
+
+                EditText numExercises2 = (EditText)findViewById(R.id.numExercises);
+                TextView exList2 = (TextView) findViewById(R.id.exList);
+                TextView setList2 = (TextView) findViewById(R.id.numOfReps);
+
+                int num2 = Integer.parseInt(numExercises2.getText().toString());
+                List<String> exStringList2 = new ArrayList<>();
+                ArrayList<String> printList2 = new ArrayList<String>();
+                ArrayList<Integer> printSet2 = new ArrayList<>();
+                //back exercises
+                exStringList2.add("curl up");
+                exStringList2.add("chin up");
+                exStringList2.add("cable pulls");
+                exStringList2.add("preacher curls");
+
+
+                printList= (ArrayList<String>) obj2.getRandomElement(exStringList2,num2);
+                printSet = (ArrayList<Integer>) obj2.getRandomNumber(num2);
+                exList2.setText(Arrays.toString(printList.toArray()));
+                setList2.setText(Arrays.toString(printSet.toArray()));
+                break;
+                 */
 
         }
     }
