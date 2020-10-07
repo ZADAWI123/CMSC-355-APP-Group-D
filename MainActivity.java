@@ -65,6 +65,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         List<Integer> numList = new ArrayList<>(n);
         return numList;
     }
+    public List<String> randomRepPattern (int num){
+        Random randPattern = new Random();
+        int n = num;
+        List<String> comboList = new ArrayList<>();
+        comboList.add("pyramid up");
+        comboList.add("pyramid down");
+        comboList.add("same amount");
+        return comboList;
+    }
 
     public List<String> randomRestAmount (int num){
         Random ranCombo = new Random();
