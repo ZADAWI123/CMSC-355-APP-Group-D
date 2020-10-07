@@ -223,5 +223,7 @@ later i plan to change the sets based on power, size, or athetic endurance
                  */
 
         }
+
+        TextView repList = (TextView) findViewById(R.id.amountOfRest);
     }
 }
