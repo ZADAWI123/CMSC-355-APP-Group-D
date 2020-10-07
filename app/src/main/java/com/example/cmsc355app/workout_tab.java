@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 public class workout_tab extends AppCompatActivity {
 
 
@@ -63,6 +65,12 @@ public class workout_tab extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_tab);
+        //SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
+        String numIndicator = Integer.toString(programIndicator);
+        TextView pro = findViewById(R.id.pro);
+        pro.setText(numIndicator);
+
         test();
     }
 
