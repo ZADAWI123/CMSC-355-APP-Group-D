@@ -17,6 +17,7 @@ public class main_hub extends AppCompatActivity {
     private Button BtnWork;
     private Button BtnPro;
     private Button BtnSel;
+    private Button BtnExa;
 
 
     @Override
@@ -55,6 +56,15 @@ public class main_hub extends AppCompatActivity {
                 moveToSelection();
             }
         });
+
+        BtnExa = (Button)findViewById(R.id.examplesBtn);
+
+        BtnExa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToExample();
+            }
+        });
     }
 
 
@@ -72,5 +82,10 @@ public class main_hub extends AppCompatActivity {
     private void moveToSelection(){
         Intent intentS = new Intent(main_hub.this, SelectionTab.class);
         startActivity(intentS);
+    }
+
+    private void moveToExample(){
+        Intent intent3 = new Intent(main_hub.this, workExamples.class);
+        startActivity(intent3);
     }
 }
