@@ -40,6 +40,8 @@ public class workout_tab extends AppCompatActivity {
                 //TextView textView2 = (TextView) findViewById(R.id.textView2);
                 //TextView textView = (TextView) findViewById(R.id.textView);
                 myEditor.putInt("num", count[0]++).apply();
+                PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num", count[0]).apply();
+
                 if(count[0] == points[0] * 2){
                     myEditor.putInt("num2", currentLevel[0]++).apply();
                     myEditor.putInt("num3", points[0] = count[0]).apply();
@@ -71,12 +73,20 @@ public class workout_tab extends AppCompatActivity {
         if program indicator is equal to 1 then the user wants a weight training program, 2 means the user wants a body weight exercise program, and
         3 means they want a cardio execrise program
          */
+        test();
         int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
         String numIndicator = Integer.toString(programIndicator);
         TextView pro = findViewById(R.id.pro);
-        pro.setText(numIndicator);
+        if(programIndicator == 1){
+            pro.setText("You selected a weight training program.");
+        }
+        if(programIndicator == 2){
+            pro.setText("You selected a body weight training program.");
+        }
+        if(programIndicator == 3){
+            pro.setText("You selected a cardio training program.");
+        }
 
-        test();
     }
 
 
