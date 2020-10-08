@@ -62,6 +62,7 @@ public class SelectionTab extends AppCompatActivity {
         cBtn = findViewById(R.id.cBtn);
         wtBtn = findViewById(R.id.wtBtn);
         bwBtn = findViewById(R.id.bwBtn);
+        selectProgram();
 
 
     }

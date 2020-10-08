@@ -66,6 +66,11 @@ public class workout_tab extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_tab);
         //SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        /*
+        The program indicator variable tells you which workout program the user picked from the selection tab
+        if program indicator is equal to 1 then the user wants a weight training program, 2 means the user wants a body weight exercise program, and
+        3 means they want a cardio execrise program
+         */
         int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
         String numIndicator = Integer.toString(programIndicator);
         TextView pro = findViewById(R.id.pro);
