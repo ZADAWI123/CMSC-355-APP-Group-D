@@ -29,8 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/randomQuotes"
-        tools:ignore="MissingConstraints"
-        tools:text="CLICK TO LAUNCH" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView6"
