@@ -34,6 +34,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 }
 
+    public class timer{
+        Timer timer = new Timer();
+        TimerTask task = new helpTime();
+        timer.schedule(task, 2000, 5000);
+    }
+    class helpTime extends TimerTask
+    {
+        public static int i = 0;
+        public void run()
+    }
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
         List<String> newList = new ArrayList<>();
