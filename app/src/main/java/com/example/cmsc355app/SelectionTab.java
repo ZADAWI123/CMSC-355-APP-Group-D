@@ -71,7 +71,6 @@ public class SelectionTab extends AppCompatActivity {
         bwBtn = findViewById(R.id.bwBtn);
         selectProgram();
 
-        //Comment for midterm will delete later
 
     }
 }
