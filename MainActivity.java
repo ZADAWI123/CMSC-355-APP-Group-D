@@ -34,16 +34,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 }
 
-    public class timer{
-        Timer timer = new Timer();
-        TimerTask task = new helpTime();
-        timer.schedule(task, 2000, 5000);
-    }
-    class helpTime extends TimerTask
-    {
-        public static int i = 0;
-        public void run()
-    }
+//    public class timer{
+//        Timer timer = new Timer();
+//        TimerTask task = new helpTime();
+//        timer.schedule(task, 2000, 5000);
+//    }
+//    class helpTime extends TimerTask
+//    {
+//        public int i = 0;
+//        public void run()
+//    }
+
+
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
         List<String> newList = new ArrayList<>();
@@ -224,6 +226,30 @@ later i plan to change the sets based on power, size, or athetic endurance
                 exStringList2.add("cable pulls");
                 exStringList2.add("preacher curls");
 
+
+                printList= (ArrayList<String>) obj2.getRandomElement(exStringList2,num2);
+                printSet = (ArrayList<Integer>) obj2.getRandomNumber(num2);
+                exList2.setText(Arrays.toString(printList.toArray()));
+                setList2.setText(Arrays.toString(printSet.toArray()));
+                break;
+
+                case R.id.cardioButton:
+                MainActivity obj2 = new MainActivity();
+
+                EditText numExercises2 = (EditText)findViewById(R.id.numExercises);
+                TextView exList2 = (TextView) findViewById(R.id.exList);
+                TextView setList2 = (TextView) findViewById(R.id.numOfReps);
+
+                int num2 = Integer.parseInt(numExercises2.getText().toString());
+                List<String> exStringList2 = new ArrayList<>();
+                ArrayList<String> printList2 = new ArrayList<String>();
+                ArrayList<Integer> printSet2 = new ArrayList<>();
+                //back exercises
+                exStringList2.add("1 mile run");
+                exStringList2.add("100 yard sprints");
+                exStringList2.add("cycling");
+                exStringList2.add("swimming");
+                exStringList2.add("jump rope");
 
                 printList= (ArrayList<String>) obj2.getRandomElement(exStringList2,num2);
                 printSet = (ArrayList<Integer>) obj2.getRandomNumber(num2);
