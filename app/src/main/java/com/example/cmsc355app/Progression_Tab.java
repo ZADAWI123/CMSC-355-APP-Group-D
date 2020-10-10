@@ -30,19 +30,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(4000);
         animationDrawable.start();
 
-        stringTextView = (TextView)findViewById(R.id.totalNumber);
 
-         /*
-        int[] array = {10, 20, 30, 40, 50, 10};
-        int sum = 0;
-
-        //Advanced for loop
-        for (int num : array) {
-            sum = sum+num;
-        }
-          */
-
-        stringTextView.setText(stringTextView.getText());
 
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         //SharedPreferences.Editor myEditor = myPrefs.edit();
