@@ -13,6 +13,13 @@ import android.os.Bundle;
 import android.text.Selection;
 import android.view.View;
 import android.widget.Button;
+import android.content.SharedPreferences;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.os.Bundle;
+import android.widget.TextView;
 
 public class main_hub extends AppCompatActivity {
 
@@ -20,13 +27,53 @@ public class main_hub extends AppCompatActivity {
     private Button BtnPro;
     private Button BtnSel;
     private Button BtnExa;
+    private TextView textView;
+    private double MagnitudePrevious = 0;
+    private Integer stepCount = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_hub);
+
+        textView = findViewById(R.id.textView3);
+        SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
+
+        //This will track your phone and count how many steps you will take.
+        SensorEventListener stepDetector = new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent sensorEvent) {
+
+                if (sensorEvent != null) {
+                    float x_acceleration = sensorEvent.values[0];
+                    float y_acceleration = sensorEvent.values[1];
+                    float z_acceleration = sensorEvent.values[2];
+                    double Magnitude = Math.sqrt(x_acceleration * x_acceleration + y_acceleration * y_acceleration + z_acceleration * z_acceleration);
+                    double MagnitudeDelta = Magnitude - MagnitudePrevious;
+                    MagnitudePrevious = Magnitude;
+
+                    if (MagnitudeDelta > 5) {
+                        stepCount++;
+                    }
+
+                    //This is were it will display your steps.
+                    textView.setText("Steps: " + stepCount.toString());
+                }
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int i) {
+
+            }
+        };
+
+        sensorManager.registerListener(stepDetector, sensor, SensorManager.SENSOR_DELAY_NORMAL);
+
+
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(4000);
@@ -72,6 +119,33 @@ public class main_hub extends AppCompatActivity {
                 moveToExample();
             }
         });
+    }
+
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.putInt("Stepcount", stepCount);
+        editor.apply();
+    }
+
+    protected void onStop() {
+        super.onStop();
+
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.putInt("stepCount", stepCount);
+        editor.apply();
+    }
+
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        stepCount = sharedPreferences.getInt("stepCount", 0);
     }
 
 
