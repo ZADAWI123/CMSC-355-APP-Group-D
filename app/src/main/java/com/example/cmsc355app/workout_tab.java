@@ -85,13 +85,13 @@ public class workout_tab extends AppCompatActivity {
         String numIndicator = Integer.toString(programIndicator);
         TextView pro = findViewById(R.id.pro);
         if(programIndicator == 1){
-            pro.setText("You selected a weight training program.");
+            pro.setText("weight training");
         }
         if(programIndicator == 2){
-            pro.setText("You selected a body weight training program.");
+            pro.setText("body weight training");
         }
         if(programIndicator == 3){
-            pro.setText("You selected a cardio training program.");
+            pro.setText("cardio");
         }
 
     }
