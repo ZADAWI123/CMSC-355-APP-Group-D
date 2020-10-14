@@ -25,6 +25,7 @@ public class workout_tab extends AppCompatActivity {
         final int []count = {myPrefs.getInt("num",0)};
         final int []currentLevel = {myPrefs.getInt("num2",0)};
         final int [] points = {myPrefs.getInt("num3",1)};;
+        final int [] giveUpPoints = {myPrefs.getInt("num4", 0)};
 
         //final String[] temp = {""};
 
@@ -32,6 +33,18 @@ public class workout_tab extends AppCompatActivity {
         setContentView(R.layout.activity_workout_tab);
         Button btn = (Button) findViewById(R.id.btn1);
         //myEditor.putInt("num", count[0]++).commit();
+        Button giveUp = (Button)findViewById(R.id.giveUp);
+        giveUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor myEditor = myPrefs.edit();
+                myEditor.putInt("num4", giveUpPoints[0]++).apply();
+                PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num4", giveUpPoints[0]).apply();
+
+
+
+            }
+        });
 
         btn.setOnClickListener(new View.OnClickListener(){
 
@@ -84,6 +97,7 @@ public class workout_tab extends AppCompatActivity {
         int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
         String numIndicator = Integer.toString(programIndicator);
         TextView pro = findViewById(R.id.pro);
+
         if(programIndicator == 1){
             pro.setText("weight training");
         }
