@@ -129,10 +129,12 @@ later i plan to change the sets based on power, size, or athetic endurance
  */
     @Override
     public void onClick(View view) {
+        MainActivity obj = new MainActivity();
         switch (view.getId())
         {
+            //MainActivity obj = new MainActivity();
             case R.id.chestButton:
-                MainActivity obj = new MainActivity();
+                //MainActivity obj = new MainActivity();
 
                 EditText numExercises = (EditText)findViewById(R.id.numExercises);
                 TextView exList = (TextView) findViewById(R.id.exList);
@@ -159,7 +161,7 @@ later i plan to change the sets based on power, size, or athetic endurance
 
                 break;
             case R.id.legButton:
-                MainActivity obj1 = new MainActivity();
+                //MainActivity obj = new MainActivity();
 
                 EditText numExercises1 = (EditText)findViewById(R.id.numExercises);
                 TextView exList1 = (TextView) findViewById(R.id.exList);
@@ -167,8 +169,6 @@ later i plan to change the sets based on power, size, or athetic endurance
 
                 int num1 = Integer.parseInt(numExercises1.getText().toString());
                 List<String> exStringList1 = new ArrayList<>();
-                ArrayList<String> printList1 = new ArrayList<String>();
-                ArrayList<Integer> printSet1 = new ArrayList<>();
                 //leg exercises
                 exStringList1.add("Jump");
                 exStringList1.add("Squats");
@@ -179,13 +179,13 @@ later i plan to change the sets based on power, size, or athetic endurance
                 exStringList1.add("Lounges");
                 exStringList1.add("leg Press");
 
-                printList= (ArrayList<String>) obj1.getRandomElement(exStringList1,num1);
-                printSet = (ArrayList<Integer>) obj1.getRandomNumber(num1);
+                printList= (ArrayList<String>) obj.getRandomElement(exStringList1,num1);
+                printSet = (ArrayList<Integer>) obj.getRandomNumber(num1);
                 exList1.setText(Arrays.toString(printList.toArray()));
                 setList1.setText(Arrays.toString(printSet.toArray()));
                 break;
             case R.id.backButton:
-                MainActivity obj2 = new MainActivity();
+                //MainActivity obj2 = new MainActivity();
 
                 EditText numExercises2 = (EditText)findViewById(R.id.numExercises);
                 TextView exList2 = (TextView) findViewById(R.id.exList);
@@ -203,8 +203,8 @@ later i plan to change the sets based on power, size, or athetic endurance
                 exStringList2.add("dumbell rows");
                 exStringList2.add("austrialian pullups");
 
-                printList= (ArrayList<String>) obj2.getRandomElement(exStringList2,num2);
-                printSet = (ArrayList<Integer>) obj2.getRandomNumber(num2);
+                printList= (ArrayList<String>) obj.getRandomElement(exStringList2,num2);
+                printSet = (ArrayList<Integer>) obj.getRandomNumber(num2);
                 exList2.setText(Arrays.toString(printList.toArray()));
                 setList2.setText(Arrays.toString(printSet.toArray()));
                 break;
