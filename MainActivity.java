@@ -129,7 +129,7 @@ later i plan to change the sets based on power, size, or athetic endurance
  */
     @Override
     public void onClick(View view) {
-        MainActivity obj = new MainActivity();
+        //MainActivity obj = new MainActivity();
         switch (view.getId())
         {
             //MainActivity obj = new MainActivity();
@@ -154,8 +154,8 @@ later i plan to change the sets based on power, size, or athetic endurance
                 exStringList.add("chest flies");
                 exStringList.add("cable flies");
 
-                printList= (ArrayList<String>) obj.getRandomElement(exStringList,num);
-                printSet = (ArrayList<Integer>) obj.getRandomNumber(num);
+                printList= (ArrayList<String>)getRandomElement(exStringList,num);
+                printSet = (ArrayList<Integer>)getRandomNumber(num);
                 exList.setText(Arrays.toString(printList.toArray()));
                 setList.setText(Arrays.toString(printSet.toArray()));
 
@@ -179,8 +179,8 @@ later i plan to change the sets based on power, size, or athetic endurance
                 exStringList1.add("Lounges");
                 exStringList1.add("leg Press");
 
-                printList= (ArrayList<String>) obj.getRandomElement(exStringList1,num1);
-                printSet = (ArrayList<Integer>) obj.getRandomNumber(num1);
+                printList= (ArrayList<String>)getRandomElement(exStringList1,num1);
+                printSet = (ArrayList<Integer>)getRandomNumber(num1);
                 exList1.setText(Arrays.toString(printList.toArray()));
                 setList1.setText(Arrays.toString(printSet.toArray()));
                 break;
@@ -203,8 +203,8 @@ later i plan to change the sets based on power, size, or athetic endurance
                 exStringList2.add("dumbell rows");
                 exStringList2.add("austrialian pullups");
 
-                printList= (ArrayList<String>) obj.getRandomElement(exStringList2,num2);
-                printSet = (ArrayList<Integer>) obj.getRandomNumber(num2);
+                printList= (ArrayList<String>)getRandomElement(exStringList2,num2);
+                printSet = (ArrayList<Integer>)getRandomNumber(num2);
                 exList2.setText(Arrays.toString(printList.toArray()));
                 setList2.setText(Arrays.toString(printSet.toArray()));
                 break;
