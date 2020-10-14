@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -58,16 +56,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         return newList;
-    }
-    public class timer{
-        Timer timer = new Timer();
-        TimerTask task = new helpTime();
-        timer.schedule(task, 2000, 5000);
-    }
-    class helpTime extends TimerTask
-    {
-        public static int i = 0;
-        public void run()
     }
     public List<Integer> getRandomNumber(int num){
         Random randNum = new Random();
