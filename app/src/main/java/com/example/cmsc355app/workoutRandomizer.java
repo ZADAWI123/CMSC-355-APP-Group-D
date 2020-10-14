@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 public class workoutRandomizer {
-    public List<String> getRandomElement(List<String> exStringList, int num) {
+    public List<String> getRandomElement(List<String> exStringList) {
         Random rand = new Random();
         List<String> newList = new ArrayList<>();
         for (int i=0; i < num; i++){
@@ -16,7 +16,7 @@ public class workoutRandomizer {
         }
         return newList;
     }
-    public List<Integer> getRandomNumber(int num){
+    public List<Integer> getRandomNumber{
         Random randNum = new Random();
         int n = num;
         List<Integer> numList = new ArrayList<>(n);
@@ -26,4 +26,5 @@ public class workoutRandomizer {
         }
         return numList;
     }
+
 }

@@ -169,4 +169,5 @@ public class main_hub extends AppCompatActivity {
         Intent intent3 = new Intent(main_hub.this, workExamples.class);
         startActivity(intent3);
     }
+
 }
