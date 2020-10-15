@@ -1,14 +1,18 @@
 package com.example.cmsc355app;
 
+import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class workoutObjects {
+public class workoutObjects extends AppCompatActivity implements View.OnClickListener {
 
 //    String workout1, workout2, workout3, workout4;
 //
@@ -31,6 +35,16 @@ public class workoutObjects {
 //    public String getWorkout4(){
 //        return workout4;
 //    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+
+
+    }
 
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();

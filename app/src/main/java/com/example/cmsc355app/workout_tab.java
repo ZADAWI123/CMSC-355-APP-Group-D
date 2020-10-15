@@ -11,9 +11,34 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 public class workout_tab extends AppCompatActivity {
 
+    public List<String> getRandomElement(List<String> exStringList, int num) {
+        Random rand = new Random();
+        List<String> newList = new ArrayList<>();
+        for (int i=0; i < num; i++){
+            int randomIndex = rand.nextInt(exStringList.size());
+            newList.add(exStringList.get(randomIndex));
+            exStringList.remove(randomIndex);
 
+        }
+        return newList;
+    }
+    public List<Integer> getRandomNumber(int num){
+        Random randNum = new Random();
+        int n = num;
+        List<Integer> numList = new ArrayList<>(n);
+        for (int i = 1; i <= num; i++){
+            int randomInt = randNum.nextInt(10);
+            numList.add(randomInt + i);
+        }
+        return numList;
+    }
 
     String temp = "";
     String temp2 = "";
@@ -41,7 +66,34 @@ public class workout_tab extends AppCompatActivity {
                 myEditor.putInt("num4", giveUpPoints[0]++).apply();
                 PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num4", giveUpPoints[0]).apply();
 
+                switch (v.getId()) {
 
+                    case R.id.giveUp:
+                        TextView exList = (TextView) findViewById(R.id.exList);
+                        TextView setList = (TextView) findViewById(R.id.numOfReps);
+
+                        int num = 4;
+                        List<String> weightList = new ArrayList<>();
+                        ArrayList<String> printList = new ArrayList<String>();
+                        ArrayList<Integer> printSet = new ArrayList<>();
+                        weightList.add("pull up");
+                        weightList.add("barbell row");
+                        weightList.add("deadlift");
+                        weightList.add("lateral pulldown");
+                        weightList.add("bench press");
+                        weightList.add("incline dumbbell");
+                        weightList.add("flat dumbbell");
+                        weightList.add("cable flies");
+
+
+                        printList= (ArrayList<String>)getRandomElement(weightList,num);
+                        printSet = (ArrayList<Integer>)getRandomNumber(num);
+                        exList.setText(Arrays.toString(printList.toArray()));
+                        setList.setText(Arrays.toString(printSet.toArray()));
+
+
+                        break;
+                }
 
             }
         });
@@ -71,7 +123,10 @@ public class workout_tab extends AppCompatActivity {
                 temp2 = Integer.toString(currentLevel[0]);
                 //textView2.setText(temp);
                 //textView.setText(temp2);
+
             }
+
+
 
 
         });
