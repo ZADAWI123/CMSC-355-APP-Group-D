@@ -18,6 +18,7 @@ import java.util.Random;
 
 public class workout_tab extends AppCompatActivity {
 
+
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
         List<String> newList = new ArrayList<>();
@@ -45,12 +46,25 @@ public class workout_tab extends AppCompatActivity {
 
 
     public void test(){
+        final int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
+        final String numIndicator = Integer.toString(programIndicator);
         //final SharedPreferences myPrefs = getSharedPreferences("tag", 0);
         final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         final int []count = {myPrefs.getInt("num",0)};
         final int []currentLevel = {myPrefs.getInt("num2",0)};
         final int [] points = {myPrefs.getInt("num3",1)};;
         final int [] giveUpPoints = {myPrefs.getInt("num4", 0)};
+        TextView pro = findViewById(R.id.pro);
+
+        if(programIndicator == 1){
+            pro.setText("weight training");
+        }
+        if(programIndicator == 2){
+            pro.setText("body weight training");
+        }
+        if(programIndicator == 3){
+            pro.setText("cardio");
+        }
 
         //final String[] temp = {""};
 
@@ -74,8 +88,11 @@ public class workout_tab extends AppCompatActivity {
 
                         int num = 4;
                         List<String> weightList = new ArrayList<>();
+                        List<String> bodyweightList = new ArrayList<>();
+                        List<String> cardioList = new ArrayList<>();
                         ArrayList<String> printList = new ArrayList<String>();
                         ArrayList<Integer> printSet = new ArrayList<>();
+
                         weightList.add("pull up");
                         weightList.add("barbell row");
                         weightList.add("deadlift");
@@ -85,8 +102,44 @@ public class workout_tab extends AppCompatActivity {
                         weightList.add("flat dumbbell");
                         weightList.add("cable flies");
 
+                        bodyweightList.add("push up");
+                        bodyweightList.add("pull ups");
+                        bodyweightList.add("austrailian pullups");
+                        bodyweightList.add("burpees");
+                        bodyweightList.add("spiderman pushups");
 
-                        printList= (ArrayList<String>)getRandomElement(weightList,num);
+                        bodyweightList.add("squats");
+                        bodyweightList.add("jump squats");
+                        bodyweightList.add("lounges");
+                        bodyweightList.add("box jumps");
+
+                        bodyweightList.add("sit ups");
+                        bodyweightList.add("planks");
+                        bodyweightList.add("flutter kicks");
+
+                        cardioList.add("100 meter sprints");
+                        cardioList.add("jog for 30 min");
+                        cardioList.add("jump rope");
+                        cardioList.add("bicycle");
+
+                        if(programIndicator == 1){
+                            printList= (ArrayList<String>)getRandomElement(weightList,num);
+
+                        }
+                        if(programIndicator == 2){
+                            printList= (ArrayList<String>)getRandomElement(bodyweightList,num);
+
+                        }
+                        if(programIndicator == 3){
+                            printList= (ArrayList<String>)getRandomElement(cardioList,num);
+
+
+
+                        }
+
+
+
+                        //printList= (ArrayList<String>)getRandomElement(weightList,num);
                         printSet = (ArrayList<Integer>)getRandomNumber(num);
                         exList.setText(Arrays.toString(printList.toArray()));
                         setList.setText(Arrays.toString(printSet.toArray()));
@@ -149,19 +202,10 @@ public class workout_tab extends AppCompatActivity {
         3 means they want a cardio execrise program
          */
         test();
-        int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
-        String numIndicator = Integer.toString(programIndicator);
-        TextView pro = findViewById(R.id.pro);
 
-        if(programIndicator == 1){
-            pro.setText("weight training");
-        }
-        if(programIndicator == 2){
-            pro.setText("body weight training");
-        }
-        if(programIndicator == 3){
-            pro.setText("cardio");
-        }
+
+
+
 
     }
 
