@@ -54,17 +54,6 @@ public class workout_tab extends AppCompatActivity {
         final int []currentLevel = {myPrefs.getInt("num2",0)};
         final int [] points = {myPrefs.getInt("num3",1)};;
         final int [] giveUpPoints = {myPrefs.getInt("num4", 0)};
-        TextView pro = findViewById(R.id.pro);
-
-        if(programIndicator == 1){
-            pro.setText("weight training");
-        }
-        if(programIndicator == 2){
-            pro.setText("body weight training");
-        }
-        if(programIndicator == 3){
-            pro.setText("cardio");
-        }
 
         //final String[] temp = {""};
 
@@ -202,6 +191,19 @@ public class workout_tab extends AppCompatActivity {
         3 means they want a cardio execrise program
          */
         test();
+        final TextView pro = findViewById(R.id.pro);
+        final int programI = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
+        final String numIndicator = Integer.toString(programI);
+        if(programI == 1){
+            pro.setText("weight training");
+        }
+        if(programI == 2){
+            pro.setText("body weight training");
+        }
+        if(programI== 3){
+            pro.setText("cardio");
+        }
+
 
 
 
