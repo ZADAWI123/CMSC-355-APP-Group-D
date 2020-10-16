@@ -50,13 +50,16 @@ public class workout_tab extends AppCompatActivity {
             //case R.id.giveUp:
                 TextView exList = (TextView) findViewById(R.id.exList);
                 TextView setList = (TextView) findViewById(R.id.numOfReps);
+                TextView restAmount = (TextView) findViewById(R.id.restAmount);
 
                 int num = 4;
                 List<String> weightList = new ArrayList<>();
                 List<String> bodyweightList = new ArrayList<>();
                 List<String> cardioList = new ArrayList<>();
+                List<String> restList = new ArrayList<>();
                 ArrayList<String> printList = new ArrayList<String>();
                 ArrayList<Integer> printSet = new ArrayList<>();
+                ArrayList<String> printRestSet = new ArrayList<>();
 
                 weightList.add("pull up");
                 weightList.add("barbell row");
@@ -87,6 +90,12 @@ public class workout_tab extends AppCompatActivity {
                 cardioList.add("jump rope");
                 cardioList.add("bicycle");
 
+                restList.add("rest for 30 secs");
+                restList.add("rest for 1 minute");
+                restList.add("rest for 2 minutes");
+                restList.add("rest for 3 minutes");
+
+
                 if(programIndicator == 1){
                     printList= (ArrayList<String>)getRandomElement(weightList,num);
 
@@ -106,8 +115,11 @@ public class workout_tab extends AppCompatActivity {
 
                 //printList= (ArrayList<String>)getRandomElement(weightList,num);
                 printSet = (ArrayList<Integer>)getRandomNumber(num);
+                printRestSet=(ArrayList<String>)getRandomElement(restList,num);
+
                 exList.setText(Arrays.toString(printList.toArray()));
                 setList.setText(Arrays.toString(printSet.toArray()));
+                restAmount.setText(Arrays.toString(printRestSet.toArray()));
 
 
                // break;
