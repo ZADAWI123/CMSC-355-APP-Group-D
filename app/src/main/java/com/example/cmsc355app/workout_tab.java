@@ -45,6 +45,7 @@ public class workout_tab extends AppCompatActivity {
     public void displayWorkouts(){
         final int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
         final String numIndicator = Integer.toString(programIndicator);
+
        // switch (v.getId()) {
 
             //case R.id.giveUp:
@@ -98,14 +99,20 @@ public class workout_tab extends AppCompatActivity {
 
                 if(programIndicator == 1){
                     printList= (ArrayList<String>)getRandomElement(weightList,num);
+                    printSet = (ArrayList<Integer>)getRandomNumber(num);
+                    printRestSet=(ArrayList<String>)getRandomElement(restList,num);
 
                 }
                 if(programIndicator == 2){
                     printList= (ArrayList<String>)getRandomElement(bodyweightList,num);
+                    printSet = (ArrayList<Integer>)getRandomNumber(num);
+                    printRestSet=(ArrayList<String>)getRandomElement(restList,num);
 
                 }
                 if(programIndicator == 3){
                     printList= (ArrayList<String>)getRandomElement(cardioList,num);
+                    printSet = (ArrayList<Integer>)getRandomNumber(num);
+                    printRestSet=(ArrayList<String>)getRandomElement(restList,num);
 
 
 
@@ -114,8 +121,7 @@ public class workout_tab extends AppCompatActivity {
 
 
                 //printList= (ArrayList<String>)getRandomElement(weightList,num);
-                printSet = (ArrayList<Integer>)getRandomNumber(num);
-                printRestSet=(ArrayList<String>)getRandomElement(restList,num);
+
 
                 exList.setText(Arrays.toString(printList.toArray()));
                 setList.setText(Arrays.toString(printSet.toArray()));
@@ -182,6 +188,8 @@ public class workout_tab extends AppCompatActivity {
                 temp2 = Integer.toString(currentLevel[0]);
                 //textView2.setText(temp);
                 //textView.setText(temp2);
+                displayWorkouts();
+
 
             }
 
@@ -227,6 +235,14 @@ public class workout_tab extends AppCompatActivity {
         if(programI== 3){
             pro.setText("cardio");
             displayWorkouts();
+        }
+        if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0) == 0){
+            TextView exList = (TextView) findViewById(R.id.exList);
+            TextView setList = (TextView) findViewById(R.id.numOfReps);
+            TextView restAmount = (TextView) findViewById(R.id.restAmount);
+            exList.setText("You can't work out if you haven't chosen a workout program!");
+            setList.setText("Why would I give you an amount of sets to do for a non-existant workout? :)");
+            restAmount.setText("Why do you want to rest? You haven't even started working out!");
         }
 
 
