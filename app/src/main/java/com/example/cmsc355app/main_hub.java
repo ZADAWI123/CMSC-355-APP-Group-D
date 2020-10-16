@@ -29,7 +29,7 @@ public class main_hub extends AppCompatActivity {
     private Button BtnExa;
     private TextView textView;
     private double MagnitudePrevious = 0;
-    private Integer stepCount = 0;
+    private Integer stCount = 0;
 
 
     @Override
@@ -57,11 +57,11 @@ public class main_hub extends AppCompatActivity {
                     MagnitudePrevious = Magnitude;
 
                     if (MagnitudeDelta > 5) {
-                        stepCount++;
+                        stCount++;
                     }
 
                     //This is were it will display your steps.
-                    textView.setText("Steps: " + stepCount.toString());
+                    textView.setText("Steps: " + stCount.toString());
                 }
             }
 
@@ -127,7 +127,7 @@ public class main_hub extends AppCompatActivity {
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
-        editor.putInt("Stepcount", stepCount);
+        editor.putInt("Stepcount", stCount);
         editor.apply();
     }
 
@@ -137,7 +137,7 @@ public class main_hub extends AppCompatActivity {
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
-        editor.putInt("stepCount", stepCount);
+        editor.putInt("stepCount", stCount);
         editor.apply();
     }
 
@@ -145,7 +145,7 @@ public class main_hub extends AppCompatActivity {
         super.onResume();
 
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        stepCount = sharedPreferences.getInt("stepCount", 0);
+        stCount = sharedPreferences.getInt("stepCount", 0);
     }
 
 
