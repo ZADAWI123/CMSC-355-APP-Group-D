@@ -63,6 +63,17 @@ public class workout_tab extends AppCompatActivity {
                 TextView setList = (TextView) findViewById(R.id.numOfReps);
                 TextView restAmount = (TextView) findViewById(R.id.restAmount);
 
+
+            TextView exercise1 = (TextView) findViewById(R.id.ex1);
+            TextView exercise2 = (TextView) findViewById(R.id.ex2);
+            TextView exercise3 = (TextView) findViewById(R.id.ex3);
+            TextView exercise4 = (TextView) findViewById(R.id.ex4);
+
+            TextView sets1 = (TextView) findViewById(R.id.sets1);
+            TextView sets2 = (TextView) findViewById(R.id.sets2);
+            TextView sets3 = (TextView) findViewById(R.id.sets3);
+            TextView sets4 = (TextView) findViewById(R.id.sets4);
+
                 int num = 4;
                 List<String> weightList = new ArrayList<>();
                 List<String> bodyweightList = new ArrayList<>();
@@ -130,12 +141,36 @@ public class workout_tab extends AppCompatActivity {
 
 
 
+
                 //printList= (ArrayList<String>)getRandomElement(weightList,num);
 
+                String ex1 = printList.get(0);
+                String ex2 = printList.get(1);
+                String ex3 = printList.get(2);
+                String ex4 = printList.get(3);
+                exercise1.setText(ex1);
+                exercise2.setText(ex2);
+                exercise3.setText(ex3);
+                exercise4.setText(ex4);
 
-                exList.setText(Arrays.toString(printList.toArray()));
-                setList.setText(Arrays.toString(printSet.toArray()));
-                restAmount.setText(Arrays.toString(printRestSet.toArray()));
+            String set1 = Integer.toString(printSet.get(0)) + " sets";
+            String set2 = Integer.toString(printSet.get(1)) + " sets";
+            String set3 = Integer.toString(printSet.get(2)) + " sets";
+            String set4 = Integer.toString(printSet.get(3)) + " sets";
+            sets1.setText(set1);
+            sets2.setText(set2);
+            sets3.setText(set3);
+            sets4.setText(set4);
+
+
+
+
+
+
+
+                //exList.setText(Arrays.toString(printList.toArray()));
+                //setList.setText(Arrays.toString(printSet.toArray()));
+                //restAmount.setText(Arrays.toString(printRestSet.toArray()));
 
 
                // break;
@@ -251,8 +286,8 @@ public class workout_tab extends AppCompatActivity {
             TextView setList = (TextView) findViewById(R.id.numOfReps);
             TextView restAmount = (TextView) findViewById(R.id.restAmount);
             exList.setText("You can't work out if you haven't chosen a workout program!");
-            setList.setText("Why would I give you an amount of sets to do for a non-existant workout? :)");
-            restAmount.setText("Why do you want to rest? You haven't even started working out!");
+            setList.setText("");
+            restAmount.setText("");
         }
 
 
