@@ -30,6 +30,9 @@ public class main_hub extends AppCompatActivity {
     private TextView textView;
     private double MagnitudePrevious = 0;
     private Integer stCount = 0;
+    private double calCount = 0;
+
+    TextView stringTextView;
 
 
     @Override
@@ -38,6 +41,7 @@ public class main_hub extends AppCompatActivity {
         setContentView(R.layout.activity_main_hub);
 
         textView = findViewById(R.id.textView3);
+        stringTextView = findViewById(R.id.calCountText);
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
@@ -58,10 +62,12 @@ public class main_hub extends AppCompatActivity {
 
                     if (MagnitudeDelta > 5) {
                         stCount++;
+                        calCount = calCount + 0.04;
                     }
 
                     //This is were it will display your steps.
                     textView.setText("Steps: " + stCount.toString());
+                    stringTextView.setText("Calories: " + calCount);
                 }
             }
 
@@ -127,7 +133,7 @@ public class main_hub extends AppCompatActivity {
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
-        editor.putInt("Stepcount", stCount);
+        editor.putInt("stepcount", stCount);
         editor.apply();
     }
 
