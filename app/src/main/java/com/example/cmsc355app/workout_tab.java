@@ -74,6 +74,11 @@ public class workout_tab extends AppCompatActivity {
             TextView sets3 = (TextView) findViewById(R.id.sets3);
             TextView sets4 = (TextView) findViewById(R.id.sets4);
 
+            TextView rest1 = (TextView) findViewById(R.id.rest1);
+            TextView rest2 = (TextView) findViewById(R.id.rest2);
+            TextView rest3 = (TextView) findViewById(R.id.rest3);
+            TextView rest4 = (TextView) findViewById(R.id.rest4);
+
                 int num = 4;
                 List<String> weightList = new ArrayList<>();
                 List<String> bodyweightList = new ArrayList<>();
@@ -153,14 +158,23 @@ public class workout_tab extends AppCompatActivity {
                 exercise3.setText(ex3);
                 exercise4.setText(ex4);
 
-            String set1 = Integer.toString(printSet.get(0)) + " sets";
-            String set2 = Integer.toString(printSet.get(1)) + " sets";
-            String set3 = Integer.toString(printSet.get(2)) + " sets";
-            String set4 = Integer.toString(printSet.get(3)) + " sets";
-            sets1.setText(set1);
-            sets2.setText(set2);
-            sets3.setText(set3);
-            sets4.setText(set4);
+                String set1 = Integer.toString(printSet.get(0)) + " reps";
+                String set2 = Integer.toString(printSet.get(1)) + " reps";
+                String set3 = Integer.toString(printSet.get(2)) + " reps";
+                String set4 = Integer.toString(printSet.get(3)) + " reps";
+                sets1.setText(set1);
+                sets2.setText(set2);
+                sets3.setText(set3);
+                sets4.setText(set4);
+
+                String rst1 = printRestSet.get(0);
+                String rst2 = printRestSet.get(1);
+                String rst3 = printRestSet.get(2);
+                String rst4 = printRestSet.get(3);
+                rest1.setText(rst1);
+                rest2.setText(rst2);
+                rest3.setText(rst3);
+                rest4.setText(rst4);
 
 
 
@@ -168,8 +182,9 @@ public class workout_tab extends AppCompatActivity {
 
 
 
-                //exList.setText(Arrays.toString(printList.toArray()));
-                //setList.setText(Arrays.toString(printSet.toArray()));
+                exList.setText("");
+                setList.setText("");
+                restAmount.setText("");
                 //restAmount.setText(Arrays.toString(printRestSet.toArray()));
 
 
