@@ -27,10 +27,13 @@ public class main_hub extends AppCompatActivity {
     private Button BtnPro;
     private Button BtnSel;
     private Button BtnExa;
+    private Button BtnReset;
     private TextView textView;
     private double MagnitudePrevious = 0;
     private Integer stCount = 0;
+    private double calCount = 0;
 
+    TextView stringTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class main_hub extends AppCompatActivity {
         setContentView(R.layout.activity_main_hub);
 
         textView = findViewById(R.id.textView3);
+        stringTextView = findViewById(R.id.calCountText);
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
@@ -58,10 +62,12 @@ public class main_hub extends AppCompatActivity {
 
                     if (MagnitudeDelta > 5) {
                         stCount++;
+                        calCount = calCount + 0.04;
                     }
 
                     //This is were it will display your steps.
                     textView.setText("Steps: " + stCount.toString());
+                    stringTextView.setText("Calories: " + calCount);
                 }
             }
 
@@ -87,6 +93,18 @@ public class main_hub extends AppCompatActivity {
             public void onClick(View v) {
 
                 moveToWorkOut();
+            }
+        });
+
+        BtnReset = findViewById(R.id.resetBtn);
+
+        BtnReset.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (v == BtnReset) {
+                    startActivity(new Intent(main_hub.this, main_hub.class));
+                }
             }
         });
 
