@@ -30,19 +30,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(4000);
         animationDrawable.start();
 
-        stringTextView = (TextView)findViewById(R.id.totalNumber);
 
-         /*
-        int[] array = {10, 20, 30, 40, 50, 10};
-        int sum = 0;
-
-        //Advanced for loop
-        for (int num : array) {
-            sum = sum+num;
-        }
-          */
-
-        stringTextView.setText(stringTextView.getText());
 
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         //SharedPreferences.Editor myEditor = myPrefs.edit();
@@ -55,6 +43,15 @@ public class Progression_Tab<array> extends AppCompatActivity {
         String temp2 = Integer.toString(numWorkouts);
         textView2.setText(ranks[level]);
         textView5.setText(temp2);
+
+        TextView displayQuits = (TextView) findViewById(R.id.displayQuits);
+        int quitterRank = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num4", 0);
+        int secondQuitter = quitterRank;
+        if(quitterRank > 7){
+            secondQuitter = 7;
+        }
+        String quitLevel = quitterRanks[secondQuitter];
+        displayQuits.setText(quitLevel);
 
 
 
@@ -110,5 +107,9 @@ public class Progression_Tab<array> extends AppCompatActivity {
                        "LXXIX", "LXXX", "LXXXI", "LXXXII", "LXXXIII", "LLXXXIV", "LXXXV", "LXXXVI",
                        "LXXXVII", "LXXXVIII", "LXXXIX", "XC", "XCI", "XCII", "XCIII", "XCIV", "XCV",
                        "Pablo Liftabar", "Admiral Squatbar", "Hero", "Legend", "Inheritor"};
+
+    String [] quitterRanks = {"Yay, I'm not a quitter!","Quitter", "So bad, I did it twice",
+                              "Third time's a charm, but I'm still a quitter", "n00b",
+                              "Sir Quits-a-Lot", "Weenie Hut Jr.", "Weenie Hut General"};
 
 }
