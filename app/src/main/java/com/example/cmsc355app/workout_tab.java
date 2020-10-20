@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.TextView;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,6 +19,8 @@ import java.util.List;
 import java.util.Random;
 
 public class workout_tab extends AppCompatActivity {
+    private Chronometer stopwatch;
+    private boolean running;
 
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
@@ -265,6 +269,7 @@ public class workout_tab extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_tab);
+        stopwatch = findViewById(R.id.stopwatch);
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
         animationDrawable.setEnterFadeDuration(2000);
@@ -309,9 +314,24 @@ public class workout_tab extends AppCompatActivity {
 
 
 
-
-
     }
-
+    public void startwatch(View v){
+        if(!running){
+            stopwatch.start();
+            running = true;
+        }
+    }
+    public void pauseWatch(View v){
+        if(running){
+            stopwatch.stop();
+            running = false;
+        }
+    }
+    public void resetWatch(View v){
+        if(!running){
+            stopwatch.start();
+            running = true;
+        }
+    }
 
 }

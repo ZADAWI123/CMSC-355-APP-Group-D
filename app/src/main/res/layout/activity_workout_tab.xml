@@ -8,6 +8,17 @@
     android:background="@drawable/gradient_list"
     tools:context=".workout_tab">
 
+    <Chronometer
+        android:id="@+id/stopwatch"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422" />
+
     <Button
         android:id="@+id/btn1"
         android:layout_width="275dp"
@@ -291,4 +302,39 @@
         app:layout_constraintStart_toEndOf="@+id/sets4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.265" />
+
+    <Button
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.136"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:onClick="startwatch" />
+    <Button
+        android:id="@+id/pauseWatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pause watch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <Button
+        android:id="@+id/restartWatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="restartWatch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.306" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
