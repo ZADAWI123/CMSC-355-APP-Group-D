@@ -19,8 +19,6 @@ import java.util.List;
 import java.util.Random;
 //Testing gradle thing
 public class workout_tab extends AppCompatActivity {
-    private Chronometer stopwatch;
-    private boolean running;
 
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
@@ -78,9 +76,6 @@ public class workout_tab extends AppCompatActivity {
        // switch (v.getId()) {
 
             //case R.id.giveUp:
-                TextView exList = (TextView) findViewById(R.id.exList);
-                TextView setList = (TextView) findViewById(R.id.numOfReps);
-                TextView restAmount = (TextView) findViewById(R.id.restAmount);
 
 
             TextView exercise1 = (TextView) findViewById(R.id.ex1);
@@ -181,10 +176,10 @@ public class workout_tab extends AppCompatActivity {
                 exercise3.setText(ex3);
                 exercise4.setText(ex4);
 
-                String set1 = Integer.toString(printSet.get(0)) + " sets " + (printRep.get(0)) + " x reps";
-                String set2 = Integer.toString(printSet.get(1)) + " sets "+ (printRep.get(1))+ " x reps";
-                String set3 = Integer.toString(printSet.get(2)) + " sets "+ (printRep.get(2))+ " x reps";
-                String set4 = Integer.toString(printSet.get(3)) + " sets "+ (printRep.get(3))+ " x reps";
+                String set1 = Integer.toString(printSet.get(0)) + " sets x " + (printRep.get(0)) + " reps";
+                String set2 = Integer.toString(printSet.get(1)) + " sets x "+ (printRep.get(1))+ " reps";
+                String set3 = Integer.toString(printSet.get(2)) + " sets x "+ (printRep.get(2))+ " reps";
+                String set4 = Integer.toString(printSet.get(3)) + " sets x "+ (printRep.get(3))+ " reps";
                 sets1.setText(set1);
                 sets2.setText(set2);
                 sets3.setText(set3);
@@ -205,9 +200,7 @@ public class workout_tab extends AppCompatActivity {
 
 
 
-                exList.setText("");
-                setList.setText("");
-                restAmount.setText("");
+
                 //restAmount.setText(Arrays.toString(printRestSet.toArray()));
 
 
@@ -288,7 +281,6 @@ public class workout_tab extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_tab);
-        stopwatch = findViewById(R.id.stopwatch);
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
         animationDrawable.setEnterFadeDuration(2000);
@@ -321,36 +313,14 @@ public class workout_tab extends AppCompatActivity {
             displayWorkouts();
         }
         if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0) == 0){
-            TextView exList = (TextView) findViewById(R.id.exList);
-            TextView setList = (TextView) findViewById(R.id.numOfReps);
-            TextView restAmount = (TextView) findViewById(R.id.restAmount);
-            exList.setText("You can't work out if you haven't chosen a workout program!");
-            setList.setText("");
-            restAmount.setText("");
+
+
         }
 
 
 
 
 
-    }
-    public void startwatch(View v){
-        if(!running){
-            stopwatch.start();
-            running = true;
-        }
-    }
-    public void pauseWatch(View v){
-        if(running){
-            stopwatch.stop();
-            running = false;
-        }
-    }
-    public void resetWatch(View v){
-        if(!running){
-            stopwatch.start();
-            running = true;
-        }
     }
 
 }
