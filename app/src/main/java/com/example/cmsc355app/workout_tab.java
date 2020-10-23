@@ -46,10 +46,25 @@ public class workout_tab extends AppCompatActivity {
     public List<Integer> getRandomNumber(int num){
         Random randNum = new Random();
         int n = num;
+        int low = 5;
+        int high = 15;
         List<Integer> numList = new ArrayList<>(n);
         for (int i = 1; i <= num; i++){
-            int randomInt = randNum.nextInt(10);
-            numList.add(randomInt + i);
+            int randomInt = randNum.nextInt(high-low)+ low;
+            numList.add(randomInt);
+        }
+        return numList;
+    }
+
+    public List<Integer> getRandomSet(int num){
+        Random randNum = new Random();
+        int n = num;
+        int low = 3;
+        int high = 6;
+        List<Integer> numList = new ArrayList<>(n);
+        for (int i = 1; i <= num; i++){
+            int randomInt = randNum.nextInt(high-low)+ low;
+            numList.add(randomInt);
         }
         return numList;
     }
@@ -90,6 +105,7 @@ public class workout_tab extends AppCompatActivity {
                 List<String> restList = new ArrayList<>();
                 ArrayList<String> printList = new ArrayList<String>();
                 ArrayList<Integer> printSet = new ArrayList<>();
+                ArrayList<Integer> printRep = new ArrayList<>();
                 ArrayList<String> printRestSet = new ArrayList<>();
 
                 weightList.add("pull up");
@@ -129,19 +145,22 @@ public class workout_tab extends AppCompatActivity {
 
                 if(programIndicator == 1){
                     printList= (ArrayList<String>)getRandomElement(weightList,num);
-                    printSet = (ArrayList<Integer>)getRandomNumber(num);
+                    printSet = (ArrayList<Integer>)getRandomSet(num);
+                    printRep = (ArrayList<Integer>)getRandomNumber(num);
                     printRestSet=(ArrayList<String>)getRandomElement(restList,num);
 
                 }
                 if(programIndicator == 2){
                     printList= (ArrayList<String>)getRandomElement(bodyweightList,num);
-                    printSet = (ArrayList<Integer>)getRandomNumber(num);
+                    printSet = (ArrayList<Integer>)getRandomSet(num);
+                    printRep = (ArrayList<Integer>)getRandomNumber(num);
                     printRestSet=(ArrayList<String>)getRandomElement(restList,num);
 
                 }
                 if(programIndicator == 3){
                     printList= (ArrayList<String>)getRandomElement(cardioList,num);
-                    printSet = (ArrayList<Integer>)getRandomNumber(num);
+                    printSet = (ArrayList<Integer>)getRandomSet(num);
+                    printRep = (ArrayList<Integer>)getRandomNumber(num);
                     printRestSet=(ArrayList<String>)getRandomElement(restList,num);
 
 
@@ -162,10 +181,10 @@ public class workout_tab extends AppCompatActivity {
                 exercise3.setText(ex3);
                 exercise4.setText(ex4);
 
-                String set1 = Integer.toString(printSet.get(0)) + " reps";
-                String set2 = Integer.toString(printSet.get(1)) + " reps";
-                String set3 = Integer.toString(printSet.get(2)) + " reps";
-                String set4 = Integer.toString(printSet.get(3)) + " reps";
+                String set1 = Integer.toString(printSet.get(0)) + " sets " + (printRep.get(0)) + " x reps";
+                String set2 = Integer.toString(printSet.get(1)) + " sets "+ (printRep.get(1))+ " x reps";
+                String set3 = Integer.toString(printSet.get(2)) + " sets "+ (printRep.get(2))+ " x reps";
+                String set4 = Integer.toString(printSet.get(3)) + " sets "+ (printRep.get(3))+ " x reps";
                 sets1.setText(set1);
                 sets2.setText(set2);
                 sets3.setText(set3);
