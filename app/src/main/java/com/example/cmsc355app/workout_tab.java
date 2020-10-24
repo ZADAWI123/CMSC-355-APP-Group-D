@@ -294,10 +294,13 @@ public class workout_tab extends AppCompatActivity {
          */
         test();
         final TextView pro = findViewById(R.id.pro);
-        final int programI = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
+        final int programI = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum", 0);
         final String numIndicator = Integer.toString(programI);
 
+//switch{
+    }
 
+        //
 
         if(programI == 1){
             pro.setText("weight training");
