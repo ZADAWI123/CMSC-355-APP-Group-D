@@ -103,7 +103,9 @@ public class main_hub extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (v == BtnReset) {
-                    startActivity(new Intent(main_hub.this, main_hub.class));
+                    //startActivity(new Intent(main_hub.this, main_hub.class));
+                    stCount = 0;
+                    calCount = 0;
                 }
             }
         });
