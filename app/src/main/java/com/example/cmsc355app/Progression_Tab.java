@@ -88,11 +88,6 @@ public class Progression_Tab<array> extends AppCompatActivity {
 
 
 
-
-
-
-
-
     int xp = 0;
 
 

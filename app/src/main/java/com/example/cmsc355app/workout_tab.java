@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -158,11 +159,7 @@ public class workout_tab extends AppCompatActivity {
                     printRep = (ArrayList<Integer>)getRandomNumber(num);
                     printRestSet=(ArrayList<String>)getRandomElement(restList,num);
 
-
-
                 }
-
-
 
 
                 //printList= (ArrayList<String>)getRandomElement(weightList,num);
@@ -194,13 +191,6 @@ public class workout_tab extends AppCompatActivity {
                 rest3.setText(rst3);
                 rest4.setText(rst4);
 
-
-
-
-
-
-
-
                 //restAmount.setText(Arrays.toString(printRestSet.toArray()));
 
 
@@ -230,9 +220,15 @@ public class workout_tab extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor myEditor = myPrefs.edit();
-                myEditor.putInt("num4", giveUpPoints[0]++).apply();
-                PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num4", giveUpPoints[0]).apply();
-                displayWorkouts();
+                if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0) == 0){
+                    Toast.makeText(getApplicationContext(), "Select a workout program :)", Toast.LENGTH_SHORT).show();
+                }else{
+                    myEditor.putInt("num4", giveUpPoints[0]++).apply();
+                    PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num4", giveUpPoints[0]).apply();
+                    displayWorkouts();
+
+                }
+
 
 
 
@@ -241,30 +237,38 @@ public class workout_tab extends AppCompatActivity {
 
         btn.setOnClickListener(new View.OnClickListener(){
 
+
             @Override
             public void onClick(View v){
                 SharedPreferences.Editor myEditor = myPrefs.edit();
+                if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0) == 0){
+                    Toast.makeText(getApplicationContext(), "Select a workout program :)", Toast.LENGTH_SHORT).show();
+                }else{
 
-                //TextView textView2 = (TextView) findViewById(R.id.textView2);
-                //TextView textView = (TextView) findViewById(R.id.textView);
-                myEditor.putInt("num", count[0]++).apply();
-                PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num", count[0]).apply();
 
-                if(count[0] == points[0] * 2){
-                    myEditor.putInt("num2", currentLevel[0]++).apply();
-                    myEditor.putInt("num3", points[0] = count[0]).apply();
-                    PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num2", currentLevel[0]).apply();
-                    PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num", currentLevel[0]).apply();
+                    //TextView textView2 = (TextView) findViewById(R.id.textView2);
+                    //TextView textView = (TextView) findViewById(R.id.textView);
+                    myEditor.putInt("num", count[0]++).apply();
+                    PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num", count[0]).apply();
 
+                    if(count[0] == points[0] * 2){
+                        myEditor.putInt("num2", currentLevel[0]++).apply();
+                        myEditor.putInt("num3", points[0] = count[0]).apply();
+                        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num2", currentLevel[0]).apply();
+                        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num", currentLevel[0]).apply();
+
+
+                    }
+
+
+                    temp = Integer.toString(count[0]);
+                    temp2 = Integer.toString(currentLevel[0]);
+                    //textView2.setText(temp);
+                    //textView.setText(temp2);
+                    displayWorkouts();
 
                 }
 
-
-                temp = Integer.toString(count[0]);
-                temp2 = Integer.toString(currentLevel[0]);
-                //textView2.setText(temp);
-                //textView.setText(temp2);
-                displayWorkouts();
 
 
             }
@@ -298,7 +302,7 @@ public class workout_tab extends AppCompatActivity {
         final String numIndicator = Integer.toString(programI);
 
 //switch{
-    }
+
 
         //
 
@@ -316,13 +320,36 @@ public class workout_tab extends AppCompatActivity {
             displayWorkouts();
         }
         if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0) == 0){
+            TextView exercise1 = (TextView) findViewById(R.id.ex1);
+            TextView exercise2 = (TextView) findViewById(R.id.ex2);
+            TextView exercise3 = (TextView) findViewById(R.id.ex3);
+            TextView exercise4 = (TextView) findViewById(R.id.ex4);
 
+            TextView sets1 = (TextView) findViewById(R.id.sets1);
+            TextView sets2 = (TextView) findViewById(R.id.sets2);
+            TextView sets3 = (TextView) findViewById(R.id.sets3);
+            TextView sets4 = (TextView) findViewById(R.id.sets4);
 
+            TextView rest1 = (TextView) findViewById(R.id.rest1);
+            TextView rest2 = (TextView) findViewById(R.id.rest2);
+            TextView rest3 = (TextView) findViewById(R.id.rest3);
+            TextView rest4 = (TextView) findViewById(R.id.rest4);
+
+            exercise1.setText("You can't work out if you haven't picked a workout program!");
+            exercise2.setText("");
+            exercise3.setText("");
+            exercise4.setText("");
+
+            sets1.setText("");
+            sets2.setText("");
+            sets3.setText("");
+            sets4.setText("");
+
+            rest1.setText("");
+            rest2.setText("");
+            rest3.setText("");
+            rest4.setText("");
         }
-
-
-
-
 
     }
 
