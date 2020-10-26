@@ -255,7 +255,7 @@ public class workout_tab extends AppCompatActivity {
                         myEditor.putInt("num2", currentLevel[0]++).apply();
                         myEditor.putInt("num3", points[0] = count[0]).apply();
                         PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num2", currentLevel[0]).apply();
-                        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num", currentLevel[0]).apply();
+                        //PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num", currentLevel[0]).apply();
 
 
                     }

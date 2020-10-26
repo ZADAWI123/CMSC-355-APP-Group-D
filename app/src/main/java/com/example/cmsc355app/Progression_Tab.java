@@ -76,7 +76,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
                     try {
                         startActivity(Intent.createChooser(shareIntent, "Share via"));
                     } catch (ActivityNotFoundException e) {
-                        Toast.makeText(getApplicationContext(), "No App Available", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
