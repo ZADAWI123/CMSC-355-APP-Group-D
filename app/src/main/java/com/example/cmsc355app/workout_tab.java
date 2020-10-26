@@ -72,27 +72,47 @@ public class workout_tab extends AppCompatActivity {
     String temp2 = "";
     public void displayWorkouts(){
         final int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
+        final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         final String numIndicator = Integer.toString(programIndicator);
+        final String [] favoriteE = {myPrefs.getString("e1","")};
+        final String [] favoriteE2 = {myPrefs.getString("e2","")};
+        final String [] favoriteE3 = {myPrefs.getString("e3","")};
+        final String [] favoriteE4 = {myPrefs.getString("e4","")};
 
-       // switch (v.getId()) {
+
+
+        final String [] favoriteR = {myPrefs.getString("r1","")};
+        final String [] favoriteR2 = {myPrefs.getString("r2","")};
+        final String [] favoriteR3 = {myPrefs.getString("r3","")};
+        final String [] favoriteR4 = {myPrefs.getString("r4","")};
+
+        final String [] favoriteS = {myPrefs.getString("s1","")};
+        final String [] favoriteS2 = {myPrefs.getString("s2","")};
+        final String [] favoriteS3 = {myPrefs.getString("s3","")};
+        final String [] favoriteS4 = {myPrefs.getString("s4","")};
+
+
+
+
+        // switch (v.getId()) {
 
             //case R.id.giveUp:
 
 
-            TextView exercise1 = (TextView) findViewById(R.id.ex1);
-            TextView exercise2 = (TextView) findViewById(R.id.ex2);
-            TextView exercise3 = (TextView) findViewById(R.id.ex3);
-            TextView exercise4 = (TextView) findViewById(R.id.ex4);
+            final TextView exercise1 = (TextView) findViewById(R.id.ex1);
+            final TextView exercise2 = (TextView) findViewById(R.id.ex2);
+            final TextView exercise3 = (TextView) findViewById(R.id.ex3);
+            final TextView exercise4 = (TextView) findViewById(R.id.ex4);
 
-            TextView sets1 = (TextView) findViewById(R.id.sets1);
-            TextView sets2 = (TextView) findViewById(R.id.sets2);
-            TextView sets3 = (TextView) findViewById(R.id.sets3);
-            TextView sets4 = (TextView) findViewById(R.id.sets4);
+            final TextView sets1 = (TextView) findViewById(R.id.sets1);
+            final TextView sets2 = (TextView) findViewById(R.id.sets2);
+            final TextView sets3 = (TextView) findViewById(R.id.sets3);
+            final TextView sets4 = (TextView) findViewById(R.id.sets4);
 
-            TextView rest1 = (TextView) findViewById(R.id.rest1);
-            TextView rest2 = (TextView) findViewById(R.id.rest2);
-            TextView rest3 = (TextView) findViewById(R.id.rest3);
-            TextView rest4 = (TextView) findViewById(R.id.rest4);
+            final TextView rest1 = (TextView) findViewById(R.id.rest1);
+            final TextView rest2 = (TextView) findViewById(R.id.rest2);
+            final TextView rest3 = (TextView) findViewById(R.id.rest3);
+            final TextView rest4 = (TextView) findViewById(R.id.rest4);
 
                 int num = 4;
                 List<String> weightList = new ArrayList<>();
@@ -162,34 +182,113 @@ public class workout_tab extends AppCompatActivity {
                 }
 
 
+
+
                 //printList= (ArrayList<String>)getRandomElement(weightList,num);
 
-                String ex1 = printList.get(0);
-                String ex2 = printList.get(1);
-                String ex3 = printList.get(2);
-                String ex4 = printList.get(3);
+                final String ex1 = printList.get(0);
+                final String ex2 = printList.get(1);
+                final String ex3 = printList.get(2);
+                final String ex4 = printList.get(3);
                 exercise1.setText(ex1);
                 exercise2.setText(ex2);
                 exercise3.setText(ex3);
                 exercise4.setText(ex4);
 
-                String set1 = Integer.toString(printSet.get(0)) + " sets x " + (printRep.get(0)) + " reps";
-                String set2 = Integer.toString(printSet.get(1)) + " sets x "+ (printRep.get(1))+ " reps";
-                String set3 = Integer.toString(printSet.get(2)) + " sets x "+ (printRep.get(2))+ " reps";
-                String set4 = Integer.toString(printSet.get(3)) + " sets x "+ (printRep.get(3))+ " reps";
+                final String set1 = Integer.toString(printSet.get(0)) + " sets x " + (printRep.get(0)) + " reps";
+                final String set2 = Integer.toString(printSet.get(1)) + " sets x "+ (printRep.get(1))+ " reps";
+                final String set3 = Integer.toString(printSet.get(2)) + " sets x "+ (printRep.get(2))+ " reps";
+                final String set4 = Integer.toString(printSet.get(3)) + " sets x "+ (printRep.get(3))+ " reps";
                 sets1.setText(set1);
                 sets2.setText(set2);
                 sets3.setText(set3);
                 sets4.setText(set4);
 
-                String rst1 = printRestSet.get(0);
-                String rst2 = printRestSet.get(1);
-                String rst3 = printRestSet.get(2);
-                String rst4 = printRestSet.get(3);
+                final String rst1 = printRestSet.get(0);
+                final String rst2 = printRestSet.get(1);
+                final String rst3 = printRestSet.get(2);
+                final String rst4 = printRestSet.get(3);
                 rest1.setText(rst1);
                 rest2.setText(rst2);
                 rest3.setText(rst3);
                 rest4.setText(rst4);
+
+        Button fav = (Button) findViewById(R.id.fav);
+
+
+        final ArrayList<String> finalPrintList = printList;
+        final ArrayList<String> finalPrintRestSet = printRestSet;
+        final ArrayList<Integer> finalPrintSet = printSet;
+        final ArrayList<Integer> finalPrintRep = printRep;
+        fav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor myEditor = myPrefs.edit();
+                if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0) == 0){
+                    Toast.makeText(getApplicationContext(), "Select a workout program :)", Toast.LENGTH_SHORT).show();
+                }else{
+                    myEditor.putString("e1", favoriteE[0] = finalPrintList.get(0)).apply();
+                    myEditor.putString("e2", favoriteE2[0] = finalPrintList.get(1)).apply();
+                    myEditor.putString("e3", favoriteE3[0] = finalPrintList.get(2)).apply();
+                    myEditor.putString("e4", favoriteE4[0] = finalPrintList.get(3)).apply();
+
+                    myEditor.putString("r1", favoriteR[0] = finalPrintRestSet.get(0)).apply();
+                    myEditor.putString("r2", favoriteR2[0] = finalPrintRestSet.get(1)).apply();
+                    myEditor.putString("r3", favoriteR3[0] = finalPrintRestSet.get(2)).apply();
+                    myEditor.putString("r4", favoriteR4[0] = finalPrintRestSet.get(3)).apply();
+
+                    myEditor.putString("s1", favoriteS[0] = String.valueOf(finalPrintSet.get(0) + " sets x " + finalPrintRep.get(0) + " reps")).apply();
+                    myEditor.putString("s2", favoriteS2[0] = String.valueOf(finalPrintSet.get(0) + " sets x " + finalPrintRep.get(0) + " reps")).apply();
+                    myEditor.putString("s3", favoriteS3[0] = String.valueOf(finalPrintSet.get(0) + " sets x " + finalPrintRep.get(0) + " reps")).apply();
+                    myEditor.putString("s4", favoriteS4[0] = String.valueOf(finalPrintSet.get(0) + " sets x " + finalPrintRep.get(0) + " reps")).apply();
+
+                    //myEditor.putString("s1", favoriteRep[0] = String.valueOf(finalPrintRep.get(0))).apply();
+                    //myEditor.putString("s1", favoriteRep[1] = String.valueOf(finalPrintRep.get(1))).apply();
+                    //myEditor.putString("s1", favoriteRep[2] = String.valueOf(finalPrintRep.get(2))).apply();
+                    //myEditor.putString("s1", favoriteRep[3] = String.valueOf(finalPrintRep.get(3))).apply();
+
+
+                }
+
+
+
+
+            }
+        });
+
+        Button sv = (Button) findViewById(R.id.sv);
+        sv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor myEditor = myPrefs.edit();
+                if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0) == 0){
+                    Toast.makeText(getApplicationContext(), "Select a workout program :)", Toast.LENGTH_SHORT).show();
+                }else{
+                    PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("s1", String.valueOf(0));
+                    PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r1", String.valueOf(0));
+                    PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("e1", String.valueOf(0));
+                    exercise1.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("e1", String.valueOf(0)));
+                    exercise2.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("e2", String.valueOf(0)));
+                    exercise3.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("e3", String.valueOf(0)));
+                    exercise4.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("e4", String.valueOf(0)));
+
+                    sets1.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("s1", String.valueOf(0)));
+                    sets2.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("s2", String.valueOf(0)));
+                    sets3.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("s3", String.valueOf(0)));
+                    sets4.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("s4", String.valueOf(0)));
+
+                    rest1.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r1", String.valueOf(0)));
+                    rest2.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r2", String.valueOf(0)));
+                    rest3.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r3", String.valueOf(0)));
+                    rest4.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r4", String.valueOf(0)));
+
+
+
+                }
+
+            }
+        });
+
 
                 //restAmount.setText(Arrays.toString(printRestSet.toArray()));
 
@@ -208,6 +307,8 @@ public class workout_tab extends AppCompatActivity {
         final int []currentLevel = {myPrefs.getInt("num2",0)};
         final int [] points = {myPrefs.getInt("num3",1)};;
         final int [] giveUpPoints = {myPrefs.getInt("num4", 0)};
+
+
 
         //final String[] temp = {""};
 
@@ -278,6 +379,8 @@ public class workout_tab extends AppCompatActivity {
 
 
         });
+
+
 
     }
 
