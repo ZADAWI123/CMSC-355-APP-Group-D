@@ -103,18 +103,24 @@ public class workout_tab extends AppCompatActivity {
             final TextView exercise2 = (TextView) findViewById(R.id.ex2);
             final TextView exercise3 = (TextView) findViewById(R.id.ex3);
             final TextView exercise4 = (TextView) findViewById(R.id.ex4);
+            final TextView exerciseInt = (TextView) findViewById(R.id.exInt);
+            final TextView exerciseHard = (TextView) findViewById(R.id.exHard);
 
             final TextView sets1 = (TextView) findViewById(R.id.sets1);
             final TextView sets2 = (TextView) findViewById(R.id.sets2);
             final TextView sets3 = (TextView) findViewById(R.id.sets3);
             final TextView sets4 = (TextView) findViewById(R.id.sets4);
+            final TextView setsInt = (TextView) findViewById(R.id.setsInt);
+            final TextView setsHard = (TextView) findViewById(R.id.setsHard);
 
             final TextView rest1 = (TextView) findViewById(R.id.rest1);
             final TextView rest2 = (TextView) findViewById(R.id.rest2);
             final TextView rest3 = (TextView) findViewById(R.id.rest3);
             final TextView rest4 = (TextView) findViewById(R.id.rest4);
+            final TextView restInt = (TextView) findViewById(R.id.restInt);
+            final TextView restHard = (TextView) findViewById(R.id.restHard);
 
-                int num = 4;
+                int num = 6;
                 List<String> weightList = new ArrayList<>();
                 List<String> bodyweightList = new ArrayList<>();
                 List<String> cardioList = new ArrayList<>();
@@ -148,15 +154,20 @@ public class workout_tab extends AppCompatActivity {
                 bodyweightList.add("planks");
                 bodyweightList.add("flutter kicks");
 
+
                 cardioList.add("100 meter sprints");
                 cardioList.add("jog for 30 min");
                 cardioList.add("jump rope");
                 cardioList.add("bicycle");
+                cardioList.add("swimming laps");
+                cardioList.add("run 2 miles");
 
                 restList.add("rest for 30 secs");
                 restList.add("rest for 1 minute");
                 restList.add("rest for 2 minutes");
                 restList.add("rest for 3 minutes");
+                restList.add("fully rest");
+                restList.add("less than 5 seconds");
 
 
                 if(programIndicator == 1){
@@ -190,19 +201,23 @@ public class workout_tab extends AppCompatActivity {
                 final String ex2 = printList.get(1);
                 final String ex3 = printList.get(2);
                 final String ex4 = printList.get(3);
+                final String exInt = printList.get(4);
                 exercise1.setText(ex1);
                 exercise2.setText(ex2);
                 exercise3.setText(ex3);
                 exercise4.setText(ex4);
+                exerciseInt.setText(exInt);
 
                 final String set1 = Integer.toString(printSet.get(0)) + " sets x " + (printRep.get(0)) + " reps";
                 final String set2 = Integer.toString(printSet.get(1)) + " sets x "+ (printRep.get(1))+ " reps";
                 final String set3 = Integer.toString(printSet.get(2)) + " sets x "+ (printRep.get(2))+ " reps";
                 final String set4 = Integer.toString(printSet.get(3)) + " sets x "+ (printRep.get(3))+ " reps";
+                final String setInt = Integer.toString(printSet.get(4)) + " sets x "+ (printRep.get(4))+ " reps";
                 sets1.setText(set1);
                 sets2.setText(set2);
                 sets3.setText(set3);
                 sets4.setText(set4);
+                setsInt.setText(setInt);
 
                 final String rst1 = printRestSet.get(0);
                 final String rst2 = printRestSet.get(1);
@@ -295,6 +310,7 @@ public class workout_tab extends AppCompatActivity {
 
                // break;
        // }
+
     }
 
 
@@ -427,6 +443,7 @@ public class workout_tab extends AppCompatActivity {
             TextView exercise2 = (TextView) findViewById(R.id.ex2);
             TextView exercise3 = (TextView) findViewById(R.id.ex3);
             TextView exercise4 = (TextView) findViewById(R.id.ex4);
+            TextView exerciseInt = (TextView) findViewById(R.id.exInt);
 
             TextView sets1 = (TextView) findViewById(R.id.sets1);
             TextView sets2 = (TextView) findViewById(R.id.sets2);
