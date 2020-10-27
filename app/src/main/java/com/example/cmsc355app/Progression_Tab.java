@@ -19,6 +19,7 @@ import java.util.Scanner;
 public class Progression_Tab<array> extends AppCompatActivity {
 
     TextView stringTextView;
+    TextView receiver_msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,18 @@ public class Progression_Tab<array> extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(4000);
         animationDrawable.start();
+
+        receiver_msg = (TextView) findViewById(R.id.calid);
+
+        // create the get Intent object
+        Intent intent = getIntent();
+
+        // receive the value by getStringExtra() method
+        // and key must be same which is send by first activity
+        String str = intent.getStringExtra("message_key");
+
+        // display the string into textView
+        receiver_msg.setText(str);
 
 
 
@@ -44,6 +57,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
         textView2.setText(ranks[level]);
         textView5.setText(temp2);
 
+        //This will display the quit level if you clicked "I Give Up"
         TextView displayQuits = (TextView) findViewById(R.id.displayQuits);
         int quitterRank = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num4", 0);
         int secondQuitter = quitterRank;

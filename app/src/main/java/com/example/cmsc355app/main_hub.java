@@ -103,7 +103,13 @@ public class main_hub extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (v == BtnReset) {
-                    //startActivity(new Intent(main_hub.this, main_hub.class));
+                    double totalCal;
+                    totalCal = calCount;
+                    String str = stringTextView.toString();
+                    Intent intent = new Intent(getApplicationContext(), Progression_Tab.class);
+                    intent.putExtra("message_key", str);
+                    startActivity(intent);
+
                     stCount = 0;
                     calCount = 0;
                 }
