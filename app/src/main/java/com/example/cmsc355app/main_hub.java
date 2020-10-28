@@ -6,7 +6,6 @@ package com.example.cmsc355app;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -137,8 +136,7 @@ public class main_hub extends AppCompatActivity {
             }
         });
 
-        BtnExa = (Button)findViewById(R.id.examplesBtn);
-
+        Button BtnExa = (Button) findViewById(R.id.examplesBtn);
         BtnExa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
