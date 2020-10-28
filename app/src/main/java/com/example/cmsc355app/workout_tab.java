@@ -9,13 +9,11 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 //Testing gradle thing
@@ -202,31 +200,42 @@ public class workout_tab extends AppCompatActivity {
                 final String ex3 = printList.get(2);
                 final String ex4 = printList.get(3);
                 final String exInt = printList.get(4);
+                final String exHard = printList.get(5);
                 exercise1.setText(ex1);
                 exercise2.setText(ex2);
                 exercise3.setText(ex3);
                 exercise4.setText(ex4);
                 exerciseInt.setText(exInt);
+                exerciseHard.setText(exHard);
+
 
                 final String set1 = Integer.toString(printSet.get(0)) + " sets x " + (printRep.get(0)) + " reps";
                 final String set2 = Integer.toString(printSet.get(1)) + " sets x "+ (printRep.get(1))+ " reps";
                 final String set3 = Integer.toString(printSet.get(2)) + " sets x "+ (printRep.get(2))+ " reps";
                 final String set4 = Integer.toString(printSet.get(3)) + " sets x "+ (printRep.get(3))+ " reps";
                 final String setInt = Integer.toString(printSet.get(4)) + " sets x "+ (printRep.get(4))+ " reps";
+                final String setHard = Integer.toString(printSet.get(5)) + " sets x "+ (printRep.get(5))+ " reps";
                 sets1.setText(set1);
                 sets2.setText(set2);
                 sets3.setText(set3);
                 sets4.setText(set4);
                 setsInt.setText(setInt);
+                setsHard.setText(setHard);
 
                 final String rst1 = printRestSet.get(0);
                 final String rst2 = printRestSet.get(1);
                 final String rst3 = printRestSet.get(2);
                 final String rst4 = printRestSet.get(3);
+                final String rstInt = printRestSet.get(4);
+                final String rstHard = printRestSet.get(4);
                 rest1.setText(rst1);
                 rest2.setText(rst2);
                 rest3.setText(rst3);
                 rest4.setText(rst4);
+//                if (int temp = intTemp){
+//                    restInt.setText(rstInt);
+//                }
+                restHard.setText(rstHard);
 
         Button fav = (Button) findViewById(R.id.fav);
 
@@ -331,6 +340,31 @@ public class workout_tab extends AppCompatActivity {
         temp  = Integer.toString(count[0]);
         setContentView(R.layout.activity_workout_tab);
         Button btn = (Button) findViewById(R.id.btn1);
+        Button easyBtn = (Button) findViewById(R.id.easy);
+        Button intBtn = (Button) findViewById(R.id.intermediate);
+        Button hardBtn = (Button) findViewById(R.id.hard);
+
+        easyBtn.setOnClickListener(new View.OnClickListener(){
+            int easyTemp;
+            public void onClick(View v){
+                easyTemp = 3;
+                //return easyTemp;
+            }
+
+        });
+        intBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                int intTemp = 4;
+            }
+        });
+        hardBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                int hardTemp = 5;
+            }
+        });
+
         //myEditor.putInt("num", count[0]++).commit();
         Button giveUp = (Button)findViewById(R.id.giveUp);
         giveUp.setOnClickListener(new View.OnClickListener() {
@@ -345,10 +379,6 @@ public class workout_tab extends AppCompatActivity {
                     displayWorkouts();
 
                 }
-
-
-
-
             }
         });
 
