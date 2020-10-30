@@ -215,16 +215,7 @@ public class workout_tab extends AppCompatActivity {
                 final String set4 = Integer.toString(printSet.get(3)) + " sets x "+ (printRep.get(3))+ " reps";
                 final String setInt = Integer.toString(printSet.get(4)) + " sets x "+ (printRep.get(4))+ " reps";
                 final String setHard = Integer.toString(printSet.get(5)) + " sets x "+ (printRep.get(5))+ " reps";
-                sets1.setText(set1);
-                sets2.setText(set2);
-                sets3.setText(set3);
-                sets4.setText(set4);
-                if(choice == 1) {
-                    setsInt.setText(setInt);
-                }
-                if(choice == 2) {
-                    setsHard.setText(setHard);
-                }
+
 
                 final String rst1 = printRestSet.get(0);
                 final String rst2 = printRestSet.get(1);
@@ -322,6 +313,31 @@ public class workout_tab extends AppCompatActivity {
                // break;
        // }
 
+        if(choiceEasy == true && choiceInt == false && choiceHard == false) {
+            sets1.setText(set1);
+            sets2.setText(set2);
+            sets3.setText(set3);
+            sets4.setText(set4);
+            setsInt.setText(null);
+            setsHard.setText(null);
+        }
+        else if(choiceEasy == true && choiceInt == true && choiceHard == false) {
+            sets1.setText(set1);
+            sets2.setText(set2);
+            sets3.setText(set3);
+            sets4.setText(set4);
+            setsInt.setText(setInt);
+            setsHard.setText(null);
+        }
+        else if(choiceEasy == true && choiceInt == true && choiceHard == true) {
+            sets1.setText(set1);
+            sets2.setText(set2);
+            sets3.setText(set3);
+            sets4.setText(set4);
+            setsInt.setText(setInt);
+            setsHard.setText(setHard);
+        }
+
     }
 
 
@@ -343,8 +359,6 @@ public class workout_tab extends AppCompatActivity {
         setContentView(R.layout.activity_workout_tab);
         Button btn = (Button) findViewById(R.id.btn1);
         Button easyBtn = (Button) findViewById(R.id.easy);
-        Button intBtn = (Button) findViewById(R.id.intermediate);
-        Button hardBtn = (Button) findViewById(R.id.hard);
         
 
 
@@ -412,7 +426,9 @@ public class workout_tab extends AppCompatActivity {
 
 
     }
-    int choice = 0;
+    boolean choiceEasy = false;
+    boolean choiceInt = false;
+    boolean choiceHard = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -434,20 +450,32 @@ public class workout_tab extends AppCompatActivity {
         final int programI = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum", 0);
         final String numIndicator = Integer.toString(programI);
 
+        Button easyBtn = (Button) findViewById(R.id.easy);
         Button intBtn = (Button) findViewById(R.id.intermediate);
         Button hardBtn = (Button) findViewById(R.id.hard);
+
+        easyBtn.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                choiceEasy = true;
+                choiceInt = false;
+                choiceHard = false;
+            }
+        });
 
         intBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                choice = 1;
+                choiceEasy = true;
+                choiceInt = true;
+                choiceHard = false;
             }
         });
 
         hardBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
             public void onClick(View v){
-                choice = 2;
+                choiceEasy = true;
+                choiceInt = true;
+                choiceHard = true;
             }
         });
 
