@@ -219,8 +219,12 @@ public class workout_tab extends AppCompatActivity {
                 sets2.setText(set2);
                 sets3.setText(set3);
                 sets4.setText(set4);
-                setsInt.setText(setInt);
-                setsHard.setText(setHard);
+                if(choice == 1) {
+                    setsInt.setText(setInt);
+                }
+                if(choice == 2) {
+                    setsHard.setText(setHard);
+                }
 
                 final String rst1 = printRestSet.get(0);
                 final String rst2 = printRestSet.get(1);
@@ -232,9 +236,7 @@ public class workout_tab extends AppCompatActivity {
                 rest2.setText(rst2);
                 rest3.setText(rst3);
                 rest4.setText(rst4);
-//                if (int temp = intTemp){
-//                    restInt.setText(rstInt);
-//                }
+                restInt.setText(rstInt);
                 restHard.setText(rstHard);
 
         Button fav = (Button) findViewById(R.id.fav);
@@ -343,27 +345,8 @@ public class workout_tab extends AppCompatActivity {
         Button easyBtn = (Button) findViewById(R.id.easy);
         Button intBtn = (Button) findViewById(R.id.intermediate);
         Button hardBtn = (Button) findViewById(R.id.hard);
+        
 
-        easyBtn.setOnClickListener(new View.OnClickListener(){
-            int easyTemp;
-            public void onClick(View v){
-                easyTemp = 3;
-                //return easyTemp;
-            }
-
-        });
-        intBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                int intTemp = 4;
-            }
-        });
-        hardBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                int hardTemp = 5;
-            }
-        });
 
         //myEditor.putInt("num", count[0]++).commit();
         Button giveUp = (Button)findViewById(R.id.giveUp);
@@ -429,9 +412,10 @@ public class workout_tab extends AppCompatActivity {
 
 
     }
-
+    int choice = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_tab);
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
@@ -449,6 +433,23 @@ public class workout_tab extends AppCompatActivity {
         final TextView pro = findViewById(R.id.pro);
         final int programI = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum", 0);
         final String numIndicator = Integer.toString(programI);
+
+        Button intBtn = (Button) findViewById(R.id.intermediate);
+        Button hardBtn = (Button) findViewById(R.id.hard);
+
+        intBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                choice = 1;
+            }
+        });
+
+        hardBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                choice = 2;
+            }
+        });
 
 //switch{
 
