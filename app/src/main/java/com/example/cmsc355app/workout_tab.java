@@ -201,12 +201,7 @@ public class workout_tab extends AppCompatActivity {
                 final String ex4 = printList.get(3);
                 final String exInt = printList.get(4);
                 final String exHard = printList.get(5);
-                exercise1.setText(ex1);
-                exercise2.setText(ex2);
-                exercise3.setText(ex3);
-                exercise4.setText(ex4);
-                exerciseInt.setText(exInt);
-                exerciseHard.setText(exHard);
+
 
 
                 final String set1 = Integer.toString(printSet.get(0)) + " sets x " + (printRep.get(0)) + " reps";
@@ -223,12 +218,6 @@ public class workout_tab extends AppCompatActivity {
                 final String rst4 = printRestSet.get(3);
                 final String rstInt = printRestSet.get(4);
                 final String rstHard = printRestSet.get(4);
-                rest1.setText(rst1);
-                rest2.setText(rst2);
-                rest3.setText(rst3);
-                rest4.setText(rst4);
-                restInt.setText(rstInt);
-                restHard.setText(rstHard);
 
         Button fav = (Button) findViewById(R.id.fav);
 
@@ -318,24 +307,61 @@ public class workout_tab extends AppCompatActivity {
             sets2.setText(set2);
             sets3.setText(set3);
             sets4.setText(set4);
+            rest1.setText(rst1);
+            rest2.setText(rst2);
+            rest3.setText(rst3);
+            rest4.setText(rst4);
+            exercise1.setText(ex1);
+            exercise2.setText(ex2);
+            exercise3.setText(ex3);
+            exercise4.setText(ex4);
+            exerciseInt.setText(null);
+            restInt.setText(null);
             setsInt.setText(null);
             setsHard.setText(null);
+            restHard.setText(null);
+            exerciseHard.setText(null);
         }
         else if(choiceEasy == true && choiceInt == true && choiceHard == false) {
             sets1.setText(set1);
             sets2.setText(set2);
             sets3.setText(set3);
             sets4.setText(set4);
+            rest1.setText(rst1);
+            rest2.setText(rst2);
+            rest3.setText(rst3);
+            rest4.setText(rst4);
+            exercise1.setText(ex1);
+            exercise2.setText(ex2);
+            exercise3.setText(ex3);
+            exercise4.setText(ex4);
             setsInt.setText(setInt);
+            restInt.setText(rstInt);
+            exerciseInt.setText(exInt);
+            exerciseHard.setText(null);
             setsHard.setText(null);
+            restHard.setText(null);
         }
         else if(choiceEasy == true && choiceInt == true && choiceHard == true) {
             sets1.setText(set1);
             sets2.setText(set2);
             sets3.setText(set3);
             sets4.setText(set4);
+            rest1.setText(rst1);
+            rest2.setText(rst2);
+            rest3.setText(rst3);
+            rest4.setText(rst4);
+            exercise1.setText(ex1);
+            exercise2.setText(ex2);
+            exercise3.setText(ex3);
+            exercise4.setText(ex4);
+            exerciseInt.setText(exInt);
             setsInt.setText(setInt);
+            restInt.setText(rstInt);
+            exerciseHard.setText(exHard);
             setsHard.setText(setHard);
+            restHard.setText(rstHard);
+
         }
 
     }
