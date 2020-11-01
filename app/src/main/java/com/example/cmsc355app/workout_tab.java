@@ -76,6 +76,10 @@ public class workout_tab extends AppCompatActivity {
         final String [] favoriteE2 = {myPrefs.getString("e2","")};
         final String [] favoriteE3 = {myPrefs.getString("e3","")};
         final String [] favoriteE4 = {myPrefs.getString("e4","")};
+        final String [] favoriteE5 = {myPrefs.getString("e5","")};
+        final String [] favoriteE6 = {myPrefs.getString("e6","")};
+
+
 
 
 
@@ -83,11 +87,19 @@ public class workout_tab extends AppCompatActivity {
         final String [] favoriteR2 = {myPrefs.getString("r2","")};
         final String [] favoriteR3 = {myPrefs.getString("r3","")};
         final String [] favoriteR4 = {myPrefs.getString("r4","")};
+        final String [] favoriteR5 = {myPrefs.getString("r5","")};
+        final String [] favoriteR6 = {myPrefs.getString("r6","")};
+
+
 
         final String [] favoriteS = {myPrefs.getString("s1","")};
         final String [] favoriteS2 = {myPrefs.getString("s2","")};
         final String [] favoriteS3 = {myPrefs.getString("s3","")};
         final String [] favoriteS4 = {myPrefs.getString("s4","")};
+        final String [] favoriteS5 = {myPrefs.getString("s5","")};
+        final String [] favoriteS6 = {myPrefs.getString("s6","")};
+
+
 
 
 
@@ -174,6 +186,7 @@ public class workout_tab extends AppCompatActivity {
                     printRep = (ArrayList<Integer>)getRandomNumber(num);
                     printRestSet=(ArrayList<String>)getRandomElement(restList,num);
 
+
                 }
                 if(programIndicator == 2){
                     printList= (ArrayList<String>)getRandomElement(bodyweightList,num);
@@ -248,6 +261,39 @@ public class workout_tab extends AppCompatActivity {
                     myEditor.putString("s3", favoriteS3[0] = String.valueOf(finalPrintSet.get(0) + " sets x " + finalPrintRep.get(0) + " reps")).apply();
                     myEditor.putString("s4", favoriteS4[0] = String.valueOf(finalPrintSet.get(0) + " sets x " + finalPrintRep.get(0) + " reps")).apply();
 
+                    myEditor.putString("e5", favoriteE5[0] = " ").apply();
+                    myEditor.putString("r5", favoriteR5[0] = " ").apply();
+                    myEditor.putString("s5", favoriteS5[0] = " ").apply();
+
+                    myEditor.putString("e6", favoriteE6[0] = " ").apply();
+                    myEditor.putString("r6", favoriteR6[0] = " ").apply();
+                    myEditor.putString("s6", favoriteS6[0] = " ").apply();
+
+                    if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
+                            && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
+                            && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
+                        myEditor.putString("e5", favoriteE5[0] = finalPrintList.get(4)).apply();
+                        myEditor.putString("r5", favoriteR5[0] = finalPrintRestSet.get(4)).apply();
+                        myEditor.putString("s5", favoriteS5[0] = String.valueOf(finalPrintSet.get(0) + " sets x " + finalPrintRep.get(0) + " reps")).apply();
+
+
+
+
+                    }
+                    if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
+                            && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
+                            && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == true) {
+                        myEditor.putString("e5", favoriteE5[0] = finalPrintList.get(4)).apply();
+                        myEditor.putString("r5", favoriteR5[0] = finalPrintRestSet.get(4)).apply();
+                        myEditor.putString("s5", favoriteS5[0] = String.valueOf(finalPrintSet.get(0) + " sets x " + finalPrintRep.get(0) + " reps")).apply();
+
+                        myEditor.putString("e6", favoriteE6[0] = finalPrintList.get(5)).apply();
+                        myEditor.putString("r6", favoriteR6[0] = finalPrintRestSet.get(5)).apply();
+                        myEditor.putString("s6", favoriteS6[0] = String.valueOf(finalPrintSet.get(0) + " sets x " + finalPrintRep.get(0) + " reps")).apply();
+
+
+                    }
+
                     //myEditor.putString("s1", favoriteRep[0] = String.valueOf(finalPrintRep.get(0))).apply();
                     //myEditor.putString("s1", favoriteRep[1] = String.valueOf(finalPrintRep.get(1))).apply();
                     //myEditor.putString("s1", favoriteRep[2] = String.valueOf(finalPrintRep.get(2))).apply();
@@ -261,6 +307,93 @@ public class workout_tab extends AppCompatActivity {
 
             }
         });
+
+        sets1.setText(set1);
+        sets2.setText(set2);
+        sets3.setText(set3);
+        sets4.setText(set4);
+        rest1.setText(rst1);
+        rest2.setText(rst2);
+        rest3.setText(rst3);
+        rest4.setText(rst4);
+        exercise1.setText(ex1);
+        exercise2.setText(ex2);
+        exercise3.setText(ex3);
+        exercise4.setText(ex4);
+        exerciseInt.setText(null);
+        restInt.setText(null);
+        setsInt.setText(null);
+        setsHard.setText(null);
+        restHard.setText(null);
+        exerciseHard.setText(null);
+
+        if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
+                && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == false
+                && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
+            sets1.setText(set1);
+            sets2.setText(set2);
+            sets3.setText(set3);
+            sets4.setText(set4);
+            rest1.setText(rst1);
+            rest2.setText(rst2);
+            rest3.setText(rst3);
+            rest4.setText(rst4);
+            exercise1.setText(ex1);
+            exercise2.setText(ex2);
+            exercise3.setText(ex3);
+            exercise4.setText(ex4);
+            exerciseInt.setText(null);
+            restInt.setText(null);
+            setsInt.setText(null);
+            setsHard.setText(null);
+            restHard.setText(null);
+            exerciseHard.setText(null);
+        }
+        else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
+                && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
+                && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
+            sets1.setText(set1);
+            sets2.setText(set2);
+            sets3.setText(set3);
+            sets4.setText(set4);
+            rest1.setText(rst1);
+            rest2.setText(rst2);
+            rest3.setText(rst3);
+            rest4.setText(rst4);
+            exercise1.setText(ex1);
+            exercise2.setText(ex2);
+            exercise3.setText(ex3);
+            exercise4.setText(ex4);
+            setsInt.setText(setInt);
+            restInt.setText(rstInt);
+            exerciseInt.setText(exInt);
+            exerciseHard.setText(null);
+            setsHard.setText(null);
+            restHard.setText(null);
+        }
+        else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
+                && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
+                && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == true) {
+            sets1.setText(set1);
+            sets2.setText(set2);
+            sets3.setText(set3);
+            sets4.setText(set4);
+            rest1.setText(rst1);
+            rest2.setText(rst2);
+            rest3.setText(rst3);
+            rest4.setText(rst4);
+            exercise1.setText(ex1);
+            exercise2.setText(ex2);
+            exercise3.setText(ex3);
+            exercise4.setText(ex4);
+            exerciseInt.setText(exInt);
+            setsInt.setText(setInt);
+            restInt.setText(rstInt);
+            exerciseHard.setText(exHard);
+            setsHard.setText(setHard);
+            restHard.setText(rstHard);
+
+        }
 
         Button sv = (Button) findViewById(R.id.sv);
         sv.setOnClickListener(new View.OnClickListener() {
@@ -288,6 +421,13 @@ public class workout_tab extends AppCompatActivity {
                     rest3.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r3", String.valueOf(0)));
                     rest4.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r4", String.valueOf(0)));
 
+                    exerciseInt.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("e5", String.valueOf(0)));
+                    setsInt.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("s5", String.valueOf(0)));
+                    restInt.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r5", String.valueOf(0)));
+
+                    exerciseHard.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("e6", String.valueOf(0)));
+                    setsHard.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("s6", String.valueOf(0)));
+                    restHard.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r6", String.valueOf(0)));
 
 
                 }
@@ -302,67 +442,7 @@ public class workout_tab extends AppCompatActivity {
                // break;
        // }
 
-        if(choiceEasy == true && choiceInt == false && choiceHard == false) {
-            sets1.setText(set1);
-            sets2.setText(set2);
-            sets3.setText(set3);
-            sets4.setText(set4);
-            rest1.setText(rst1);
-            rest2.setText(rst2);
-            rest3.setText(rst3);
-            rest4.setText(rst4);
-            exercise1.setText(ex1);
-            exercise2.setText(ex2);
-            exercise3.setText(ex3);
-            exercise4.setText(ex4);
-            exerciseInt.setText(null);
-            restInt.setText(null);
-            setsInt.setText(null);
-            setsHard.setText(null);
-            restHard.setText(null);
-            exerciseHard.setText(null);
-        }
-        else if(choiceEasy == true && choiceInt == true && choiceHard == false) {
-            sets1.setText(set1);
-            sets2.setText(set2);
-            sets3.setText(set3);
-            sets4.setText(set4);
-            rest1.setText(rst1);
-            rest2.setText(rst2);
-            rest3.setText(rst3);
-            rest4.setText(rst4);
-            exercise1.setText(ex1);
-            exercise2.setText(ex2);
-            exercise3.setText(ex3);
-            exercise4.setText(ex4);
-            setsInt.setText(setInt);
-            restInt.setText(rstInt);
-            exerciseInt.setText(exInt);
-            exerciseHard.setText(null);
-            setsHard.setText(null);
-            restHard.setText(null);
-        }
-        else if(choiceEasy == true && choiceInt == true && choiceHard == true) {
-            sets1.setText(set1);
-            sets2.setText(set2);
-            sets3.setText(set3);
-            sets4.setText(set4);
-            rest1.setText(rst1);
-            rest2.setText(rst2);
-            rest3.setText(rst3);
-            rest4.setText(rst4);
-            exercise1.setText(ex1);
-            exercise2.setText(ex2);
-            exercise3.setText(ex3);
-            exercise4.setText(ex4);
-            exerciseInt.setText(exInt);
-            setsInt.setText(setInt);
-            restInt.setText(rstInt);
-            exerciseHard.setText(exHard);
-            setsHard.setText(setHard);
-            restHard.setText(rstHard);
 
-        }
 
     }
 
@@ -452,9 +532,7 @@ public class workout_tab extends AppCompatActivity {
 
 
     }
-    boolean choiceEasy = false;
-    boolean choiceInt = false;
-    boolean choiceHard = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -465,6 +543,11 @@ public class workout_tab extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(4000);
         animationDrawable.start();
+        final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        final boolean[] choiceEasy = {myPrefs.getBoolean("easy", false)};
+        final boolean[] choiceInt = {myPrefs.getBoolean("intermediate", false)};;
+        final boolean[] choiceHard = {myPrefs.getBoolean("hard", false)};
+        final SharedPreferences.Editor myEditor = myPrefs.edit();
         //SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         /*
         The program indicator variable tells you which workout program the user picked from the selection tab
@@ -482,26 +565,27 @@ public class workout_tab extends AppCompatActivity {
 
         easyBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                choiceEasy = true;
-                choiceInt = false;
-                choiceHard = false;
+                myEditor.putBoolean("easy",choiceEasy[0] = true).apply();
+                myEditor.putBoolean("intermediate",choiceInt[0] = false).apply();
+                myEditor.putBoolean("hard",choiceHard[0] = false).apply();
             }
         });
 
         intBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                choiceEasy = true;
-                choiceInt = true;
-                choiceHard = false;
+                myEditor.putBoolean("easy",choiceEasy[0] = true).apply();
+                myEditor.putBoolean("intermediate",choiceInt[0] = true).apply();
+                myEditor.putBoolean("hard",choiceHard[0] = false).apply();
             }
         });
 
         hardBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                choiceEasy = true;
-                choiceInt = true;
-                choiceHard = true;
+                myEditor.putBoolean("easy",choiceEasy[0] = true).apply();
+                myEditor.putBoolean("intermediate",choiceInt[0] = true).apply();
+                myEditor.putBoolean("hard",choiceHard[0] = true).apply();
+
             }
         });
 
@@ -540,7 +624,7 @@ public class workout_tab extends AppCompatActivity {
             TextView rest3 = (TextView) findViewById(R.id.rest3);
             TextView rest4 = (TextView) findViewById(R.id.rest4);
 
-            exercise1.setText("You can't work out if you haven't picked a workout program!");
+            exercise1.setText("");
             exercise2.setText("");
             exercise3.setText("");
             exercise4.setText("");
