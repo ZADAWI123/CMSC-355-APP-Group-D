@@ -164,7 +164,7 @@ public class workout_tab extends AppCompatActivity {
                 restList.add("rest for 1 minute");
                 restList.add("rest for 2 minutes");
                 restList.add("rest for 3 minutes");
-                restList.add("fully rest");
+                restList.add("rest fully");
                 restList.add("less than 5 seconds");
 
 
