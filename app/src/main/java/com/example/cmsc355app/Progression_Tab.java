@@ -43,8 +43,6 @@ public class Progression_Tab<array> extends AppCompatActivity {
         // display the string into textView
         receiver_msg.setText(str);
 
-
-
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         //SharedPreferences.Editor myEditor = myPrefs.edit();
         int level = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num2",0);
@@ -66,9 +64,6 @@ public class Progression_Tab<array> extends AppCompatActivity {
         }
         String quitLevel = quitterRanks[secondQuitter];
         displayQuits.setText(quitLevel);
-
-
-
 
         Button shareBtn = (Button) findViewById(R.id.shareBtn);
         shareBtn.setOnClickListener(new View.OnClickListener() {
@@ -96,11 +91,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
             }
         });
 
-
-
             }
-
-
 
     int xp = 0;
 
