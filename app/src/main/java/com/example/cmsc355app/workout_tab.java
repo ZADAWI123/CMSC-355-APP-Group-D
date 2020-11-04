@@ -40,27 +40,26 @@ public class workout_tab extends AppCompatActivity {
 //        public int i = 0;
 //        public void run()
 //    }
+    Random randNum = new Random();
     public List<Integer> getRandomNumber(int num){
-        Random randNum = new Random();
         int n = num;
         int low = 5;
-        int high = 15;
+        int range = 10;
         List<Integer> numList = new ArrayList<>(n);
         for (int i = 1; i <= num; i++){
-            int randomInt = randNum.nextInt(high-low)+ low;
+            int randomInt = randNum.nextInt(range)+ low;
             numList.add(randomInt);
         }
         return numList;
     }
 
     public List<Integer> getRandomSet(int num){
-        Random randNum = new Random();
         int n = num;
         int low = 3;
-        int high = 6;
+        int range = 3;
         List<Integer> numList = new ArrayList<>(n);
         for (int i = 1; i <= num; i++){
-            int randomInt = randNum.nextInt(high-low)+ low;
+            int randomInt = randNum.nextInt(range)+ low;
             numList.add(randomInt);
         }
         return numList;
