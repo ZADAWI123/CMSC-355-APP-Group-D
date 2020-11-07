@@ -14,12 +14,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
 import java.util.Scanner;
 
 public class Progression_Tab<array> extends AppCompatActivity {
 
     TextView stringTextView;
     TextView receiver_msg;
+    TextView stps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(4000);
         animationDrawable.start();
+        stps = findViewById(R.id.stps);
 
         receiver_msg = (TextView) findViewById(R.id.calid);
 
@@ -42,6 +47,8 @@ public class Progression_Tab<array> extends AppCompatActivity {
 
         // display the string into textView
         receiver_msg.setText(Float.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount", 0)));
+        stps.setText(Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("stepCount", 0)));
+
 
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         //SharedPreferences.Editor myEditor = myPrefs.edit();
