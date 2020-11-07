@@ -38,7 +38,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
 
         // receive the value by getStringExtra() method
         // and key must be same which is send by first activity
-        String str = intent.getStringExtra("message_key");
+        String str = intent.getStringExtra("key" + "Calories: ");
 
         // display the string into textView
         receiver_msg.setText(str);
