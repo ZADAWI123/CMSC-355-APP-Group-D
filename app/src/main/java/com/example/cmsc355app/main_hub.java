@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Selection;
 import android.view.View;
 import android.widget.Button;
@@ -27,20 +28,24 @@ public class main_hub extends AppCompatActivity {
     private Button BtnSel;
     private Button BtnExa;
     private Button BtnReset;
-    private TextView textView;
+    private TextView stepTxt;
     private double MagnitudePrevious = 0;
-    private Integer stCount = 0;
-    private double calCount = 0;
-
-    TextView stringTextView;
+    private TextView calCountText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_hub);
 
-        textView = findViewById(R.id.textView3);
-        stringTextView = findViewById(R.id.calCountText);
+        final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        final SharedPreferences.Editor myEditor = myPrefs.edit();
+        final int[] stepCount = {myPrefs.getInt("stepCount", 0)};
+        final float[] calorieCount = {myPrefs.getFloat("calCount", 0)};
+
+        final int[] stepCount2 = {myPrefs.getInt("stepCount2", 0)};
+        final float[] calorieCount2 = {myPrefs.getFloat("calCount2", 0)};
+        stepTxt = findViewById(R.id.textView3);
+        calCountText = findViewById(R.id.calCountText);
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
@@ -60,15 +65,22 @@ public class main_hub extends AppCompatActivity {
                     MagnitudePrevious = Magnitude;
 
                     if (MagnitudeDelta > 5) {
-                        stCount++;
-                        calCount = calCount + 0.04;
+
+                        myEditor.putInt("stepCount2", stepCount2[0]+=1).apply();
+                        myEditor.putFloat("calCount2", calorieCount2[0]+=(float)0.04).apply();
+
+                        myEditor.putInt("stepCount", stepCount[0]+=1).apply();
+                        myEditor.putFloat("calCount", calorieCount[0]+=(float)0.04).apply();
+                        //myEditor.putInt("calCount", calorieCount[0]++).apply();
                     }
 
                     //This is were it will display your steps.
-                    textView.setText("Steps: " + stCount.toString());
-                    stringTextView.setText("Calories: " + calCount);
+                    stepTxt.setText("Steps: " + Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("stepCount2", 0)));
+                    calCountText.setText("Calories: " + Float.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount2",  0)));
+
                 }
             }
+
 
             @Override
             public void onAccuracyChanged(Sensor sensor, int i) {
@@ -101,14 +113,15 @@ public class main_hub extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if (v == BtnReset) {
-                    String str = stringTextView.getText().toString() + calCount;
-                    Intent intent = new Intent(getApplicationContext(), Progression_Tab.class);
-                    intent.putExtra("key", str);
 
-                    stCount = 0;
-                    calCount = 0;
-                }
+
+                    myEditor.putInt("stepCount2", stepCount2[0] = 0).apply();
+                    myEditor.putFloat("calCount2", calorieCount2[0] = 0).apply();
+
+                    stepTxt.setText("Steps: " + Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("stepCount2", 0)));
+                    calCountText.setText("Calories: " + Float.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount2",  0)));
+
+
             }
         });
 
@@ -140,35 +153,8 @@ public class main_hub extends AppCompatActivity {
                 moveToExample();
             }
         });
+
     }
-
-    protected void onPause() {
-        super.onPause();
-
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear();
-        editor.putInt("Stepcount", stCount);
-        editor.apply();
-    }
-
-    protected void onStop() {
-        super.onStop();
-
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear();
-        editor.putInt("stepCount", stCount);
-        editor.apply();
-    }
-
-    protected void onResume() {
-        super.onResume();
-
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        stCount = sharedPreferences.getInt("stepCount", 0);
-    }
-
 
     private void moveToWorkOut(){
 
@@ -190,5 +176,6 @@ public class main_hub extends AppCompatActivity {
         Intent intent3 = new Intent(main_hub.this, workExamples.class);
         startActivity(intent3);
     }
+
 
 }
