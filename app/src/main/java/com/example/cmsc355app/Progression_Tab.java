@@ -46,7 +46,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
 
 
         // display the string into textView
-        receiver_msg.setText(Float.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount", 0)));
+        receiver_msg.setText(Float.toString((float) (Math.floor(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount",  0) * 100) / 100)));
         stps.setText(Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("stepCount", 0)));
 
 

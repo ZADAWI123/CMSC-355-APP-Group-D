@@ -76,7 +76,8 @@ public class main_hub extends AppCompatActivity {
 
                     //This is were it will display your steps.
                     stepTxt.setText("Steps: " + Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("stepCount2", 0)));
-                    calCountText.setText("Calories: " + Float.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount2",  0)));
+                    calCountText.setText("Calories: " + Float.toString((float) (Math.floor(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount2",  0) * 100) / 100)));
+
 
                 }
             }
