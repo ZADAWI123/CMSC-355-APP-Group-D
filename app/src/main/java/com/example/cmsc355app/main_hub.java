@@ -29,6 +29,8 @@ public class main_hub extends AppCompatActivity {
     private Button BtnExa;
     private Button BtnReset;
     private TextView stepTxt;
+    private Button goalTab;
+
     private double MagnitudePrevious = 0;
     private TextView calCountText;
 
@@ -146,6 +148,15 @@ public class main_hub extends AppCompatActivity {
                 moveToSelection();
             }
         });
+        goalTab = (Button)findViewById(R.id.goalTab);
+        goalTab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                moveToGoals();
+            }
+        });
+
 
         Button BtnExa = (Button) findViewById(R.id.examplesBtn);
         BtnExa.setOnClickListener(new View.OnClickListener() {
@@ -176,6 +187,11 @@ public class main_hub extends AppCompatActivity {
     private void moveToExample(){
         Intent intent3 = new Intent(main_hub.this, workExamples.class);
         startActivity(intent3);
+    }
+
+    private void moveToGoals(){
+        Intent intentG = new Intent(main_hub.this, Goals.class);
+        startActivity(intentG);
     }
 
 
