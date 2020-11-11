@@ -469,6 +469,9 @@ public class workout_tab extends AppCompatActivity {
         final int programI = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum", 0);
         final String numIndicator = Integer.toString(programI);
 
+        final SharedPreferences imagePrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        final int [] whichPicture = {myPrefs.getInt("programImage",0)};
+
         Button easyBtn = findViewById(R.id.easy);
         Button intBtn = findViewById(R.id.intermediate);
         Button hardBtn = findViewById(R.id.hard);
