@@ -78,19 +78,6 @@
         app:layout_constraintVertical_bias="0.51" />
 
     <TextView
-        android:id="@+id/goal1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#00000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
-
-    <TextView
         android:id="@+id/goal2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -170,5 +157,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.607" />
+
+    <TextView
+        android:id="@+id/goal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.199" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
