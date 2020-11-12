@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">cmsc355APP</string>
+    <string name="app_name">Challenge Me</string>
     <string name="hub_page">Hub Page</string>
     <string name="work_out_page">Work Out Page</string>
     <string name="progression">Progression</string>
