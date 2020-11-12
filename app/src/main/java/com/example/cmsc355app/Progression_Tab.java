@@ -14,16 +14,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
 import java.util.Scanner;
 
 public class Progression_Tab<array> extends AppCompatActivity {
 
     TextView stringTextView;
     TextView receiver_msg;
-    TextView stps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +30,6 @@ public class Progression_Tab<array> extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(4000);
         animationDrawable.start();
-        stps = findViewById(R.id.stps);
 
         receiver_msg = (TextView) findViewById(R.id.calid);
 
@@ -43,11 +38,11 @@ public class Progression_Tab<array> extends AppCompatActivity {
 
         // receive the value by getStringExtra() method
         // and key must be same which is send by first activity
-
+        String str = intent.getStringExtra("message_key");
 
         // display the string into textView
-        receiver_msg.setText(Float.toString((float) (Math.floor(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount",  0) * 100) / 100)));
-        stps.setText(Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("stepCount", 0)));
+        receiver_msg.setText(str);
+
 
 
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -71,6 +66,9 @@ public class Progression_Tab<array> extends AppCompatActivity {
         }
         String quitLevel = quitterRanks[secondQuitter];
         displayQuits.setText(quitLevel);
+
+
+
 
         Button shareBtn = (Button) findViewById(R.id.shareBtn);
         shareBtn.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +96,11 @@ public class Progression_Tab<array> extends AppCompatActivity {
             }
         });
 
+
+
             }
+
+
 
     int xp = 0;
 

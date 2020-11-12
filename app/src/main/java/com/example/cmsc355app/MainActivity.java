@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -33,11 +32,24 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.start();
         stringTextView = (TextView)findViewById(R.id.randomQuotes);
 
-        //List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
 
-        String[] array = {"You are a Machine", "You can do this!", "It all starts with you.", "Your limitation—it's only your imagination.", "Sometimes later becomes never.", "No pain, no gain. Shut up and train.", "Train insane or remain the same.", "Push yourself because no one else is going to do it for you.", "Suck it up. And one day you won’t have to suck it in.", "Success starts with self-discipline.", "Good things come to those who sweat.", "The body achieves what the mind believes.", "Someone busier than you is working out right now.", "The hardest lift of all is lifting your butt off the couch."};
+        list.add("You are a Machine");
+        list.add("You can do this!");
+        list.add("It all starts with you.");
+        list.add("Your limitation—it's only your imagination.");
+        list.add("Sometimes later becomes never.");
+        list.add("No pain, no gain. Shut up and train.");
+        list.add("Train insane or remain the same.");
+        list.add("Push yourself because no one else is going to do it for you.");
+        list.add("Suck it up. And one day you won’t have to suck it in.");
+        list.add("Success starts with self-discipline.");
+        list.add("Good things come to those who sweat.");
+        list.add("The body achieves what the mind believes.");
+        list.add("Someone busier than you is working out right now.");
+        list.add("The hardest lift of all is lifting your butt off the couch.");
 
-        List<String> list = Arrays.asList(array);
+
 
         MainActivity obj = new MainActivity();
 

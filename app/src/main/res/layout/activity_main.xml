@@ -29,16 +29,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/randomQuotes"
+        app:layout_constraintVertical_bias="0.74"
+>>>>>>> 6bb1ffbd5e68273dea541a8084e2a4b7801900e6
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView6"
+<<<<<<< HEAD
         android:layout_width="256dp"
         android:layout_height="80dp"
         android:fontFamily="monospace"
         android:text="@string/challenge_me2nd"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/design_default_color_on_secondary"
+=======
+        android:layout_width="219dp"
+        android:layout_height="60dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/challenge_me2nd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+>>>>>>> 6bb1ffbd5e68273dea541a8084e2a4b7801900e6
         android:textSize="33sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,9 +61,15 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:fontFamily="monospace"
         android:text="@string/workouts_for_beginners"
         android:textColor="@color/design_default_color_on_secondary"
+=======
+        android:fontFamily="sans-serif"
+        android:text="@string/workouts_for_beginners"
+        android:textColor="#000000"
+>>>>>>> 6bb1ffbd5e68273dea541a8084e2a4b7801900e6
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/randomQuotes"
         app:layout_constraintEnd_toEndOf="parent"

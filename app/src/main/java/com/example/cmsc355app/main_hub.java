@@ -9,7 +9,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.Selection;
 import android.view.View;
 import android.widget.Button;
@@ -28,26 +27,20 @@ public class main_hub extends AppCompatActivity {
     private Button BtnSel;
     private Button BtnExa;
     private Button BtnReset;
-    private TextView stepTxt;
-    private Button goalTab;
-
+    private TextView textView;
     private double MagnitudePrevious = 0;
-    private TextView calCountText;
+    private Integer stCount = 0;
+    private double calCount = 0;
+
+    TextView stringTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_hub);
 
-        final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        final SharedPreferences.Editor myEditor = myPrefs.edit();
-        final int[] stepCount = {myPrefs.getInt("stepCount", 0)};
-        final float[] calorieCount = {myPrefs.getFloat("calCount", 0)};
-
-        final int[] stepCount2 = {myPrefs.getInt("stepCount2", 0)};
-        final float[] calorieCount2 = {myPrefs.getFloat("calCount2", 0)};
-        stepTxt = findViewById(R.id.textView3);
-        calCountText = findViewById(R.id.calCountText);
+        textView = findViewById(R.id.textView3);
+        stringTextView = findViewById(R.id.calCountText);
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
@@ -67,23 +60,15 @@ public class main_hub extends AppCompatActivity {
                     MagnitudePrevious = Magnitude;
 
                     if (MagnitudeDelta > 5) {
-
-                        myEditor.putInt("stepCount2", stepCount2[0]+=1).apply();
-                        myEditor.putFloat("calCount2", calorieCount2[0]+=(float)0.04).apply();
-
-                        myEditor.putInt("stepCount", stepCount[0]+=1).apply();
-                        myEditor.putFloat("calCount", calorieCount[0]+=(float)0.04).apply();
-                        //myEditor.putInt("calCount", calorieCount[0]++).apply();
+                        stCount++;
+                        calCount = calCount + 0.04;
                     }
 
                     //This is were it will display your steps.
-                    stepTxt.setText("Steps: " + Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("stepCount2", 0)));
-                    calCountText.setText("Calories: " + Float.toString((float) (Math.floor(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount2",  0) * 100) / 100)));
-
-
+                    textView.setText("Steps: " + stCount.toString());
+                    stringTextView.setText("Calories: " + calCount);
                 }
             }
-
 
             @Override
             public void onAccuracyChanged(Sensor sensor, int i) {
@@ -116,15 +101,17 @@ public class main_hub extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                if (v == BtnReset) {
+                    double totalCal;
+                    totalCal = calCount;
+                    String str = stringTextView.toString();
+                    Intent intent = new Intent(getApplicationContext(), Progression_Tab.class);
+                    intent.putExtra("message_key", str);
+                    startActivity(intent);
 
-
-                    myEditor.putInt("stepCount2", stepCount2[0] = 0).apply();
-                    myEditor.putFloat("calCount2", calorieCount2[0] = 0).apply();
-
-                    stepTxt.setText("Steps: " + Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("stepCount2", 0)));
-                    calCountText.setText("Calories: " + Float.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount2",  0)));
-
-
+                    stCount = 0;
+                    calCount = 0;
+                }
             }
         });
 
@@ -148,15 +135,6 @@ public class main_hub extends AppCompatActivity {
                 moveToSelection();
             }
         });
-        goalTab = (Button)findViewById(R.id.goalTab);
-        goalTab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                moveToGoals();
-            }
-        });
-
 
         Button BtnExa = (Button) findViewById(R.id.examplesBtn);
         BtnExa.setOnClickListener(new View.OnClickListener() {
@@ -165,8 +143,35 @@ public class main_hub extends AppCompatActivity {
                 moveToExample();
             }
         });
-
     }
+
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.putInt("Stepcount", stCount);
+        editor.apply();
+    }
+
+    protected void onStop() {
+        super.onStop();
+
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.putInt("stepCount", stCount);
+        editor.apply();
+    }
+
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        stCount = sharedPreferences.getInt("stepCount", 0);
+    }
+
 
     private void moveToWorkOut(){
 
@@ -188,11 +193,5 @@ public class main_hub extends AppCompatActivity {
         Intent intent3 = new Intent(main_hub.this, workExamples.class);
         startActivity(intent3);
     }
-
-    private void moveToGoals(){
-        Intent intentG = new Intent(main_hub.this, Goals.class);
-        startActivity(intentG);
-    }
-
 
 }
