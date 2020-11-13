@@ -10,6 +10,7 @@ import java.util.Iterator;
 
 public class workExamples extends AppCompatActivity {
 
+    @SuppressWarnings("checkstyle:Indentation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

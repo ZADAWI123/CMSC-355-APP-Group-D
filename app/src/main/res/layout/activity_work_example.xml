@@ -31,19 +31,19 @@
                 android:id="@+id/button5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="First Examples" />
 
             <Button
                 android:id="@+id/button6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Second Exmaples" />
 
             <Button
                 android:id="@+id/button7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Third Examples" />
         </LinearLayout>
     </ScrollView>
 

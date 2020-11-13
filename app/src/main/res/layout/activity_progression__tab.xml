@@ -121,6 +121,7 @@
         android:id="@+id/shareBtn"
         android:layout_width="299dp"
         android:layout_height="55dp"
+        android:background="@drawable/button"
         android:text="Share your progress with friends!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

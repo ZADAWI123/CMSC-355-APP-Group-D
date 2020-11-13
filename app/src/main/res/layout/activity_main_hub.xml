@@ -10,8 +10,9 @@
 
     <Button
         android:id="@+id/workOutBtn"
-        android:layout_width="273dp"
-        android:layout_height="81dp"
+        android:layout_width="289dp"
+        android:layout_height="46dp"
+        android:background="@drawable/button"
         android:text="@string/start_working_out"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,10 +23,11 @@
 
     <Button
         android:id="@+id/progressBtn"
-        android:layout_width="173dp"
-        android:layout_height="75dp"
+        android:layout_width="156dp"
+        android:layout_height="46dp"
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
+        android:background="@drawable/button"
         android:text="@string/progress"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,8 +38,9 @@
 
     <Button
         android:id="@+id/selectBtn"
-        android:layout_width="292dp"
-        android:layout_height="74dp"
+        android:layout_width="310dp"
+        android:layout_height="46dp"
+        android:background="@drawable/button"
         android:text="@string/workout_programs"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,13 +63,13 @@
 
     <Button
         android:id="@+id/resetBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="279dp"
+        android:layout_height="46dp"
         android:layout_marginEnd="11dp"
         android:layout_marginRight="11dp"
-        android:layout_marginBottom="60dp"
+        android:background="@drawable/button"
         android:text="Reset Calorie and step counter"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/selectBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,8 +115,9 @@
 
     <Button
         android:id="@+id/goalTab"
-        android:layout_width="125dp"
-        android:layout_height="75dp"
+        android:layout_width="123dp"
+        android:layout_height="46dp"
+        android:background="@drawable/button"
         android:text="Goals"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
