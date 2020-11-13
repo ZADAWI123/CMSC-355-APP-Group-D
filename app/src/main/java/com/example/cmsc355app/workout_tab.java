@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -205,6 +206,7 @@ public class workout_tab extends AppCompatActivity {
         final ArrayList<String> finalPrintRestSet = printRestSet;
         final ArrayList<Integer> finalPrintSet = printSet;
         final ArrayList<Integer> finalPrintRep = printRep;
+
         fav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -278,9 +280,13 @@ public class workout_tab extends AppCompatActivity {
         restHard.setText(null);
         exerciseHard.setText(null);
 
+
+        final String [] imageArray = {myPrefs.getString("programImage", String.valueOf(0))};
         if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == false
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
+            SharedPreferences.Editor myEditorPicEasy = myPrefs.edit();
+            ArrayList<String> easyList = new ArrayList<String>();
             sets1.setText(set1);
             sets2.setText(set2);
             sets3.setText(set3);
@@ -293,16 +299,24 @@ public class workout_tab extends AppCompatActivity {
             exercise2.setText(ex2);
             exercise3.setText(ex3);
             exercise4.setText(ex4);
+            easyList.add(ex4);
+            easyList.add(ex1);
+            easyList.add(ex2);
+            easyList.add(ex3);
             exerciseInt.setText(null);
             restInt.setText(null);
             setsInt.setText(null);
             setsHard.setText(null);
             restHard.setText(null);
             exerciseHard.setText(null);
+            String easyString = TextUtils.join(",", easyList);
+            myEditorPicEasy.putString("programImage", imageArray[0] = easyString).apply();
+            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImage", imageArray[0]).apply();
         }
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
+            SharedPreferences.Editor myEditorPicInt = myPrefs.edit();
             sets1.setText(set1);
             sets2.setText(set2);
             sets3.setText(set3);
@@ -325,6 +339,7 @@ public class workout_tab extends AppCompatActivity {
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == true) {
+            SharedPreferences.Editor myEditorPicHard = myPrefs.edit();
             sets1.setText(set1);
             sets2.setText(set2);
             sets3.setText(set3);
@@ -491,6 +506,7 @@ public class workout_tab extends AppCompatActivity {
 
         easyBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                SharedPreferences.Editor myEditorPicEasy = myPrefs.edit();
                 myEditor.putBoolean("easy",choiceEasy[0] = true).apply();
                 myEditor.putBoolean("intermediate",choiceInt[0] = false).apply();
                 myEditor.putBoolean("hard",choiceHard[0] = false).apply();
@@ -500,6 +516,7 @@ public class workout_tab extends AppCompatActivity {
         intBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                SharedPreferences.Editor myEditorPicInt = myPrefs.edit();
                 myEditor.putBoolean("easy",choiceEasy[0] = true).apply();
                 myEditor.putBoolean("intermediate",choiceInt[0] = true).apply();
                 myEditor.putBoolean("hard",choiceHard[0] = false).apply();
@@ -508,6 +525,7 @@ public class workout_tab extends AppCompatActivity {
 
         hardBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                SharedPreferences.Editor myEditorPicHard = myPrefs.edit();
                 myEditor.putBoolean("easy",choiceEasy[0] = true).apply();
                 myEditor.putBoolean("intermediate",choiceInt[0] = true).apply();
                 myEditor.putBoolean("hard",choiceHard[0] = true).apply();
@@ -529,7 +547,7 @@ public class workout_tab extends AppCompatActivity {
             displayWorkouts();
 
         }
-        if(programI== 3){
+        if(programI == 3){
             pro.setText("cardio");
             displayWorkouts();
         }
