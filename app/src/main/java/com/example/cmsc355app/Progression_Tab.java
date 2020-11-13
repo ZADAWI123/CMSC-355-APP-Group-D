@@ -54,12 +54,15 @@ public class Progression_Tab<array> extends AppCompatActivity {
         //SharedPreferences.Editor myEditor = myPrefs.edit();
         int level = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num2",0);
         int numWorkouts = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num",0);
-
+        int secondLevel = level;
+        if(level > 99){
+            secondLevel = 99;
+        }
         TextView textView2 = (TextView) findViewById(R.id.textView2);
         TextView textView5 = (TextView) findViewById(R.id.textView5);
         String temp = Integer.toString(level);
         String temp2 = Integer.toString(numWorkouts);
-        textView2.setText(ranks[level]);
+        textView2.setText(ranks[secondLevel]);
         textView5.setText(temp2);
 
         //This will display the quit level if you clicked "I Give Up"
@@ -69,18 +72,19 @@ public class Progression_Tab<array> extends AppCompatActivity {
         if(quitterRank > 7){
             secondQuitter = 7;
         }
-        String quitLevel = quitterRanks[secondQuitter];
+        final String quitLevel = quitterRanks[secondQuitter];
         displayQuits.setText(quitLevel);
 
         Button shareBtn = (Button) findViewById(R.id.shareBtn);
+        final int finalSecondLevel = secondLevel;
         shareBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Uri contentUri = Uri.parse("android.resource://" + getPackageName() + "/drawable/" + "ic_launcher");
 
-                String invite = "Think you can beat my rank? Download 'Challenge Me! - Workouts for Beginners' and see who's more dedicated!" +"\n"
-                        + "https://play.google.com/store/apps/details?id=com.example.cmsc355app";
+                String invite = "Think you can beat my rank? Download 'Challenge Me! - Workouts for Beginners' and see who's more dedicated!" +"\n"+"\n"
+                        + "https://play.google.com/store/apps/details?id=com.example.cmsc355app" + "\n" + "\n"+ "My rank is: " + ranks[finalSecondLevel];
 
                 if (contentUri != null) {
                     Intent shareIntent = new Intent();
