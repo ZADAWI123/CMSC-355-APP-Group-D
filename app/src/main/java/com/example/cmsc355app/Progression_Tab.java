@@ -31,8 +31,8 @@ public class Progression_Tab<array> extends AppCompatActivity {
         setContentView(R.layout.activity_progression__tab);
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.setEnterFadeDuration(4200);
+        animationDrawable.setExitFadeDuration(4200);
         animationDrawable.start();
         stps = findViewById(R.id.stps);
 

@@ -95,8 +95,8 @@ public class main_hub extends AppCompatActivity {
 
 
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.setEnterFadeDuration(4200);
+        animationDrawable.setExitFadeDuration(4200);
         animationDrawable.start();
 
         //Workout Button

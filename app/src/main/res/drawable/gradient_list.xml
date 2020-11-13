@@ -2,9 +2,8 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:drawable="@drawable/gradient_1"
-        android:duration="4400"/>
+        android:duration="4100"/>
     <item android:drawable="@drawable/gradient_2"
-        android:duration="4400"/>
-    <item android:drawable="@drawable/gradient_3"
-        android:duration="4000"/>
+        android:duration="4100"/>
+
 </animation-list>

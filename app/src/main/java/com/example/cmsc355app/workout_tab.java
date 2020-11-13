@@ -470,8 +470,8 @@ public class workout_tab extends AppCompatActivity {
         setContentView(R.layout.activity_workout_tab);
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.setEnterFadeDuration(4200);
+        animationDrawable.setExitFadeDuration(4200);
         animationDrawable.start();
         crossActivityDataTrackers();
 

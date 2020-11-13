@@ -27,8 +27,8 @@ public class Goals extends AppCompatActivity {
         setContentView(R.layout.activity_goals);
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.setEnterFadeDuration(4200);
+        animationDrawable.setExitFadeDuration(4200);
         animationDrawable.start();
 
         final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
