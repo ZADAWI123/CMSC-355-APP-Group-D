@@ -281,7 +281,9 @@ public class workout_tab extends AppCompatActivity {
         exerciseHard.setText(null);
 
 
-        final String [] imageArray = {myPrefs.getString("programImage", String.valueOf(0))};
+        final String [] imageArrayEasy = {myPrefs.getString("programImageEasy", String.valueOf(0))};
+        final String [] imageArrayInt = {myPrefs.getString("programImageInt", String.valueOf(0))};
+        final String [] imageArrayHard = {myPrefs.getString("programImageHard", String.valueOf(0))};
         if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == false
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
@@ -310,13 +312,14 @@ public class workout_tab extends AppCompatActivity {
             restHard.setText(null);
             exerciseHard.setText(null);
             String easyString = TextUtils.join(",", easyList);
-            myEditorPicEasy.putString("programImage", imageArray[0] = easyString).apply();
-            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImage", imageArray[0]).apply();
+            myEditorPicEasy.putString("programImageEasy", imageArrayEasy[0] = easyString).apply();
+            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImageEasy", imageArrayEasy[0]).apply();
         }
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
             SharedPreferences.Editor myEditorPicInt = myPrefs.edit();
+            ArrayList<String> intList = new ArrayList<String>();
             sets1.setText(set1);
             sets2.setText(set2);
             sets3.setText(set3);
@@ -332,14 +335,23 @@ public class workout_tab extends AppCompatActivity {
             setsInt.setText(setInt);
             restInt.setText(rstInt);
             exerciseInt.setText(exInt);
+            intList.add(ex1);
+            intList.add(ex2);
+            intList.add(ex3);
+            intList.add(ex4);
+            intList.add(exInt);
             exerciseHard.setText(null);
             setsHard.setText(null);
             restHard.setText(null);
+            String intString = TextUtils.join(",", intList);
+            myEditorPicInt.putString("programImageInt", imageArrayInt[0] = intString).apply();
+            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImageInt", imageArrayInt[0]).apply();
         }
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == true) {
             SharedPreferences.Editor myEditorPicHard = myPrefs.edit();
+            ArrayList<String> hardList = new ArrayList<String>();
             sets1.setText(set1);
             sets2.setText(set2);
             sets3.setText(set3);
@@ -358,7 +370,15 @@ public class workout_tab extends AppCompatActivity {
             exerciseHard.setText(exHard);
             setsHard.setText(setHard);
             restHard.setText(rstHard);
-
+            hardList.add(ex1);
+            hardList.add(ex2);
+            hardList.add(ex3);
+            hardList.add(ex4);
+            hardList.add(exInt);
+            hardList.add(exHard);
+            String hardString = TextUtils.join(",", hardList);
+            myEditorPicHard.putString("programImageHard", imageArrayHard[0] = hardString).apply();
+            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImageHard", imageArrayHard[0]).apply();
         }
 
         Button sv = findViewById(R.id.sv);

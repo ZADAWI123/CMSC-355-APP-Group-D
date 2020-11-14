@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 public class workExamples extends AppCompatActivity {
 
@@ -45,11 +47,21 @@ public class workExamples extends AppCompatActivity {
         exerciseImages.add("run 2 miles");
 
 
-        final int programPic = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programImage", 0);
 
+        //final String programPic = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage", "");
+
+        String programPicEasy = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImageEasy", null);
+        String programPicInt = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImageInt", null);
+        String programPicHard = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImageHard", null);
+
+        List<String> easyList = Arrays.asList(programPicEasy.split("\\s*,\\s*"));
+        List<String> intList = Arrays.asList(programPicInt.split("\\s*,\\s*"));
+        List<String> hardList = Arrays.asList(programPicHard.split("\\s*,\\s*"));
 
         Iterator<String> itr = exerciseImages.iterator();
+
         while (itr.hasNext()) {
+
 
         }
 
