@@ -281,9 +281,7 @@ public class workout_tab extends AppCompatActivity {
         exerciseHard.setText(null);
 
 
-        final String [] imageArrayEasy = {myPrefs.getString("programImageEasy", String.valueOf(0))};
-        final String [] imageArrayInt = {myPrefs.getString("programImageInt", String.valueOf(0))};
-        final String [] imageArrayHard = {myPrefs.getString("programImageHard", String.valueOf(0))};
+        final String [] imageArray = {myPrefs.getString("programImage", String.valueOf(0))};
         if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == false
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
@@ -312,8 +310,8 @@ public class workout_tab extends AppCompatActivity {
             restHard.setText(null);
             exerciseHard.setText(null);
             String easyString = TextUtils.join(",", easyList);
-            myEditorPicEasy.putString("programImageEasy", imageArrayEasy[0] = easyString).apply();
-            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImageEasy", imageArrayEasy[0]).apply();
+            myEditorPicEasy.putString("programImage", imageArray[0] = easyString).apply();
+            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImage", imageArray[0]).apply();
         }
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
@@ -344,8 +342,8 @@ public class workout_tab extends AppCompatActivity {
             setsHard.setText(null);
             restHard.setText(null);
             String intString = TextUtils.join(",", intList);
-            myEditorPicInt.putString("programImageInt", imageArrayInt[0] = intString).apply();
-            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImageInt", imageArrayInt[0]).apply();
+            myEditorPicInt.putString("programImage", imageArray[0] = intString).apply();
+            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImage", imageArray[0]).apply();
         }
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
@@ -377,8 +375,8 @@ public class workout_tab extends AppCompatActivity {
             hardList.add(exInt);
             hardList.add(exHard);
             String hardString = TextUtils.join(",", hardList);
-            myEditorPicHard.putString("programImageHard", imageArrayHard[0] = hardString).apply();
-            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImageHard", imageArrayHard[0]).apply();
+            myEditorPicHard.putString("programImage", imageArray[0] = hardString).apply();
+            PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putString("programImage", imageArray[0]).apply();
         }
 
         Button sv = findViewById(R.id.sv);

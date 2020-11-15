@@ -50,19 +50,30 @@ public class workExamples extends AppCompatActivity {
 
         //final String programPic = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage", "");
 
-        String programPicEasy = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImageEasy", null);
-        String programPicInt = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImageInt", null);
-        String programPicHard = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImageHard", null);
+        String programPicFirst = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage", null);
+        String programPicSecond = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage", null);
+        String programPicThird = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage", null);
+        String programPicFourth = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage", null);
+        String programPicFifth = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage", null);
+        String programPicSixth = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage", null);
+//        String programPicInt = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImageInt", null);
+//        String programPicHard = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImageHard", null);
 
-        List<String> easyList = Arrays.asList(programPicEasy.split("\\s*,\\s*"));
-        List<String> intList = Arrays.asList(programPicInt.split("\\s*,\\s*"));
-        List<String> hardList = Arrays.asList(programPicHard.split("\\s*,\\s*"));
+        List<String> firstImage = Arrays.asList(programPicFirst.split("\\s*,\\s*"));
+        List<String> secondImage = Arrays.asList(programPicSecond.split("\\s*,\\s*"));
+        List<String> thirdImage = Arrays.asList(programPicThird.split("\\s*,\\s*"));
+        List<String> fourthImage = Arrays.asList(programPicFourth.split("\\s*,\\s*"));
+        List<String> fifthImage = Arrays.asList(programPicFifth.split("\\s*,\\s*"));
+        List<String> sixthImage = Arrays.asList(programPicSixth.split("\\s*,\\s*"));
+//        List<String> intList = Arrays.asList(programPicInt.split("\\s*,\\s*"));
+//        List<String> hardList = Arrays.asList(programPicHard.split("\\s*,\\s*"));
 
         Iterator<String> itr = exerciseImages.iterator();
-
         while (itr.hasNext()) {
+            if (exerciseImages.contains(programPicFirst)){
+                
 
-
+            }
         }
 
     }
