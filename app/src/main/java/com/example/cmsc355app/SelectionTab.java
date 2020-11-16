@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class SelectionTab extends AppCompatActivity {
     Button cBtn;
@@ -31,6 +32,7 @@ public class SelectionTab extends AppCompatActivity {
                 SharedPreferences.Editor myEditor = myPrefs.edit();
                 myEditor.putInt("programNum", whichProgram[0]=1).apply();
                 PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("programNum", whichProgram[0]).apply();
+                Toast.makeText(getApplicationContext(), "Workout program set!", Toast.LENGTH_SHORT).show();
                 //Create value to hold selection
             }
         });
@@ -41,6 +43,7 @@ public class SelectionTab extends AppCompatActivity {
                 SharedPreferences.Editor myEditor = myPrefs.edit();
                 myEditor.putInt("programNum", whichProgram[0]=2).apply();
                 PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("programNum", whichProgram[0]).apply();
+                Toast.makeText(getApplicationContext(), "Workout program set!", Toast.LENGTH_SHORT).show();
                 //Create value to hold selection
             }
         });
@@ -51,6 +54,7 @@ public class SelectionTab extends AppCompatActivity {
                 SharedPreferences.Editor myEditor = myPrefs.edit();
                 myEditor.putInt("programNum", whichProgram[0]=3).apply();
                 PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("programNum", whichProgram[0]).apply();
+                Toast.makeText(getApplicationContext(), "Workout program set!", Toast.LENGTH_SHORT).show();
 
                 //Create value to hold selection
             }

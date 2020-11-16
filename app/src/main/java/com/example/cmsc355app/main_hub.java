@@ -30,6 +30,7 @@ public class main_hub extends AppCompatActivity {
     private Button BtnReset;
     private TextView stepTxt;
     private Button goalTab;
+    private Button help;
 
     private double MagnitudePrevious = 0;
     private TextView calCountText;
@@ -158,11 +159,12 @@ public class main_hub extends AppCompatActivity {
         });
 
 
-        Button BtnExa = (Button) findViewById(R.id.examplesBtn);
-        BtnExa.setOnClickListener(new View.OnClickListener() {
+        help = (Button)findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveToExample();
+
+                moveToHelp();
             }
         });
 
@@ -192,6 +194,10 @@ public class main_hub extends AppCompatActivity {
     private void moveToGoals(){
         Intent intentG = new Intent(main_hub.this, Goals.class);
         startActivity(intentG);
+    }
+    private void moveToHelp(){
+        Intent intentH = new Intent(main_hub.this, help.class);
+        startActivity(intentH);
     }
 
 

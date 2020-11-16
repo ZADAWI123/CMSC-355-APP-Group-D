@@ -50,18 +50,6 @@
         app:layout_constraintVertical_bias="0.65" />
 
     <Button
-        android:id="@+id/examplesBtn"
-        android:layout_width="64dp"
-        android:layout_height="63dp"
-        android:background="@android:drawable/ic_menu_info_details"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.946" />
-
-    <Button
         android:id="@+id/resetBtn"
         android:layout_width="279dp"
         android:layout_height="46dp"
@@ -125,4 +113,17 @@
         app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="97dp"
+        android:layout_height="51dp"
+        android:text="Help"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.929" />
 </androidx.constraintlayout.widget.ConstraintLayout>
