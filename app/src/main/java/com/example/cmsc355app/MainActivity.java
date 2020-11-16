@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(4200);
-        animationDrawable.setExitFadeDuration(4200);
+        animationDrawable.setEnterFadeDuration(3900);
+        animationDrawable.setExitFadeDuration(3900);
         animationDrawable.start();
         stringTextView = (TextView)findViewById(R.id.randomQuotes);
 

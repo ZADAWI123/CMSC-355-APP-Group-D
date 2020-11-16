@@ -60,6 +60,11 @@ public class workout_tab extends AppCompatActivity {
     String temp = "";
     String temp2 = "";
     public void displayWorkouts(){
+        ConstraintLayout constraintLayout = findViewById(R.id.layout);
+        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(3900);
+        animationDrawable.setExitFadeDuration(3900);
+        animationDrawable.start();
 
         final int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
         final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -486,11 +491,7 @@ public class workout_tab extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_tab);
-        ConstraintLayout constraintLayout = findViewById(R.id.layout);
-        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(4200);
-        animationDrawable.setExitFadeDuration(4200);
-        animationDrawable.start();
+
         crossActivityDataTrackers();
 
         final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
