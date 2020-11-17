@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -70,11 +71,14 @@ public class workExamples extends AppCompatActivity {
 
         Iterator<String> itr = exerciseImages.iterator();
         while (itr.hasNext()) {
-            if (exerciseImages.contains(programPicFirst)){
-                
+            if (exerciseImages.contains(firstImage)){
+                if(firstImage.contains("pull up")){
+                    ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+                    firstDisplayPic.setImageResource(R.drawable.pullup);
+                }
+                }
 
             }
         }
 
     }
-}
