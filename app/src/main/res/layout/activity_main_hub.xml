@@ -10,59 +10,59 @@
 
     <Button
         android:id="@+id/workOutBtn"
-        android:layout_width="289dp"
-        android:layout_height="46dp"
-        android:background="@drawable/button"
+        android:layout_width="295dp"
+        android:layout_height="63dp"
         android:text="@string/start_working_out"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/selectBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/selectBtn"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintVertical_bias="0.969" />
 
     <Button
         android:id="@+id/progressBtn"
         android:layout_width="156dp"
-        android:layout_height="46dp"
+        android:layout_height="61dp"
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
-        android:background="@drawable/button"
         android:text="@string/progress"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/selectBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/selectBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.755" />
 
     <Button
         android:id="@+id/selectBtn"
-        android:layout_width="310dp"
-        android:layout_height="46dp"
-        android:background="@drawable/button"
+        android:layout_width="311dp"
+        android:layout_height="62dp"
         android:text="@string/workout_programs"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.639" />
 
     <Button
         android:id="@+id/resetBtn"
-        android:layout_width="279dp"
-        android:layout_height="46dp"
+        android:layout_width="305dp"
+        android:layout_height="85dp"
         android:layout_marginEnd="11dp"
         android:layout_marginRight="11dp"
-        android:background="@drawable/button"
         android:text="Reset Calorie and step counter"
-        app:layout_constraintBottom_toBottomOf="@+id/selectBtn"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintVertical_bias="0.953" />
 
     <TextView
         android:id="@+id/textView3"
@@ -72,9 +72,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16000003" />
+        app:layout_constraintVertical_bias="0.801" />
 
     <TextView
         android:id="@+id/calCountText"
@@ -84,9 +85,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23000002" />
+        app:layout_constraintVertical_bias="0.725" />
 
     <TextView
         android:id="@+id/textView14"
@@ -103,27 +105,28 @@
 
     <Button
         android:id="@+id/goalTab"
-        android:layout_width="123dp"
-        android:layout_height="46dp"
-        android:background="@drawable/button"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
         android:text="Goals"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/selectBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/selectBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.554" />
 
     <Button
         android:id="@+id/help"
-        android:layout_width="97dp"
-        android:layout_height="51dp"
+        android:layout_width="106dp"
+        android:layout_height="55dp"
         android:text="Help"
-        android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/selectBtn"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.926" />
+        app:layout_constraintVertical_bias="0.204" />
 </androidx.constraintlayout.widget.ConstraintLayout>
