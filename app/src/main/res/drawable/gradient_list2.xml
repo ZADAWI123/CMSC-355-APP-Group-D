@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/gradientf1"
+        android:duration="1"/>
+    <item android:drawable="@drawable/gradientf2"
+    android:duration="1"/>
+    <item android:drawable="@drawable/gradientf3"
+        android:duration="1"/>
+    <item android:drawable="@drawable/gradientf4"
+        android:duration="1"/>
+    <item android:drawable="@drawable/gradientf5"
+        android:duration="1"/>
+    <item android:drawable="@drawable/gradientf6"
+        android:duration="1"/>
+    <item android:drawable="@drawable/gradientf7"
+        android:duration="1"/>
+    <item android:drawable="@drawable/gradientf8"
+        android:duration="1"/>
+
+</animation-list>
