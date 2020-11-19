@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Random;
 
 public class workout_tab extends AppCompatActivity {
-    private Button exercisePicButton;
+
 
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
@@ -487,7 +487,7 @@ public class workout_tab extends AppCompatActivity {
         });
 
     }
-
+    private Button exercisePicButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -590,6 +590,7 @@ public class workout_tab extends AppCompatActivity {
             rest3.setText("");
             rest4.setText("");
         }
+
     exercisePicButton = (Button) findViewById(R.id.exercisePicButton);
         exercisePicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -597,10 +598,9 @@ public class workout_tab extends AppCompatActivity {
                 openPicPage();
             }
         });
-
         }
         public void openPicPage(){
-        Intent picIntent = new Intent(this, workExamples.class);
+        Intent picIntent = new Intent(workout_tab.this, picActivity.class);
         startActivity(picIntent);
         }
     }
