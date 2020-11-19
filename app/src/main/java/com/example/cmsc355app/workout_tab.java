@@ -3,6 +3,7 @@ package com.example.cmsc355app;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import java.util.List;
 import java.util.Random;
 
 public class workout_tab extends AppCompatActivity {
+    private Button exercisePicButton;
 
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
@@ -588,7 +590,18 @@ public class workout_tab extends AppCompatActivity {
             rest3.setText("");
             rest4.setText("");
         }
+    exercisePicButton = (Button) findViewById(R.id.exercisePicButton);
+        exercisePicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPicPage();
+            }
+        });
 
+        }
+        public void openPicPage(){
+        Intent picIntent = new Intent(this, workExamples.class);
+        startActivity(picIntent);
+        }
     }
 
-}
