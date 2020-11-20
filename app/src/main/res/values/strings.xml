@@ -30,4 +30,6 @@
     <string name="Btn2">Button</string>
     <string name="Btn3">Button</string>
     <string name="button">Button</string>
+    <string name="seizure_warning">Seizure Warning!!!</string>
+    <string name="TextCon">Continue</string>
 </resources>

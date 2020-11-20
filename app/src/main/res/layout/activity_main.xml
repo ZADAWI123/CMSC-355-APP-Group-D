@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/toHub"
+        android:id="@+id/toHubBtn"
         android:layout_width="94dp"
         android:layout_height="94dp"
         android:background="@drawable/home_button"

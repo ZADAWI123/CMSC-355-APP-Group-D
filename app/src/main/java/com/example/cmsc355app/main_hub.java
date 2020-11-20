@@ -31,7 +31,7 @@ public class main_hub extends AppCompatActivity {
     private TextView stepTxt;
     private Button goalTab;
     private Button help;
-    private Button challenges;
+    private Button warning;
 
     private double MagnitudePrevious = 0;
     private TextView calCountText;
@@ -169,12 +169,12 @@ public class main_hub extends AppCompatActivity {
             }
         });
 
-        challenges = (Button)findViewById(R.id.challenges);
-        challenges.setOnClickListener(new View.OnClickListener() {
+        warning = (Button)findViewById(R.id.challenges);
+        warning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                moveToChallenges();
+                moveToWarning();
             }
         });
 
@@ -210,9 +210,9 @@ public class main_hub extends AppCompatActivity {
         startActivity(intentH);
     }
 
-    private void moveToChallenges(){
-        Intent intentC = new Intent(main_hub.this, challenges.class);
-        startActivity(intentC);
+    private void moveToWarning(){
+        Intent intentW = new Intent(main_hub.this, challenges.class);
+        startActivity(intentW);
     }
 
 
