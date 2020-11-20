@@ -20,6 +20,7 @@ public class Goals extends AppCompatActivity {
     private TextView goal2;
     private TextView goal3;
     private EditText goalName;
+    private Button goalComplete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class Goals extends AppCompatActivity {
         final String[] gl1 = {myPrefs.getString("goal1", "")};
         final String[] gl2 = {myPrefs.getString("goal2", "")};
         final String[] gl3 = {myPrefs.getString("goal3", "")};
+        final Integer[] goalsComplete = {myPrefs.getInt("complete", 0)};
         final SharedPreferences.Editor myEditor = myPrefs.edit();
 
 
@@ -63,6 +65,18 @@ public class Goals extends AppCompatActivity {
                 System.out.println( goalNum.getText());
             }
         });
+
+        goalComplete = findViewById(R.id.gcomplete);
+        goalComplete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myEditor.putInt("complete",goalsComplete[0]+=1).apply();
+                Toast.makeText(getApplicationContext(), "You've completed one of your goals! \n Now set a new one!", Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
         goal1.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("goal1",""));
         goal2.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("goal2",""));
         goal3.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("goal3",""));

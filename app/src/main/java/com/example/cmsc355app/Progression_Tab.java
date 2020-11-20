@@ -24,6 +24,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
     TextView stringTextView;
     TextView receiver_msg;
     TextView stps;
+    TextView totalGoalsComplete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,8 @@ public class Progression_Tab<array> extends AppCompatActivity {
         receiver_msg.setText(Float.toString((float) (Math.floor(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getFloat("calCount",  0) * 100) / 100)));
         stps.setText(Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("stepCount", 0)));
 
+        totalGoalsComplete = findViewById(R.id.totalGoalsComplete);
+        totalGoalsComplete.setText(Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("complete",0)));
 
         SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         //SharedPreferences.Editor myEditor = myPrefs.edit();
