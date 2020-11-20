@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.text.Selection;
 import android.view.View;
 import android.widget.Button;
 import android.content.SharedPreferences;
@@ -18,7 +17,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Bundle;
 import android.widget.TextView;
 
 public class main_hub extends AppCompatActivity {
@@ -211,7 +209,7 @@ public class main_hub extends AppCompatActivity {
     }
 
     private void moveToWarning(){
-        Intent intentW = new Intent(main_hub.this, challenges.class);
+        Intent intentW = new Intent(main_hub.this, WarningActivity.class);
         startActivity(intentW);
     }
 

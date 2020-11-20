@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Warning"></activity>
+        <activity android:name=".WarningActivity"></activity>
         <activity android:name=".challenges" />
         <activity android:name=".help" />
         <activity android:name=".Goals" />
