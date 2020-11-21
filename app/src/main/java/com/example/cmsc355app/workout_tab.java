@@ -3,6 +3,7 @@ package com.example.cmsc355app;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import java.util.List;
 import java.util.Random;
 
 public class workout_tab extends AppCompatActivity {
+    private Button exercisePicButton;
 
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
@@ -496,7 +498,8 @@ public class workout_tab extends AppCompatActivity {
 
         final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         final boolean[] choiceEasy = {myPrefs.getBoolean("easy", false)};
-        final boolean[] choiceInt = {myPrefs.getBoolean("intermediate", false)};;
+        final boolean[] choiceInt = {myPrefs.getBoolean("intermediate", false)};
+        ;
         final boolean[] choiceHard = {myPrefs.getBoolean("hard", false)};
         final SharedPreferences.Editor myEditor = myPrefs.edit();
         final TextView pro = findViewById(R.id.pro);
@@ -523,31 +526,31 @@ public class workout_tab extends AppCompatActivity {
         TextView rest3 = findViewById(R.id.rest3);
         TextView rest4 = findViewById(R.id.rest4);
 
-        easyBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        easyBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 SharedPreferences.Editor myEditorPicEasy = myPrefs.edit();
-                myEditor.putBoolean("easy",choiceEasy[0] = true).apply();
-                myEditor.putBoolean("intermediate",choiceInt[0] = false).apply();
-                myEditor.putBoolean("hard",choiceHard[0] = false).apply();
+                myEditor.putBoolean("easy", choiceEasy[0] = true).apply();
+                myEditor.putBoolean("intermediate", choiceInt[0] = false).apply();
+                myEditor.putBoolean("hard", choiceHard[0] = false).apply();
             }
         });
 
-        intBtn.setOnClickListener(new View.OnClickListener(){
+        intBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 SharedPreferences.Editor myEditorPicInt = myPrefs.edit();
-                myEditor.putBoolean("easy",choiceEasy[0] = true).apply();
-                myEditor.putBoolean("intermediate",choiceInt[0] = true).apply();
-                myEditor.putBoolean("hard",choiceHard[0] = false).apply();
+                myEditor.putBoolean("easy", choiceEasy[0] = true).apply();
+                myEditor.putBoolean("intermediate", choiceInt[0] = true).apply();
+                myEditor.putBoolean("hard", choiceHard[0] = false).apply();
             }
         });
 
-        hardBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        hardBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 SharedPreferences.Editor myEditorPicHard = myPrefs.edit();
-                myEditor.putBoolean("easy",choiceEasy[0] = true).apply();
-                myEditor.putBoolean("intermediate",choiceInt[0] = true).apply();
-                myEditor.putBoolean("hard",choiceHard[0] = true).apply();
+                myEditor.putBoolean("easy", choiceEasy[0] = true).apply();
+                myEditor.putBoolean("intermediate", choiceInt[0] = true).apply();
+                myEditor.putBoolean("hard", choiceHard[0] = true).apply();
 
             }
         });
@@ -557,21 +560,21 @@ public class workout_tab extends AppCompatActivity {
         if program indicator is equal to 1 then the user wants a weight training program, 2 means the user wants a body weight exercise program, and
         3 means they want a cardio execrise program
          */
-        if(programI == 1){
+        if (programI == 1) {
             pro.setText("weight training");
             displayWorkouts();
         }
-        if(programI == 2){
+        if (programI == 2) {
             pro.setText("body weight training");
             displayWorkouts();
 
         }
-        if(programI == 3){
+        if (programI == 3) {
             pro.setText("cardio");
             displayWorkouts();
         }
 
-        if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0) == 0){
+        if (PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum", 0) == 0) {
 
             exercise1.setText("");
             exercise2.setText("");
@@ -588,7 +591,18 @@ public class workout_tab extends AppCompatActivity {
             rest3.setText("");
             rest4.setText("");
         }
-
+        exercisePicButton = (Button) findViewById(R.id.exercisePicButton);
+        exercisePicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openExercisePic();
+            }
+        });
     }
-
+    public void openExercisePic(){
+        Intent picIntent = new Intent (this,picDisplay.class);
+        startActivity(picIntent);
+    }
 }
+
+
