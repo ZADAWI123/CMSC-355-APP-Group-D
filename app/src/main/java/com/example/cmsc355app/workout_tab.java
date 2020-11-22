@@ -366,8 +366,6 @@ public class workout_tab extends AppCompatActivity {
             myEditorPicEasy.putString("programImage5", imageArray5[0] = exInt).apply();
             myEditorPicEasy.putString("programImage6", imageArray6[0] = "").apply();
 
-
-
         }
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
@@ -404,6 +402,7 @@ public class workout_tab extends AppCompatActivity {
             myEditorPicEasy.putString("programImage4", imageArray4[0] = ex4).apply();
             myEditorPicEasy.putString("programImage5", imageArray5[0] = exInt).apply();
             myEditorPicEasy.putString("programImage6", imageArray6[0] = exHard).apply();
+
 
         }
 
@@ -442,9 +441,7 @@ public class workout_tab extends AppCompatActivity {
                     setsHard.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("s6", String.valueOf(0)));
                     restHard.setText(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("r6", String.valueOf(0)));
 
-
                 }
-
             }
         });
 
@@ -553,6 +550,7 @@ public class workout_tab extends AppCompatActivity {
                 myEditor.putBoolean("easy", choiceEasy[0] = true).apply();
                 myEditor.putBoolean("intermediate", choiceInt[0] = false).apply();
                 myEditor.putBoolean("hard", choiceHard[0] = false).apply();
+                Toast.makeText(getApplicationContext(), "Difficulty set!\nNow re-roll workouts!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -563,6 +561,7 @@ public class workout_tab extends AppCompatActivity {
                 myEditor.putBoolean("easy", choiceEasy[0] = true).apply();
                 myEditor.putBoolean("intermediate", choiceInt[0] = true).apply();
                 myEditor.putBoolean("hard", choiceHard[0] = false).apply();
+                Toast.makeText(getApplicationContext(), "Difficulty set!\nNow re-roll workouts!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -572,7 +571,7 @@ public class workout_tab extends AppCompatActivity {
                 myEditor.putBoolean("easy", choiceEasy[0] = true).apply();
                 myEditor.putBoolean("intermediate", choiceInt[0] = true).apply();
                 myEditor.putBoolean("hard", choiceHard[0] = true).apply();
-
+                Toast.makeText(getApplicationContext(), "Difficulty set!\nNow re-roll workouts!", Toast.LENGTH_SHORT).show();
             }
         });
 
