@@ -66,14 +66,14 @@
 
     <ImageView
         android:id="@+id/sixthImagePic"
-        android:layout_width="35dp"
-        android:layout_height="6dp"
+        android:layout_width="105dp"
+        android:layout_height="110dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702" />
+        app:layout_constraintVertical_bias="0.724" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
