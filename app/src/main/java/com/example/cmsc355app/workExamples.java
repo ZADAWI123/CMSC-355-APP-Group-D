@@ -10,7 +10,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+/*
+THIS IS THE TRASH ACTIVITY THAT DOES NOT WORK DO NOT WORK ON IT
 
+ */
 public class workExamples extends AppCompatActivity {
 
     @SuppressWarnings("checkstyle:Indentation")
