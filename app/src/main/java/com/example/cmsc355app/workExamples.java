@@ -77,7 +77,7 @@ public class workExamples extends AppCompatActivity {
                     firstDisplayPic.setImageResource(R.drawable.pullup);
                 }
                 }
-            
+
 
             }
         }
