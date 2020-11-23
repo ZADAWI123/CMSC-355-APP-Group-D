@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".picDisplay"></activity>
+        <activity android:name=".cardioList"></activity>
+        <activity android:name=".bodyList" />
+        <activity android:name=".weightList" />
+        <activity android:name=".picDisplay" />
         <activity android:name=".WarningActivity" />
         <activity android:name=".challenges" />
         <activity android:name=".help" />

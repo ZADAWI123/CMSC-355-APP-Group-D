@@ -77,4 +77,9 @@ public class SelectionTab extends AppCompatActivity {
 
 
     }
+    private Button weight;
+    private Button body;
+    private Button cardio;
+
+
 }
