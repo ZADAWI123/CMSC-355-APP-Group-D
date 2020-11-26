@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".weightList">
+    android:id="@+id/layout"
+    android:background="@drawable/gradient_list"
+    tools:context=".help">
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
