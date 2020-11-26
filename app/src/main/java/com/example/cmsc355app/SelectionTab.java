@@ -3,6 +3,7 @@ package com.example.cmsc355app;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -15,6 +16,11 @@ public class SelectionTab extends AppCompatActivity {
     Button cBtn;
     Button wtBtn;
     Button bwBtn;
+
+    private Button weight;
+    private Button body;
+    private Button cardio;
+
     String workoutValue;
     /*This method stores the value of each button click and allows the value to be carried over between
       activities, 1 means you want weight training, 2 means you want a body weight exercise program, and
@@ -61,6 +67,20 @@ public class SelectionTab extends AppCompatActivity {
         });
 
     }
+
+    private void moveToWeightList(){
+        Intent intent10 = new Intent(SelectionTab.this, weightList.class);
+        startActivity(intent10);
+    }
+    private void moveToBodyList(){
+        Intent intent11 = new Intent(SelectionTab.this, bodyList.class);
+        startActivity(intent11);
+    }
+    private void moveToCardioList(){
+        Intent intent12 = new Intent(SelectionTab.this, cardioList.class);
+        startActivity(intent12);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,11 +95,30 @@ public class SelectionTab extends AppCompatActivity {
         bwBtn = findViewById(R.id.bwBtn);
         selectProgram();
 
+        weight = findViewById(R.id.weightListButton);
+        weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToWeightList();
+            }
+        });
+
+        cardio = findViewById(R.id.cardioListButton);
+        cardio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToCardioList();
+            }
+        });
+
+        body = findViewById(R.id.bodyListButton);
+        body.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToBodyList();
+            }
+        });
 
     }
-    private Button weight;
-    private Button body;
-    private Button cardio;
-
 
 }
