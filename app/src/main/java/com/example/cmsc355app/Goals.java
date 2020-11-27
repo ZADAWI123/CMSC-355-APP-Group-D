@@ -37,6 +37,7 @@ public class Goals extends AppCompatActivity {
         final String[] gl2 = {myPrefs.getString("goal2", "")};
         final String[] gl3 = {myPrefs.getString("goal3", "")};
         final Integer[] goalsComplete = {myPrefs.getInt("complete", 0)};
+        final Integer[] goalPoints = {myPrefs.getInt("points", 0)};
         final SharedPreferences.Editor myEditor = myPrefs.edit();
 
 
@@ -71,6 +72,7 @@ public class Goals extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myEditor.putInt("complete",goalsComplete[0]+=1).apply();
+                myEditor.putInt("points",PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("points",0) + 100).apply();
                 Toast.makeText(getApplicationContext(), "You've completed one of your goals! \n Now set a new one!", Toast.LENGTH_SHORT).show();
 
 

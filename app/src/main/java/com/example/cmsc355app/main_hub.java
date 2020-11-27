@@ -46,6 +46,7 @@ public class main_hub extends AppCompatActivity {
 
         final int[] stepCount2 = {myPrefs.getInt("stepCount2", 0)};
         final float[] calorieCount2 = {myPrefs.getFloat("calCount2", 0)};
+
         stepTxt = findViewById(R.id.textView3);
         calCountText = findViewById(R.id.calCountText);
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -69,9 +70,12 @@ public class main_hub extends AppCompatActivity {
                     if (MagnitudeDelta > 5) {
 
                         myEditor.putInt("stepCount2", stepCount2[0]+=1).apply();
+
+
                         myEditor.putFloat("calCount2", calorieCount2[0]+=(float)0.04).apply();
 
                         myEditor.putInt("stepCount", stepCount[0]+=1).apply();
+                        myEditor.putInt("points", PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("points",0)+1).apply();
                         myEditor.putFloat("calCount", calorieCount[0]+=(float)0.04).apply();
                         //myEditor.putInt("calCount", calorieCount[0]++).apply();
                     }

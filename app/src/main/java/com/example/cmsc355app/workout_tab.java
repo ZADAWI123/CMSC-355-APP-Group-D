@@ -59,8 +59,7 @@ public class workout_tab extends AppCompatActivity {
         return numList;
     }
 
-    String temp = "";
-    String temp2 = "";
+
     public void displayWorkouts(){
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
@@ -455,12 +454,11 @@ public class workout_tab extends AppCompatActivity {
         final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         final int []count = {myPrefs.getInt("num",0)};
         final int []currentLevel = {myPrefs.getInt("num2",0)};
-        final int [] points = {myPrefs.getInt("num3",1)};;
+        final int [] points = {myPrefs.getInt("points",0)};
         final int [] giveUpPoints = {myPrefs.getInt("num4", 0)};
 
-        temp  = Integer.toString(count[0]);
         setContentView(R.layout.activity_workout_tab);
-        Button btn = findViewById(R.id.btn1);
+        Button workoutComplete = findViewById(R.id.btn1);
         Button easyBtn = findViewById(R.id.easy);
 
         Button giveUp = findViewById(R.id.giveUp);
@@ -479,7 +477,7 @@ public class workout_tab extends AppCompatActivity {
             }
         });
 
-        btn.setOnClickListener(new View.OnClickListener(){
+        workoutComplete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 SharedPreferences.Editor myEditor = myPrefs.edit();
@@ -488,16 +486,10 @@ public class workout_tab extends AppCompatActivity {
                 }else{
 
                     myEditor.putInt("num", count[0]++).apply();
+                    myEditor.putInt("points", PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("points",0) + 10).apply();
                     PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num", count[0]).apply();
 
-                    if(count[0] == points[0] * 2){
-                        myEditor.putInt("num2", currentLevel[0]++).apply();
-                        myEditor.putInt("num3", points[0] = count[0]).apply();
-                        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num2", currentLevel[0]).apply();
-                    }
 
-                    temp = Integer.toString(count[0]);
-                    temp2 = Integer.toString(currentLevel[0]);
                     displayWorkouts();
                 }
             }
