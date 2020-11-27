@@ -10,19 +10,19 @@
 
     <Button
         android:id="@+id/backBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="97dp"
+        android:layout_height="65dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="105dp"
-        android:layout_marginEnd="307dp"
-        android:layout_marginRight="307dp"
-        android:layout_marginBottom="40dp"
         android:text="Back"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
 
     <Button
         android:id="@+id/stop"
@@ -32,9 +32,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintVertical_bias="0.939" />
 
     <TextView
         android:id="@+id/textView25"
@@ -66,18 +67,18 @@
 
     <TextView
         android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="376dp"
+        android:layout_height="52dp"
         android:fontFamily="monospace"
         android:text="Blue - do 100 push ups as fast as you can"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView34"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22000003" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <TextView
         android:id="@+id/textView34"
@@ -86,7 +87,7 @@
         android:fontFamily="monospace"
         android:text="Green - do 100 incline push ups"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.099"
@@ -101,13 +102,13 @@
         android:fontFamily="monospace"
         android:text="Yellow - wall sit for 5 minutes"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView34"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
+        app:layout_constraintVertical_bias="0.562" />
 
     <TextView
         android:id="@+id/textView31"
@@ -116,28 +117,28 @@
         android:fontFamily="monospace"
         android:text="Purple - do 200 squats"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView34"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
+        app:layout_constraintVertical_bias="0.629" />
 
     <TextView
         android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="359dp"
+        android:layout_height="63dp"
         android:fontFamily="monospace"
         android:text="Brown - do 100 sit ups as fast as you can"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView34"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31" />
+        app:layout_constraintVertical_bias="0.356" />
 
     <TextView
         android:id="@+id/textView32"
@@ -146,13 +147,12 @@
         android:fontFamily="monospace"
         android:text="Orange - do 200 jumping jacks"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView34"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView33"
@@ -161,13 +161,13 @@
         android:fontFamily="monospace"
         android:text="White - plank for 5 minutes"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView34"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintVertical_bias="0.701" />
 
     <TextView
         android:id="@+id/textView28"
@@ -176,12 +176,12 @@
         android:fontFamily="monospace"
         android:text="Red - run a mile as fast as you can"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView34"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.401" />
+        app:layout_constraintVertical_bias="0.435" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

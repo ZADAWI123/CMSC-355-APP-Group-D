@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.17000002" />
 
     <TextView
         android:id="@+id/textView20"
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="0.353" />
 
     <TextView
         android:id="@+id/textView21"
@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735" />
+        app:layout_constraintVertical_bias="0.65999997" />
 
     <TextView
         android:id="@+id/textView23"
@@ -71,5 +71,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintVertical_bias="0.84000003" />
+
+    <Button
+        android:id="@+id/findGym"
+        android:layout_width="217dp"
+        android:layout_height="67dp"
+        android:text="Find Nearby Gyms"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
 </androidx.constraintlayout.widget.ConstraintLayout>
