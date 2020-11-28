@@ -20,6 +20,7 @@ public class SelectionTab extends AppCompatActivity {
     private Button weight;
     private Button body;
     private Button cardio;
+    private Button facts;
 
     String workoutValue;
     /*This method stores the value of each button click and allows the value to be carried over between
@@ -66,6 +67,15 @@ public class SelectionTab extends AppCompatActivity {
             }
         });
 
+        facts = (Button)findViewById(R.id.factBtn);
+        facts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                moveToFact();
+            }
+        });
+
     }
 
     private void moveToWeightList(){
@@ -79,6 +89,11 @@ public class SelectionTab extends AppCompatActivity {
     private void moveToCardioList(){
         Intent intent12 = new Intent(SelectionTab.this, cardioList.class);
         startActivity(intent12);
+    }
+
+    private void moveToFact(){
+        Intent intentW = new Intent(SelectionTab.this, randomFacts.class);
+        startActivity(intentW);
     }
 
     @Override
