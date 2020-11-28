@@ -108,9 +108,13 @@
         android:id="@+id/imageView21"
         android:layout_width="193dp"
         android:layout_height="146dp"
-        app:srcCompat="@drawable/situp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="418dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.694"
+        app:srcCompat="@drawable/situp" />
 
     <ImageView
         android:id="@+id/imageView22"
