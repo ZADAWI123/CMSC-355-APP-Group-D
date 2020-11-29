@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".randomFacts"></activity>
-        <activity android:name=".gymFinder" />
         <activity android:name=".cardioList" />
         <activity android:name=".bodyList" />
         <activity android:name=".weightList" />
@@ -33,7 +32,8 @@
         </activity>
     </application>
     <meta-data
-        android:name="com.google.android.gms.version"
-        android:value="@integer/google_play_services_version" />
+        android:name="com.google.android.gms.version"/>
+        //android:value="@integer/google_play_services_version"
+    />
 
 </manifest>

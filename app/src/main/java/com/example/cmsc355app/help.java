@@ -22,20 +22,8 @@ public class help extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(3900);
         animationDrawable.start();
 
-        findGym = findViewById(R.id.findGym);
 
-        findGym.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                moveToGymFinder();
-            }
-        });
 
     }
 
-    private void moveToGymFinder(){
-        Intent intentfg = new Intent(help.this, gymFinder.class);
-        startActivity(intentfg);
-    }
 }
