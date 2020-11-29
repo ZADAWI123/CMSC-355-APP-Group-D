@@ -24,7 +24,6 @@ public class main_hub extends AppCompatActivity {
     private Button BtnWork;
     private Button BtnPro;
     private Button BtnSel;
-    private Button BtnExa;
     private Button BtnReset;
     private TextView stepTxt;
     private Button goalTab;
@@ -196,11 +195,6 @@ public class main_hub extends AppCompatActivity {
     private void moveToSelection(){
         Intent intentS = new Intent(main_hub.this, SelectionTab.class);
         startActivity(intentS);
-    }
-
-    private void moveToExample(){
-        Intent intent3 = new Intent(main_hub.this, workExamples.class);
-        startActivity(intent3);
     }
 
     private void moveToGoals(){

@@ -1,8 +1,6 @@
 package com.example.cmsc355app;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,20 +13,18 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.util.Scanner;
-import java.util.prefs.AbstractPreferences;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class Progression_Tab<array> extends AppCompatActivity {
 
-    TextView stringTextView;
     TextView receiver_msg;
     TextView stps;
     TextView totalGoalsComplete;
     TextView exp;
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +37,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
         stps = findViewById(R.id.stps);
 
 
-        receiver_msg = (TextView) findViewById(R.id.calid);
+        receiver_msg =  findViewById(R.id.calid);
 
         // create the get Intent object
         Intent intent = getIntent();
@@ -73,8 +69,8 @@ public class Progression_Tab<array> extends AppCompatActivity {
         if(level[0] > 99){
             secondLevel = 99;
         }
-        TextView textView2 = (TextView) findViewById(R.id.textView2);
-        TextView textView5 = (TextView) findViewById(R.id.textView5);
+        TextView textView2 =  findViewById(R.id.textView2);
+        TextView textView5 =  findViewById(R.id.textView5);
         String temp = Integer.toString(level[0]);
         String temp2 = Integer.toString(numWorkouts);
         textView2.setText(ranks[secondLevel]);
@@ -84,7 +80,7 @@ public class Progression_Tab<array> extends AppCompatActivity {
         exp.setText(Integer.toString(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("points",0)));
 
         //This will display the quit level if you clicked "I Give Up"
-        TextView displayQuits = (TextView) findViewById(R.id.displayQuits);
+        TextView displayQuits =  findViewById(R.id.displayQuits);
         int quitterRank = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("num4", 0);
         int secondQuitter = quitterRank;
         if(quitterRank > 7){
@@ -142,11 +138,3 @@ public class Progression_Tab<array> extends AppCompatActivity {
                               "Sir Quits-a-Lot", "Weenie Hut Jr.", "Weenie Hut General"};
 
 }
-/*
-if(count[0] == points[0] * 2){
-        myEditor.putInt("num2", currentLevel[0]++).apply();
-        myEditor.putInt("num3", points[0] = count[0]).apply();
-        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putInt("num2", currentLevel[0]).apply();
-        }
-
- */

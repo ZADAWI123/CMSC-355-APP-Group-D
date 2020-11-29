@@ -9,9 +9,7 @@ import android.preference.PreferenceManager;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+
 
 public class picDisplay extends AppCompatActivity {
 
@@ -68,737 +66,734 @@ public class picDisplay extends AppCompatActivity {
         String fifthImage = programPicFifth;
         String sixthImage = programPicSixth;
 
-        if(firstImage==("pull up")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        if(firstImage.equals("pull up")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(firstImage==("barbell row")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("barbell row")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.barbellrow);
         }
-        else if(firstImage==("deadlift")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("deadlift")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.deadlift);
         }
-        else if(firstImage==("lateral pulldown")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("lateral pulldown")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.latpulldown);
         }
-        else if(firstImage==("bench press")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("bench press")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.benchpress);
         }
-        else if(firstImage==("incline dumbbell")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("incline dumbbell")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.inclinedumbbellpress);
         }
-        else if(firstImage==("flat dumbbell")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("flat dumbbell")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.dumbbellpress);
         }
-        else if(firstImage==("cable flies")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("cable flies")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.chestflies);
         }
-        else if(firstImage==("push up")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("push up")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.pushup);
         }
-        else if(firstImage==("austrailian pullups")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("austrailian pullups")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.austrialian);
         }
-        else if(firstImage==("burpees")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("burpees")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.burpee);
         }
-        else if(firstImage==("spiderman pushups")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("spiderman pushups")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.spiderman);
         }
-        else if(firstImage==("squats")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("squats")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(firstImage==("jump squats")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("jump squats")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(firstImage==("lounges")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("lounges")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(firstImage==("box jumps")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("box jumps")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.boxjump);
         }
-        else if(firstImage==("sit ups")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("sit ups")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.situp);
         }
-        else if(firstImage==("planks")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("planks")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.plank);
         }
-        else if(firstImage==("flutter kicks")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("flutter kicks")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.flutterkicks);
         }
-        else if(firstImage==("pull up")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("pull up")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(firstImage==("100 meter sprints")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("100 meter sprints")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.sprints);
         }
-        else if(firstImage==("jog for 30 min")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("jog for 30 min")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.jog);
         }
-        else if(firstImage==("jump rope")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("jump rope")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.jumprope);
         }
-        else if(firstImage==("bicycle")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("bicycle")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.cycle);
         }
-        else if(firstImage==("swimming laps")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("swimming laps")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.swim);
         }
-        else if(firstImage==("run 2 miles")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("run 2 miles")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.sprints);
         }
 
-
-
-
-        if(secondImage==("pull up")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        if(secondImage.equals("pull up")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(secondImage==("barbell row")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(secondImage.equals("barbell row")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.barbellrow);
         }
-        else if(firstImage==("deadlift")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("deadlift")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.deadlift);
         }
-        else if(firstImage==("lateral pulldown")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("lateral pulldown")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.latpulldown);
         }
-        else if(firstImage==("bench press")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("bench press")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.benchpress);
         }
-        else if(firstImage==("incline dumbbell")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("incline dumbbell")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.inclinedumbbellpress);
         }
-        else if(firstImage==("flat dumbbell")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("flat dumbbell")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.dumbbellpress);
         }
-        else if(firstImage==("cable flies")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("cable flies")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.chestflies);
         }
-        else if(firstImage==("push up")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("push up")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.pushup);
         }
-        else if(firstImage==("austrailian pullups")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("austrailian pullups")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.austrialian);
         }
-        else if(firstImage==("burpees")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("burpees")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.burpee);
         }
-        else if(firstImage==("spiderman pushups")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("spiderman pushups")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.spiderman);
         }
-        else if(firstImage==("squats")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("squats")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(firstImage==("jump squats")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("jump squats")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(firstImage==("lounges")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("lounges")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(firstImage==("box jumps")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("box jumps")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.boxjump);
         }
-        else if(firstImage==("sit ups")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("sit ups")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.situp);
         }
-        else if(firstImage==("planks")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("planks")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.plank);
         }
-        else if(firstImage==("flutter kicks")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("flutter kicks")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.flutterkicks);
         }
-        else if(firstImage==("pull up")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("pull up")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(firstImage==("100 meter sprints")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("100 meter sprints")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.sprints);
         }
-        else if(firstImage==("jog for 30 min")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("jog for 30 min")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.jog);
         }
-        else if(firstImage==("jump rope")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("jump rope")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.jumprope);
         }
-        else if(firstImage==("bicycle")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("bicycle")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.cycle);
         }
-        else if(firstImage==("swimming laps")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("swimming laps")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.swim);
         }
-        else if(firstImage==("run 2 miles")){
-            ImageView firstDisplayPic = (ImageView) findViewById(R.id.firstImagePic);
+        else if(firstImage.equals("run 2 miles")){
+            ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.sprints);
         }
-        if(secondImage==("pull up")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        if(secondImage.equals("pull up")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(secondImage==("barbell row")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("barbell row")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.barbellrow);
         }
-        else if(secondImage==("deadlift")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("deadlift")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.deadlift);
         }
-        else if(secondImage==("lateral pulldown")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("lateral pulldown")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.latpulldown);
         }
-        else if(secondImage==("bench press")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("bench press")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.benchpress);
         }
-        else if(secondImage==("incline dumbbell")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("incline dumbbell")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.inclinedumbbellpress);
         }
-        else if(secondImage==("flat dumbbell")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("flat dumbbell")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.dumbbellpress);
         }
-        else if(secondImage==("cable flies")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("cable flies")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.chestflies);
         }
-        else if(secondImage==("push up")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("push up")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.pushup);
         }
-        else if(secondImage==("austrailian pullups")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("austrailian pullups")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.austrialian);
         }
-        else if(secondImage==("burpees")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("burpees")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.burpee);
         }
-        else if(secondImage==("spiderman pushups")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("spiderman pushups")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.spiderman);
         }
-        else if(secondImage==("squats")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("squats")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(secondImage==("jump squats")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("jump squats")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(secondImage==("lounges")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("lounges")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(secondImage==("box jumps")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("box jumps")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.boxjump);
         }
-        else if(secondImage==("sit ups")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("sit ups")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.situp);
         }
-        else if(secondImage==("planks")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("planks")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.plank);
         }
-        else if(secondImage==("flutter kicks")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("flutter kicks")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.flutterkicks);
         }
-        else if(secondImage==("pull up")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("pull up")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(secondImage==("100 meter sprints")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("100 meter sprints")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.sprints);
         }
-        else if(secondImage==("jog for 30 min")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("jog for 30 min")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.jog);
         }
-        else if(secondImage==("jump rope")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("jump rope")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.jumprope);
         }
-        else if(secondImage==("bicycle")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("bicycle")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.cycle);
         }
-        else if(secondImage==("swimming laps")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("swimming laps")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.swim);
         }
-        else if(secondImage==("run 2 miles")){
-            ImageView secondDisplayPic = (ImageView) findViewById(R.id.secondImagePic);
+        else if(secondImage.equals("run 2 miles")){
+            ImageView secondDisplayPic =  findViewById(R.id.secondImagePic);
             secondDisplayPic.setImageResource(R.drawable.sprints);
         }
-        if(thirdImage==("pull up")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        if(thirdImage.equals("pull up")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(thirdImage==("barbell row")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("barbell row")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.barbellrow);
         }
-        else if(thirdImage==("deadlift")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("deadlift")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.deadlift);
         }
-        else if(thirdImage==("lateral pulldown")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("lateral pulldown")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.latpulldown);
         }
-        else if(thirdImage==("bench press")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("bench press")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.benchpress);
         }
-        else if(thirdImage==("incline dumbbell")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("incline dumbbell")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.inclinedumbbellpress);
         }
-        else if(thirdImage==("flat dumbbell")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("flat dumbbell")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.dumbbellpress);
         }
-        else if(thirdImage==("cable flies")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("cable flies")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.chestflies);
         }
-        else if(thirdImage==("push up")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("push up")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.pushup);
         }
-        else if(thirdImage==("austrailian pullups")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("austrailian pullups")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.austrialian);
         }
-        else if(thirdImage==("burpees")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("burpees")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.burpee);
         }
-        else if(thirdImage==("spiderman pushups")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("spiderman pushups")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.spiderman);
         }
-        else if(thirdImage==("squats")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("squats")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(thirdImage==("jump squats")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("jump squats")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(thirdImage==("lounges")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("lounges")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(thirdImage==("box jumps")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("box jumps")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.boxjump);
         }
-        else if(thirdImage==("sit ups")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("sit ups")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.situp);
         }
-        else if(thirdImage==("planks")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("planks")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.plank);
         }
-        else if(thirdImage==("flutter kicks")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("flutter kicks")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.flutterkicks);
         }
-        else if(thirdImage==("pull up")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("pull up")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(thirdImage==("100 meter sprints")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("100 meter sprints")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.sprints);
         }
-        else if(thirdImage==("jog for 30 min")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("jog for 30 min")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.jog);
         }
-        else if(thirdImage==("jump rope")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("jump rope")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.jumprope);
         }
-        else if(thirdImage==("bicycle")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("bicycle")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.cycle);
         }
-        else if(thirdImage==("swimming laps")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("swimming laps")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.swim);
         }
-        else if(thirdImage==("run 2 miles")){
-            ImageView thirdDisplayPic = (ImageView) findViewById(R.id.thirdImagePic);
+        else if(thirdImage.equals("run 2 miles")){
+            ImageView thirdDisplayPic =  findViewById(R.id.thirdImagePic);
             thirdDisplayPic.setImageResource(R.drawable.sprints);
         }
 
-        if(fourthImage==("pull up")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        if(fourthImage.equals("pull up")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(fourthImage==("barbell row")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("barbell row")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.barbellrow);
         }
-        else if(fourthImage==("deadlift")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("deadlift")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.deadlift);
         }
-        else if(fourthImage==("lateral pulldown")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("lateral pulldown")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.latpulldown);
         }
-        else if(fourthImage==("bench press")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("bench press")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.benchpress);
         }
-        else if(fourthImage==("incline dumbbell")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("incline dumbbell")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.inclinedumbbellpress);
         }
-        else if(fourthImage==("flat dumbbell")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("flat dumbbell")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.dumbbellpress);
         }
-        else if(fourthImage==("cable flies")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("cable flies")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.chestflies);
         }
-        else if(fourthImage==("push up")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("push up")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.pushup);
         }
-        else if(fourthImage==("austrailian pullups")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("austrailian pullups")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.austrialian);
         }
-        else if(fourthImage==("burpees")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("burpees")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.burpee);
         }
-        else if(fourthImage==("spiderman pushups")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("spiderman pushups")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.spiderman);
         }
-        else if(fourthImage==("squats")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("squats")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(fourthImage==("jump squats")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("jump squats")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(fourthImage==("lounges")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("lounges")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(fourthImage==("box jumps")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("box jumps")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.boxjump);
         }
-        else if(fourthImage==("sit ups")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("sit ups")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.situp);
         }
-        else if(fourthImage==("planks")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("planks")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.plank);
         }
-        else if(fourthImage==("flutter kicks")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("flutter kicks")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.flutterkicks);
         }
-        else if(fourthImage==("pull up")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("pull up")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(fourthImage==("100 meter sprints")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("100 meter sprints")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.sprints);
         }
-        else if(fourthImage==("jog for 30 min")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("jog for 30 min")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.jog);
         }
-        else if(fourthImage==("jump rope")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("jump rope")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.jumprope);
         }
-        else if(fourthImage==("bicycle")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("bicycle")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.cycle);
         }
-        else if(fourthImage==("swimming laps")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("swimming laps")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.swim);
         }
-        else if(fourthImage==("run 2 miles")){
-            ImageView fourthDisplayPic = (ImageView) findViewById(R.id.fourthImagePic);
+        else if(fourthImage.equals("run 2 miles")){
+            ImageView fourthDisplayPic =  findViewById(R.id.fourthImagePic);
             fourthDisplayPic.setImageResource(R.drawable.sprints);
         }
-        if(fifthImage==("pull up")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        if(fifthImage.equals("pull up")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(fifthImage==("barbell row")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("barbell row")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.barbellrow);
         }
-        else if(fifthImage==("deadlift")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("deadlift")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.deadlift);
         }
-        else if(fifthImage==("lateral pulldown")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("lateral pulldown")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.latpulldown);
         }
-        else if(fifthImage==("bench press")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("bench press")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.benchpress);
         }
-        else if(fifthImage==("incline dumbbell")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("incline dumbbell")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.inclinedumbbellpress);
         }
-        else if(fifthImage==("flat dumbbell")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("flat dumbbell")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.dumbbellpress);
         }
-        else if(fifthImage==("cable flies")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("cable flies")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.chestflies);
         }
-        else if(fifthImage==("push up")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("push up")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.pushup);
         }
-        else if(fifthImage==("austrailian pullups")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("austrailian pullups")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.austrialian);
         }
-        else if(fifthImage==("burpees")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("burpees")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.burpee);
         }
-        else if(fifthImage==("spiderman pushups")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("spiderman pushups")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.spiderman);
         }
-        else if(fifthImage==("squats")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("squats")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(fifthImage==("jump squats")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("jump squats")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(fifthImage==("lounges")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("lounges")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(fifthImage==("box jumps")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("box jumps")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.boxjump);
         }
-        else if(fifthImage==("sit ups")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("sit ups")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.situp);
         }
-        else if(fifthImage==("planks")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("planks")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.plank);
         }
-        else if(fifthImage==("flutter kicks")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("flutter kicks")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.flutterkicks);
         }
-        else if(fifthImage==("pull up")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("pull up")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(fifthImage==("100 meter sprints")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("100 meter sprints")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.sprints);
         }
-        else if(fifthImage==("jog for 30 min")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("jog for 30 min")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.jog);
         }
-        else if(fifthImage==("jump rope")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("jump rope")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.jumprope);
         }
-        else if(fifthImage==("bicycle")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("bicycle")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.cycle);
         }
-        else if(fifthImage==("swimming laps")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("swimming laps")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.swim);
         }
-        else if(fifthImage==("run 2 miles")){
-            ImageView fifthDisplayPic = (ImageView) findViewById(R.id.fifthImagePic);
+        else if(fifthImage.equals("run 2 miles")){
+            ImageView fifthDisplayPic =  findViewById(R.id.fifthImagePic);
             fifthDisplayPic.setImageResource(R.drawable.sprints);
         }
-        if(sixthImage==("pull up")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        if(sixthImage.equals("pull up")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(sixthImage==("barbell row")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("barbell row")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.barbellrow);
         }
-        else if(sixthImage==("deadlift")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("deadlift")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.deadlift);
         }
-        else if(sixthImage==("lateral pulldown")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("lateral pulldown")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.latpulldown);
         }
-        else if(sixthImage==("bench press")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("bench press")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.benchpress);
         }
-        else if(sixthImage==("incline dumbbell")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("incline dumbbell")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.inclinedumbbellpress);
         }
-        else if(sixthImage==("flat dumbbell")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("flat dumbbell")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.dumbbellpress);
         }
-        else if(sixthImage==("cable flies")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("cable flies")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.chestflies);
         }
-        else if(sixthImage==("push up")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("push up")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.pushup);
         }
-        else if(sixthImage==("austrailian pullups")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("austrailian pullups")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.austrialian);
         }
-        else if(sixthImage==("burpees")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("burpees")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.burpee);
         }
-        else if(sixthImage==("spiderman pushups")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("spiderman pushups")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.spiderman);
         }
-        else if(sixthImage==("squats")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("squats")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(sixthImage==("jump squats")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("jump squats")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(sixthImage==("lounges")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("lounges")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.bodyweightsquat);
         }
-        else if(sixthImage==("box jumps")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("box jumps")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.boxjump);
         }
-        else if(sixthImage==("sit ups")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("sit ups")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.situp);
         }
-        else if(sixthImage==("planks")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("planks")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.plank);
         }
-        else if(sixthImage==("flutter kicks")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("flutter kicks")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.flutterkicks);
         }
-        else if(sixthImage==("pull up")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("pull up")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.pullup);
         }
-        else if(sixthImage==("100 meter sprints")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("100 meter sprints")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.sprints);
         }
-        else if(sixthImage==("jog for 30 min")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("jog for 30 min")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.jog);
         }
-        else if(sixthImage==("jump rope")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("jump rope")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.jumprope);
         }
-        else if(sixthImage==("bicycle")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("bicycle")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.cycle);
         }
-        else if(sixthImage==("swimming laps")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("swimming laps")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.swim);
         }
-        else if(sixthImage==("run 2 miles")){
-            ImageView sixthDisplayPic = (ImageView) findViewById(R.id.sixthImagePic);
+        else if(sixthImage.equals("run 2 miles")){
+            ImageView sixthDisplayPic =  findViewById(R.id.sixthImagePic);
             sixthDisplayPic.setImageResource(R.drawable.sprints);
         }
     }

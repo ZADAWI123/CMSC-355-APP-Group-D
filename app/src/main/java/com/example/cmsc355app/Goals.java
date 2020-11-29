@@ -20,7 +20,6 @@ public class Goals extends AppCompatActivity {
     private TextView goal2;
     private TextView goal3;
     private EditText goalName;
-    private Button goalComplete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +66,7 @@ public class Goals extends AppCompatActivity {
             }
         });
 
-        goalComplete = findViewById(R.id.gcomplete);
+        Button goalComplete = findViewById(R.id.gcomplete);
         goalComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -69,7 +69,6 @@ public class workout_tab extends AppCompatActivity {
 
         final int programIndicator = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0);
         final SharedPreferences myPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        final String numIndicator = Integer.toString(programIndicator);
 
         final String [] favoriteE = {myPrefs.getString("e1","")};
         final String [] favoriteE2 = {myPrefs.getString("e2","")};
@@ -538,7 +537,6 @@ public class workout_tab extends AppCompatActivity {
 
         easyBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                SharedPreferences.Editor myEditorPicEasy = myPrefs.edit();
                 myEditor.putBoolean("easy", choiceEasy[0] = true).apply();
                 myEditor.putBoolean("intermediate", choiceInt[0] = false).apply();
                 myEditor.putBoolean("hard", choiceHard[0] = false).apply();
@@ -549,7 +547,6 @@ public class workout_tab extends AppCompatActivity {
         intBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences.Editor myEditorPicInt = myPrefs.edit();
                 myEditor.putBoolean("easy", choiceEasy[0] = true).apply();
                 myEditor.putBoolean("intermediate", choiceInt[0] = true).apply();
                 myEditor.putBoolean("hard", choiceHard[0] = false).apply();
@@ -559,7 +556,6 @@ public class workout_tab extends AppCompatActivity {
 
         hardBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                SharedPreferences.Editor myEditorPicHard = myPrefs.edit();
                 myEditor.putBoolean("easy", choiceEasy[0] = true).apply();
                 myEditor.putBoolean("intermediate", choiceInt[0] = true).apply();
                 myEditor.putBoolean("hard", choiceHard[0] = true).apply();
@@ -603,7 +599,7 @@ public class workout_tab extends AppCompatActivity {
             rest3.setText("");
             rest4.setText("");
         }
-        exercisePicButton = (Button) findViewById(R.id.exercisePicButton);
+        exercisePicButton =  findViewById(R.id.exercisePicButton);
         exercisePicButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

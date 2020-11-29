@@ -22,7 +22,6 @@ public class SelectionTab extends AppCompatActivity {
     private Button cardio;
     private Button facts;
 
-    String workoutValue;
     /*This method stores the value of each button click and allows the value to be carried over between
       activities, 1 means you want weight training, 2 means you want a body weight exercise program, and
       3 means you want a cardio execrise program. These values will be passed to the workout tab through
@@ -67,7 +66,7 @@ public class SelectionTab extends AppCompatActivity {
             }
         });
 
-        facts = (Button)findViewById(R.id.factBtn);
+        facts = findViewById(R.id.factBtn);
         facts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -30,11 +30,15 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(3900);
         animationDrawable.setExitFadeDuration(3900);
         animationDrawable.start();
-        stringTextView = (TextView)findViewById(R.id.randomQuotes);
+        stringTextView = findViewById(R.id.randomQuotes);
 
         //List<String> list = new ArrayList<>();
 
-        String[] array = {"You are a Machine", "You can do this!", "It all starts with you.", "Your limitation—it's only your imagination.", "Sometimes later becomes never.", "No pain, no gain. Shut up and train.", "Train insane or remain the same.", "Push yourself because no one else is going to do it for you.", "Suck it up. And one day you won’t have to suck it in.", "Success starts with self-discipline.", "Good things come to those who sweat.", "The body achieves what the mind believes.", "Someone busier than you is working out right now.", "The hardest lift of all is lifting your butt off the couch."};
+        String[] array = {"You are a Machine", "You can do this!", "It all starts with you.", "Your limitation—it's only your imagination.",
+                "Sometimes later becomes never.", "No pain, no gain. Shut up and train.", "Train insane or remain the same.",
+                "Push yourself because no one else is going to do it for you.", "Suck it up. And one day you won’t have to suck it in.",
+                "Success starts with self-discipline.", "Good things come to those who sweat.", "The body achieves what the mind believes.",
+                "Someone busier than you is working out right now.", "The hardest lift of all is lifting your butt off the couch."};
 
         List<String> list = Arrays.asList(array);
 

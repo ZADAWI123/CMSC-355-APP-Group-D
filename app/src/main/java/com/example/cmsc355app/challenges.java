@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class challenges extends AppCompatActivity {
-    private Button stop;
-    private Button backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +22,7 @@ public class challenges extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(501);
         animationDrawable.start();
 
-        stop = findViewById(R.id.stop);
+        Button stop = findViewById(R.id.stop);
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,7 +30,7 @@ public class challenges extends AppCompatActivity {
             }
         });
 
-        backBtn = (Button)findViewById(R.id.backBtn);
+        Button backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

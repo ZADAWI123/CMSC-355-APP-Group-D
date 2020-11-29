@@ -12,8 +12,6 @@ import android.os.Bundle;
 
 public class WarningActivity extends AppCompatActivity {
 
-    private Button continueBtn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +23,7 @@ public class WarningActivity extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(3900);
         animationDrawable.start();
 
-        continueBtn = (Button)findViewById(R.id.conBtn);
+        Button continueBtn = findViewById(R.id.conBtn);
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
