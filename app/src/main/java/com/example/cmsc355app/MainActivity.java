@@ -16,9 +16,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    //This is the name of the button
-    private Button BtnMove;
-
     TextView stringTextView;
 
     @Override
@@ -32,25 +29,26 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.start();
         stringTextView = findViewById(R.id.randomQuotes);
 
-        //List<String> list = new ArrayList<>();
 
-        String[] array = {"You are a Machine", "You can do this!", "It all starts with you.", "Your limitation—it's only your imagination.",
+        String[] array = {"You are a machine", "You can do this!", "It all starts with you.", "Your limitation—it's only your imagination.",
                 "Sometimes later becomes never.", "No pain, no gain. Shut up and train.", "Train insane or remain the same.",
                 "Push yourself because no one else is going to do it for you.", "Suck it up. And one day you won’t have to suck it in.",
                 "Success starts with self-discipline.", "Good things come to those who sweat.", "The body achieves what the mind believes.",
-                "Someone busier than you is working out right now.", "The hardest lift of all is lifting your butt off the couch."};
+                "Someone busier than you is working out right now.", "The hardest lift of all is lifting your butt off the couch.", "'Dew it'\n- Emperor Palpatine",
+                "'Firmly grasp it'\n- Patrick Star", "'Just do it!'\n- Shia LaBeouf", "'I'll take it easy when I'm dead'\n- Patrick Star", "'Only n00bz don't lift'\n- Albert Einstein"
+        };
 
         List<String> list = Arrays.asList(array);
 
-        MainActivity obj = new MainActivity();
 
         stringTextView.setText(stringTextView.getText() + getRandomQuote(list));
 
 
         //Below is the code for the button
-        BtnMove = findViewById(R.id.toHubBtn);
+        //This is the name of the button
+        Button btnMove = findViewById(R.id.toHubBtn);
 
-        BtnMove.setOnClickListener(new View.OnClickListener() {
+        btnMove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
