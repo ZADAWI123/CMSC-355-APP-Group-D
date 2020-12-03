@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
                 "Success starts with self-discipline.", "Good things come to those who sweat.", "The body achieves what the mind believes.",
                 "Someone busier than you is working out right now.", "The hardest lift of all is lifting your butt off the couch.", "'Dew it'\n- Emperor Palpatine",
                 "'Firmly grasp it'\n- Patrick Star", "'Just do it!'\n- Shia LaBeouf", "'I'll take it easy when I'm dead'\n- Patrick Star", "'Only n00bz don't lift'\n- Albert Einstein"
+                , "Are you feeling it now Mr. Krabs?", " 'Ask not what your country can do for you;\nask have I done leg day today'\n- John F. Kennedy",
+                "'I am become death, the lifter of weights.'\n- J. Robert Oppenheimer", "'If you don't do leg day,\nI can't call you my son.'\n-Julius Caesar",
+                "'If you don't lift big weight then what are you\neven doing with your life?'\n- Albert Einstein"
+
         };
 
         List<String> list = Arrays.asList(array);
