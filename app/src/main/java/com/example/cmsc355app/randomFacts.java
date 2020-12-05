@@ -2,7 +2,10 @@ package com.example.cmsc355app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -12,6 +15,7 @@ import java.util.Random;
 public class randomFacts extends AppCompatActivity {
 
     TextView stringTextView;
+    private Button nextFact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +32,24 @@ public class randomFacts extends AppCompatActivity {
         List<String> list = Arrays.asList(array);
 
         stringTextView.setText(stringTextView.getText() + getRandomFact(list));
+
+        nextFact = (Button)findViewById(R.id.nextBtn);
+        nextFact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                moveToNext();
+            }
+        });
     }
     public String getRandomFact(List<String> list)
     {
         Random rand = new Random();
         return list.get(rand.nextInt(list.size()));
+    }
+
+    private void moveToNext(){
+        Intent intentW = new Intent(randomFacts.this, randomFacts.class);
+        startActivity(intentW);
     }
 }
