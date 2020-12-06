@@ -76,7 +76,6 @@ public class main_hub extends AppCompatActivity {
                         myEditor.putInt("stepCount", stepCount[0]+=1).apply();
                         myEditor.putInt("points", PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("points",0)+1).apply();
                         myEditor.putFloat("calCount", calorieCount[0]+=(float)0.04).apply();
-                        //myEditor.putInt("calCount", calorieCount[0]++).apply();
                     }
 
                     //This is were it will display your steps.
@@ -142,7 +141,7 @@ public class main_hub extends AppCompatActivity {
             }
         });
 
-        BtnSel = (Button)findViewById(R.id.selectBtn);
+        BtnSel = findViewById(R.id.selectBtn);
 
         BtnSel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,7 +150,7 @@ public class main_hub extends AppCompatActivity {
                 moveToSelection();
             }
         });
-        goalTab = (Button)findViewById(R.id.goalTab);
+        goalTab = findViewById(R.id.goalTab);
         goalTab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,7 +160,7 @@ public class main_hub extends AppCompatActivity {
         });
 
 
-        help = (Button)findViewById(R.id.help);
+        help = findViewById(R.id.help);
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,7 +169,7 @@ public class main_hub extends AppCompatActivity {
             }
         });
 
-        warning = (Button)findViewById(R.id.challenges);
+        warning = findViewById(R.id.challenges);
         warning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

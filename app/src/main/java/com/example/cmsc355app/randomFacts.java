@@ -33,7 +33,7 @@ public class randomFacts extends AppCompatActivity {
 
         stringTextView.setText(stringTextView.getText() + getRandomFact(list));
 
-        nextFact = (Button) findViewById(R.id.nextBtn);
+        nextFact =  findViewById(R.id.nextBtn);
         nextFact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

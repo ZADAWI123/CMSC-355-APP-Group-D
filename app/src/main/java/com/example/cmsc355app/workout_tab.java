@@ -319,7 +319,6 @@ public class workout_tab extends AppCompatActivity {
             setsHard.setText(null);
             restHard.setText(null);
             exerciseHard.setText(null);
-            String easyString = TextUtils.join(",", easyList);
             myEditorPicEasy.putString("programImage1", imageArray[0] = ex1).apply();
             myEditorPicEasy.putString("programImage2", imageArray2[0] = ex2).apply();
             myEditorPicEasy.putString("programImage3", imageArray3[0] = ex3).apply();
@@ -331,7 +330,6 @@ public class workout_tab extends AppCompatActivity {
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
-            SharedPreferences.Editor myEditorPicInt = myPrefs.edit();
             ArrayList<String> intList = new ArrayList<String>();
             sets1.setText(set1);
             sets2.setText(set2);
@@ -356,7 +354,6 @@ public class workout_tab extends AppCompatActivity {
             exerciseHard.setText(null);
             setsHard.setText(null);
             restHard.setText(null);
-            String intString = TextUtils.join(",", intList);
             myEditorPicEasy.putString("programImage1", imageArray[0] = ex1).apply();
             myEditorPicEasy.putString("programImage2", imageArray2[0] = ex2).apply();
             myEditorPicEasy.putString("programImage3", imageArray3[0] = ex3).apply();
@@ -368,7 +365,6 @@ public class workout_tab extends AppCompatActivity {
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == true) {
-            SharedPreferences.Editor myEditorPicHard = myPrefs.edit();
             ArrayList<String> hardList = new ArrayList<String>();
             sets1.setText(set1);
             sets2.setText(set2);
@@ -408,7 +404,6 @@ public class workout_tab extends AppCompatActivity {
         sv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences.Editor myEditor = myPrefs.edit();
                 if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum",0) == 0){
                     Toast.makeText(getApplicationContext(), "Select a workout program :)", Toast.LENGTH_SHORT).show();
                 }else{
@@ -513,7 +508,6 @@ public class workout_tab extends AppCompatActivity {
         final SharedPreferences.Editor myEditor = myPrefs.edit();
         final TextView pro = findViewById(R.id.pro);
         final int programI = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getInt("programNum", 0);
-        final String numIndicator = Integer.toString(programI);
 
         Button easyBtn = findViewById(R.id.easy);
         Button intBtn = findViewById(R.id.intermediate);
@@ -523,7 +517,6 @@ public class workout_tab extends AppCompatActivity {
         TextView exercise2 = findViewById(R.id.ex2);
         TextView exercise3 = findViewById(R.id.ex3);
         TextView exercise4 = findViewById(R.id.ex4);
-        TextView exerciseInt = findViewById(R.id.exInt);
 
         TextView sets1 = findViewById(R.id.sets1);
         TextView sets2 = findViewById(R.id.sets2);
