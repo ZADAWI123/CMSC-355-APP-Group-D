@@ -27,7 +27,9 @@ public class randomFacts extends AppCompatActivity {
                 "The word 'gymnasium' comes from the Greek word\ngymnazein, which means 'to exercise naked.'",
                 "You burn more calories sleeping\nthan you do watching television.", "During your lifetime, you'll eat\nabout 60,000 pounds of food.",
                 "Laughing 100 times is equivalent to\n15 minutes of exercise on a stationary bike.",
-                "Maintaining good relationships with family\nand friends is good for your health.", "Yoga can boost your cognitive function and lowers stress."};
+                "Maintaining good relationships with family\nand friends is good for your health.", "Yoga can boost your cognitive function and lowers stress.",
+                "Optimism may help you live longer.","Bananas can help improve your mood.","More than half your bones are located in your hands and feet.",
+                "Smell an apple to prevent claustrophobia.","Your sweat is mostly made up of water","Water is good for you."};
 
         final List<String> list = Arrays.asList(array);
 
