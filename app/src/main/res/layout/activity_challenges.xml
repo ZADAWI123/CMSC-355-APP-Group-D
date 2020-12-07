@@ -10,12 +10,12 @@
 
     <Button
         android:id="@+id/backBtn"
-        android:layout_width="97dp"
-        android:layout_height="65dp"
+        android:layout_width="72dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="105dp"
-        android:text="Back"
+        android:background="@drawable/back_arrow"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,9 +26,9 @@
 
     <Button
         android:id="@+id/stop"
-        android:layout_width="97dp"
-        android:layout_height="65dp"
-        android:text="stop"
+        android:layout_width="80dp"
+        android:layout_height="57dp"
+        android:background="@drawable/stop_button"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
