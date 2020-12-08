@@ -41,11 +41,11 @@ public class Goals extends AppCompatActivity {
 
 
 
-        goalNum = findViewById(R.id.goalNum);
-        goal1 = findViewById(R.id.goal1);
-        goal2 = findViewById(R.id.goal2);
-        goal3 = findViewById(R.id.goal3);
-        goalName = findViewById(R.id.goalName);
+        goalNum = (EditText)findViewById(R.id.goalNum);
+        goal1 = (TextView)findViewById(R.id.goal1);
+        goal2 = (TextView)findViewById(R.id.goal2);
+        goal3 = (TextView)findViewById(R.id.goal3);
+        goalName = (EditText)findViewById(R.id.goalName);
 
         setG = findViewById(R.id.setG);
 

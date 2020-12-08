@@ -122,7 +122,6 @@
         android:id="@+id/shareBtn"
         android:layout_width="311dp"
         android:layout_height="80dp"
-        android:background="#00FFFFFF"
         android:text="Share your progress with friends!"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

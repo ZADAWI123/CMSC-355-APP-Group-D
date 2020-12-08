@@ -129,8 +129,8 @@ public class Progression_Tab<array> extends AppCompatActivity {
                        "LII", "LIII", "LIV", "LV", "LVI", "LVII", "LVIII", "LIX", "LX", "LXI",
                        "LXII", "LXIII", "LXIV", "LXV", "LXVI", "LXVII", "LXVIII", "LXIX", "LXX",
                        "LXXI", "LXXII", "LXXIII", "LXXIV", "LXXV", "LXXVI", "LXXVII", "LXXVIII",
-                       "LXXIX", "LXXX", "LXXXI", "LXXXII", "Sqwatto", "Kit Fist-full of Protein", "Weights Windu", "Mace Windu you even lift bro?",
-                       "Dexter Repstter", "Obi-Brawn Kenobi", "Ben Swolo", "Obi-Wan Gainobi", "Jango Fit", "Qui-Gon Gym", "Emperor Palprotein", "Armor Abs Krabs", "Big Meaty Claws",
+                       "LXXIX", "LXXX", "LXXXI", "LXXXII", "LXXXIII", "LLXXXIV", "LXXXV", "LXXXVI",
+                       "LXXXVII", "LXXXVIII", "LXXXIX", "XC", "XCI", "XCII", "XCIII", "XCIV", "XCV",
                        "Pablo Liftabar", "Admiral Squatbar", "Hero", "Legend", "Inheritor"};
 
     String [] quitterRanks = {"Yay, I'm not a quitter!","Quitter", "So bad, I did it twice",
