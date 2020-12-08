@@ -18,7 +18,6 @@
         <activity android:name=".challenges" />
         <activity android:name=".help" />
         <activity android:name=".Goals" />
-        <activity android:name=".workExamples" />
         <activity android:name=".SelectionTab" />
         <activity android:name=".main_hub" />
         <activity android:name=".workout_tab" />
