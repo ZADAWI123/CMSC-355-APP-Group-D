@@ -21,7 +21,7 @@ import java.util.Random;
 
 public class workout_tab extends AppCompatActivity {
     private Button exercisePicButton;
-
+    //method that takes the string and and number of imputs and returns a randomized string
     public List<String> getRandomElement(List<String> exStringList, int num) {
         Random rand = new Random();
         List<String> newList = new ArrayList<>();
@@ -33,7 +33,7 @@ public class workout_tab extends AppCompatActivity {
         }
         return newList;
     }
-
+    // method that returns a random number for the amount of reps
     Random randNum = new Random();
     public List<Integer> getRandomNumber(int num){
         int n = num;
@@ -46,7 +46,7 @@ public class workout_tab extends AppCompatActivity {
         }
         return numList;
     }
-
+    //method that returns a random number used for the amounts of sets
     public List<Integer> getRandomSet(int num){
         int n = num;
         int low = 3;
@@ -59,7 +59,7 @@ public class workout_tab extends AppCompatActivity {
         return numList;
     }
 
-
+    //method that displays the texts
     public void displayWorkouts(){
         ConstraintLayout constraintLayout = findViewById(R.id.layout);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
@@ -90,7 +90,7 @@ public class workout_tab extends AppCompatActivity {
         final String [] favoriteS4 = {myPrefs.getString("s4","")};
         final String [] favoriteS5 = {myPrefs.getString("s5","")};
         final String [] favoriteS6 = {myPrefs.getString("s6","")};
-
+//finds the text box
         final TextView exercise1 = findViewById(R.id.ex1);
         final TextView exercise2 = findViewById(R.id.ex2);
         final TextView exercise3 = findViewById(R.id.ex3);
@@ -121,7 +121,10 @@ public class workout_tab extends AppCompatActivity {
         ArrayList<Integer> printSet = new ArrayList<>();
         ArrayList<Integer> printRep = new ArrayList<>();
         ArrayList<String> printRestSet = new ArrayList<>();
-
+        //adds the list of weight exercises
+        //these exercises were picked because they were based on fundamental movements of the body
+        //bench press, pull ups, deadlift, rows and squats with their respective accessory movements
+        //these movements are the basis of most workout plans and based on the individuals we consulted with
         weightList.add("pull up");
         weightList.add("barbell row");
         weightList.add("deadlift");
@@ -293,6 +296,7 @@ public class workout_tab extends AppCompatActivity {
         final String [] imageArray4 = {myPrefs.getString("programImage4", String.valueOf(0))};
         final String [] imageArray5 = {myPrefs.getString("programImage5", String.valueOf(0))};
         final String [] imageArray6 = {myPrefs.getString("programImage6", String.valueOf(0))};
+        //easy difficulty set
         if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == false
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
@@ -328,6 +332,7 @@ public class workout_tab extends AppCompatActivity {
             myEditorPicEasy.putString("programImage6", imageArray6[0] = "").apply();
 
         }
+        //intermediate setting set
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == false) {
@@ -365,6 +370,7 @@ public class workout_tab extends AppCompatActivity {
             myEditorPicEasy.putString("programImage6", imageArray6[0] = "").apply();
 
         }
+        //hard setting set
         else if(PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("easy",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("intermediate",false) == true
                 && PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("hard",false) == true) {
