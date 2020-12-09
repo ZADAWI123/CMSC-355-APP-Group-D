@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-
+//class that takes the users exercises plan and shows a picture corresponding to it
 public class picDisplay extends AppCompatActivity {
 
     @Override
@@ -25,7 +25,7 @@ public class picDisplay extends AppCompatActivity {
         animationDrawable.start();
 
         ArrayList<String> exerciseImages = new ArrayList <String>();
-
+//exercise list added
         exerciseImages.add("pull up");
         exerciseImages.add("barbell row");
         exerciseImages.add("deadlift");
@@ -51,7 +51,7 @@ public class picDisplay extends AppCompatActivity {
         exerciseImages.add("bicycle");
         exerciseImages.add("swimming laps");
         exerciseImages.add("run 2 miles");
-
+//takes the string from the workout tab
         String programPicFirst = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage1", "");
         String programPicSecond = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage2", "");
         String programPicThird = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("programImage3", "");
@@ -65,7 +65,7 @@ public class picDisplay extends AppCompatActivity {
         String fourthImage = programPicFourth;
         String fifthImage = programPicFifth;
         String sixthImage = programPicSixth;
-
+//matches with string from the workout tab and pairs it with an image in the library
         if(firstImage.equals("pull up")){
             ImageView firstDisplayPic =  findViewById(R.id.firstImagePic);
             firstDisplayPic.setImageResource(R.drawable.pullup);
